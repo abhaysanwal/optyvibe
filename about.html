@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="About OPTYVIBE — Your digital growth partner. We design, build and grow digital experiences that help ambitious businesses move forward." />
+	<title>About OPTYVIBE — Your Digital Growth Partner</title>
+	<link rel="canonical" href="https://optyvibe.com/about.html" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		:root{
+			--ink:#101312;
+			--paper:#f3f0e9;
+			--muted:#8d918b;
+			--line:rgba(243,240,233,.14);
+			--acid:#d9fa62;
+			--teal:#76c9b4;
+			--card:#141918;
+			--card-hover:#181f1b;
+			--sans:'Manrope',sans-serif;
+			--mono:'DM Mono',monospace;
+		}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth}
+		body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);overflow-x:hidden}
+		a{color:inherit;text-decoration:none}
+		button,input,select,textarea{font:inherit}
+		button{cursor:pointer;border:0}
+		.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+		.eyebrow{font:11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--acid)}
+		.section{padding:120px 0;position:relative}
+		.section-title{font-size:clamp(38px,5vw,68px);line-height:1.04;letter-spacing:-.06em;margin:18px 0 22px}
+		.section-intro{color:#a2aba1;max-width:560px;line-height:1.7;font-size:15px}
+		.accent{color:var(--acid)}
+
+		/* ==================== HEADER ==================== */
+		header{position:fixed;top:0;left:0;width:100%;z-index:30;transition:.3s;border-bottom:1px solid transparent}
+		header.scrolled{background:rgba(16,19,18,.88);backdrop-filter:blur(16px);border-color:var(--line)}
+		nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+		.brand{display:flex;align-items:center;gap:0px;color:var(--acid);text-decoration:none;line-height:1}
+		.brand-name{font:700 clamp(1.2rem,1.1vw + .65rem,1.5rem)/1 var(--sans);letter-spacing:-.045em;white-space:nowrap;transition:opacity .3s ease;position:relative;top:8px;margin:0;padding:0}
+		.brand-symbol{position:relative;width:100px;height:96px;flex:0 0 100px;overflow:hidden;margin:0;padding:0}
+		.brand-symbol .brand-logo{position:absolute;width:522px;height:522px;max-width:none;left:-199px;top:-183px;display:block;object-fit:contain}
+		@media(min-width:801px){header .brand{transform:translateX(calc(80px - max(24px,(100vw - 1180px) / 2)))}}
+		@media(min-width:801px) and (max-width:1100px){.brand-symbol{width:80px;height:84px;flex-basis:80px}.brand-symbol .brand-logo{width:424px;height:424px;left:-162px;top:-146px}header .brand-name{font-size:1.25rem}}
+		@media(max-width:800px){header .brand{max-width:calc(100% - 48px);transform:translateY(6px)}.brand-symbol{width:80px;height:76px;flex-basis:80px}.brand-symbol .brand-logo{width:413px;height:413px;left:-158px;top:-145px}header .brand-name{font-size:clamp(.95rem,4.7vw,1.2rem);top:2px}}
+
+		.nav-links{display:flex;gap:31px;color:#a6aca5;font-size:12px}
+		.nav-links a{transition:.2s}
+		.nav-links a:hover{color:var(--paper)}
+		.nav-links a.active{color:var(--acid);font-weight:700;position:relative}
+		.nav-links a.active:after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--acid);border-radius:1px}
+
+		.nav-cta,.btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1px solid var(--line);font-size:12px;transition:.25s}
+		.nav-cta:hover,.btn.secondary:hover{border-color:var(--acid);color:var(--acid)}
+		.btn.primary{background:var(--acid);color:var(--ink);border-color:var(--acid);font-weight:800}
+		.btn.primary:hover{background:#efff99;transform:translateY(-2px)}
+		.hamb{display:none;background:none;color:var(--paper);font-size:22px}
+
+		/* ==================== 1. HERO (DIGITAL ECOSYSTEM) ==================== */
+		#about-hero{
+			padding-top:175px;
+			padding-bottom:120px;
+			min-height:680px;
+			background:radial-gradient(ellipse at 80% 25%,rgba(92,134,105,.16),transparent 45%),radial-gradient(ellipse at 12% 85%,rgba(217,250,98,.04),transparent 40%),#101312;
+			overflow:hidden;
+		}
+		#about-hero:after{
+			content:'';
+			position:absolute;
+			inset:0;
+			z-index:-1;
+			opacity:.18;
+			background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+			background-size:75px 75px;
+			mask-image:linear-gradient(to bottom,#000 65%,transparent 95%);
+		}
+		.about-hero-grid{
+			display:grid;
+			grid-template-columns:46% 54%;
+			gap:44px;
+			align-items:center;
+		}
+		.about-hero-copy h1{
+			font-size:clamp(46px,5.2vw,78px);
+			line-height:.98;
+			letter-spacing:-.065em;
+			margin:20px 0 24px;
+			font-weight:800;
+		}
+		.about-hero-copy p{
+			max-width:510px;
+			color:#a8b0a7;
+			line-height:1.75;
+			font-size:16.5px;
+			margin:0 0 32px;
+		}
+		.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+		/* Bottom Hero Indicators */
+		.hero-indicators{
+			display:flex;
+			align-items:center;
+			gap:24px;
+			margin-top:44px;
+			padding-top:28px;
+			border-top:1px solid var(--line);
+		}
+		.indicator-item{
+			display:flex;
+			align-items:baseline;
+			gap:10px;
+		}
+		.indicator-num{
+			font:11px var(--mono);
+			color:var(--acid);
+			letter-spacing:.08em;
+		}
+		.indicator-label{
+			font-size:13px;
+			font-weight:600;
+			color:#b8c1b7;
+			letter-spacing:-.02em;
+		}
+		.indicator-divider{
+			width:1px;
+			height:18px;
+			background:var(--line);
+		}
+
+		/* Ecosystem Stage */
+		.ecosystem-stage{
+			position:relative;
+			width:100%;
+			max-width:560px;
+			height:500px;
+			margin:0 auto;
+			border-radius:20px;
+			box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+		}
+
+		/* Technical Grid */
+		.tech-grid{
+			position:absolute;
+			inset:0;
+			background-image:
+				linear-gradient(rgba(92,134,105,.08) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(92,134,105,.08) 1px, transparent 1px),
+				radial-gradient(rgba(217,250,98,.12) 1px, transparent 1px);
+			background-size: 32px 32px, 32px 32px, 16px 16px;
+			opacity: .5;
+			pointer-events: none;
+			border-radius: 20px;
+		}
+
+		/* System Telemetry Tags */
+		.sys-tag{
+			position:absolute;
+			font:9px var(--mono);
+			color:#626d63;
+			letter-spacing:.12em;
+			pointer-events:none;
+			z-index:3;
+		}
+		.sys-tag.top-left{top:12px;left:18px}
+		.sys-tag.top-right{top:12px;right:18px}
+		.sys-tag.bottom-left{bottom:12px;left:18px}
+		.sys-tag.bottom-right{bottom:12px;right:18px}
+
+		/* SVG Elements */
+		.eco-svg{
+			position:absolute;
+			inset:0;
+			width:100%;
+			height:100%;
+			pointer-events:none;
+			z-index:2;
+		}
+		.eco-pulse{
+			animation:pulseMove 4.2s linear infinite;
+		}
+		.pulse-tl{animation-delay:0s}
+		.pulse-tr{animation-delay:1.05s}
+		.pulse-bl{animation-delay:2.1s}
+		.pulse-br{animation-delay:3.15s}
+
+		.eco-node{
+			animation:nodePulse 3s ease-in-out infinite;
+			transform-origin:center;
+		}
+		.node-tl{animation-delay:0s}
+		.node-tr{animation-delay:.75s}
+		.node-bl{animation-delay:1.5s}
+		.node-br{animation-delay:2.25s}
+
+		/* Central Card */
+		.eco-center-card{
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%, -50%);
+			width:204px;
+			height:165px;
+			background:#131816;
+			border:1px solid rgba(217,250,98,.3);
+			border-radius:16px;
+			padding:20px 16px;
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			justify-content:center;
+			text-align:center;
+			box-shadow:0 24px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(217,250,98,.08), inset 0 1px 0 rgba(255,255,255,.05);
+			z-index:5;
+			animation:floatCenter 5.2s ease-in-out infinite;
+		}
+		.center-badge{
+			display:inline-flex;
+			align-items:center;
+			gap:5px;
+			font:9px var(--mono);
+			color:var(--acid);
+			background:rgba(217,250,98,.07);
+			border:1px solid rgba(217,250,98,.2);
+			padding:2px 7px;
+			border-radius:3px;
+			margin-bottom:6px;
+		}
+		.center-pulse{
+			width:4px;
+			height:4px;
+			background:var(--acid);
+			border-radius:50%;
+			box-shadow:0 0 5px var(--acid);
+		}
+		.center-logo{
+			width:125px;
+			height:auto;
+			display:block;
+			margin:4px 0 2px;
+			object-fit:contain;
+		}
+		.center-title{
+			font-size:14px;
+			font-weight:800;
+			letter-spacing:.08em;
+			color:var(--paper);
+			line-height:1;
+		}
+		.center-subtitle{
+			font:9px var(--mono);
+			letter-spacing:.18em;
+			color:var(--acid);
+			margin-top:4px;
+		}
+
+		/* Four Floating Cards */
+		.eco-card{
+			position:absolute;
+			width:144px;
+			background:#151c19;
+			border:1px solid rgba(243,240,233,.16);
+			border-radius:12px;
+			padding:14px 13px;
+			box-shadow:0 16px 36px rgba(0,0,0,.35);
+			z-index:6;
+			transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+		}
+		.card-head{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			margin-bottom:8px;
+		}
+		.card-num{
+			font:10px var(--mono);
+			color:var(--acid);
+			letter-spacing:.08em;
+		}
+		.card-icon{
+			width:18px;
+			height:18px;
+			color:var(--acid);
+			display:grid;
+			place-items:center;
+		}
+		.card-icon svg{
+			width:100%;
+			height:100%;
+			stroke:currentColor;
+			transition:filter .25s ease, stroke .25s ease;
+		}
+		.card-title{
+			font-size:13px;
+			font-weight:800;
+			letter-spacing:-.02em;
+			color:var(--paper);
+			margin-bottom:6px;
+		}
+		.card-words{
+			display:flex;
+			flex-direction:column;
+			gap:2px;
+			font:10px var(--mono);
+			color:#8b948a;
+			line-height:1.4;
+		}
+
+		/* Card Specific Positions & Floating Animations */
+		.card-strategy{
+			left:12px;
+			top:15px;
+			animation:float1 5.2s ease-in-out infinite;
+		}
+		.card-design{
+			right:12px;
+			top:15px;
+			animation:float2 6.4s ease-in-out infinite .4s;
+		}
+		.card-build{
+			left:12px;
+			bottom:15px;
+			animation:float3 5.8s ease-in-out infinite .8s;
+		}
+		.card-grow{
+			right:12px;
+			bottom:15px;
+			animation:float4 6.8s ease-in-out infinite 1.2s;
+		}
+
+		/* Hover Interactions */
+		.eco-card:hover{
+			transform:translateY(-4px) !important;
+			border-color:rgba(217,250,98,.55);
+			box-shadow:0 20px 45px rgba(0,0,0,.45),0 0 16px rgba(217,250,98,.07);
+		}
+		.eco-card:hover .card-icon svg{
+			filter:drop-shadow(0 0 5px rgba(217,250,98,.6));
+			stroke:#efff99;
+		}
+		.ecosystem-stage:has(.card-strategy:hover) .node-tl,
+		.ecosystem-stage:has(.card-design:hover) .node-tr,
+		.ecosystem-stage:has(.card-build:hover) .node-bl,
+		.ecosystem-stage:has(.card-grow:hover) .node-br{
+			filter:drop-shadow(0 0 8px #d9fa62);
+			r:5;
+		}
+
+		/* Keyframes */
+		@keyframes pulseMove{
+			from{stroke-dashoffset:122}
+			to{stroke-dashoffset:0}
+		}
+		@keyframes floatCenter{
+			0%,100%{transform:translate(-50%,-50%)}
+			50%{transform:translate(-50%,-54%)}
+		}
+		@keyframes float1{
+			0%,100%{transform:translateY(0)}
+			50%{transform:translateY(-4px)}
+		}
+		@keyframes float2{
+			0%,100%{transform:translateY(0)}
+			50%{transform:translateY(4px)}
+		}
+		@keyframes float3{
+			0%,100%{transform:translateY(0)}
+			50%{transform:translateY(-4px)}
+		}
+		@keyframes float4{
+			0%,100%{transform:translateY(0)}
+			50%{transform:translateY(4px)}
+		}
+		@keyframes nodePulse{
+			0%,100%{opacity:.6;r:3.5}
+			50%{opacity:1;r:4.5;filter:drop-shadow(0 0 5px #d9fa62)}
+		}
+
+		/* Entrance Animations */
+		.about-hero-copy{
+			animation:heroFadeUp .8s cubic-bezier(0.16,1,0.3,1) both;
+		}
+		.eco-center-card{
+			animation:heroPopIn .8s cubic-bezier(0.16,1,0.3,1) both .35s, floatCenter 5.2s ease-in-out infinite 1.2s;
+		}
+		.card-strategy{animation:cardPopIn .6s cubic-bezier(0.16,1,0.3,1) both .45s, float1 5.2s ease-in-out infinite 1.1s}
+		.card-design{animation:cardPopIn .6s cubic-bezier(0.16,1,0.3,1) both .6s, float2 6.4s ease-in-out infinite 1.2s}
+		.card-build{animation:cardPopIn .6s cubic-bezier(0.16,1,0.3,1) both .75s, float3 5.8s ease-in-out infinite 1.35s}
+		.card-grow{animation:cardPopIn .6s cubic-bezier(0.16,1,0.3,1) both .9s, float4 6.8s ease-in-out infinite 1.5s}
+		.eco-svg{animation:heroFadeUp .8s ease both 1s}
+
+		@keyframes heroFadeUp{
+			from{opacity:0;transform:translateY(20px)}
+			to{opacity:1;transform:none}
+		}
+		@keyframes heroPopIn{
+			from{opacity:0;transform:translate(-50%,-50%) scale(0.9)}
+			to{opacity:1;transform:translate(-50%,-50%) scale(1)}
+		}
+		@keyframes cardPopIn{
+			from{opacity:0;transform:translateY(14px) scale(0.95)}
+			to{opacity:1;transform:none}
+		}
+
+		/* Reduced Motion Override */
+		@media (prefers-reduced-motion: reduce){
+			.about-hero-copy,
+			.eco-center-card,
+			.eco-card,
+			.eco-svg,
+			.eco-pulse,
+			.eco-node{
+				animation:none !important;
+				transition:none !important;
+				opacity:1 !important;
+				transform:none !important;
+			}
+			.eco-center-card{
+				transform:translate(-50%,-50%) !important;
+			}
+		}
+
+		/* ==================== 3. WHO WE ARE ==================== */
+		#who-we-are{border-top:1px solid var(--line);background:#101312}
+		.who-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:flex-start}
+		.who-headline{font-size:clamp(36px,4.5vw,62px);line-height:1.06;letter-spacing:-.06em;margin:18px 0 0}
+		.who-text{font-size:clamp(17px,1.4vw,20px);line-height:1.7;color:#b3bbb2;margin:0 0 34px}
+		.who-capabilities{display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px solid var(--line);padding-top:28px}
+		.capability-item{display:flex;align-items:center;gap:10px;font:11px var(--mono);letter-spacing:.14em;color:var(--paper)}
+		.capability-item i{color:var(--acid);font-style:normal;font-size:11px}
+
+		/* ==================== 4. WHAT WE DO ==================== */
+		#what-we-do{border-top:1px solid var(--line);background:#121614}
+		.services-intro-wrap{margin-bottom:55px}
+		.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+		.service-card-compact{
+			background:#151b18;
+			border:1px solid var(--line);
+			border-radius:14px;
+			padding:26px 24px;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+		}
+		.service-card-compact:hover{
+			transform:translateY(-3px);
+			border-color:rgba(217,250,98,.5);
+			box-shadow:0 12px 28px rgba(0,0,0,.2);
+		}
+		.service-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+		.service-num{font:11px var(--mono);color:var(--acid);letter-spacing:.08em}
+		.service-icon{width:36px;height:36px;color:var(--acid);display:grid;place-items:center}
+		.service-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+		.service-card-compact h3{font-size:20px;letter-spacing:-.04em;margin:0 0 8px;color:var(--paper);font-weight:700}
+		.service-card-compact p{font-size:13.5px;line-height:1.6;color:#8f978f;margin:0}
+
+		/* ==================== 5. HOW WE WORK ==================== */
+		#how-we-work{border-top:1px solid var(--line);background:#101312}
+		.how-head{margin-bottom:50px}
+		.process-row{
+			display:grid;
+			grid-template-columns:repeat(5,1fr);
+			gap:18px;
+		}
+		.process-step-box{
+			border-top:1px solid var(--line);
+			padding-top:24px;
+			position:relative;
+		}
+		.process-step-box:before{
+			content:'';
+			position:absolute;
+			top:-2px;
+			left:0;
+			width:24px;
+			height:3px;
+			background:var(--acid);
+			opacity:.7;
+		}
+		.process-num{font:11px var(--mono);color:var(--acid);letter-spacing:.1em;display:block;margin-bottom:12px}
+		.process-step-box h3{font-size:16px;letter-spacing:-.03em;margin:0 0 8px;font-weight:800;color:var(--paper)}
+		.process-step-box p{font-size:13px;line-height:1.6;color:#8b948b;margin:0}
+
+		/* ==================== 6. OUR APPROACH ==================== */
+		#approach{border-top:1px solid var(--line);background:#121614}
+		.approach-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:flex-end;margin-bottom:60px}
+		.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--line);padding-top:40px}
+		.approach-item{position:relative}
+		.approach-tag{font:10px var(--mono);color:var(--acid);letter-spacing:.12em;display:block;margin-bottom:14px}
+		.approach-item h3{font-size:18px;letter-spacing:-.03em;margin:0 0 10px;font-weight:700;color:var(--paper)}
+		.approach-item p{font-size:14px;line-height:1.65;color:#8f988f;margin:0}
+
+		/* ==================== 7. WHY OPTYVIBE (STATEMENT) ==================== */
+		#statement{
+			padding:145px 0;
+			text-align:center;
+			border-top:1px solid var(--line);
+			background:radial-gradient(ellipse at 50% 50%,rgba(92,134,105,.1) 0%,transparent 65%),#101312;
+			position:relative;
+		}
+		#statement:before{
+			content:'';
+			position:absolute;
+			inset:0;
+			opacity:.15;
+			background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+			background-size:60px 60px;
+			mask-image:radial-gradient(circle at center,#000 30%,transparent 70%);
+			pointer-events:none;
+		}
+		.statement-content{max-width:860px;margin:auto;position:relative;z-index:2}
+		.statement-content h2{
+			font-size:clamp(32px,4vw,52px);
+			line-height:1.2;
+			letter-spacing:-.05em;
+			margin:0 auto 24px;
+			font-weight:700;
+			color:var(--paper);
+		}
+		.statement-content p{
+			font-size:clamp(16px,1.3vw,19px);
+			line-height:1.65;
+			color:#9da79d;
+			max-width:620px;
+			margin:0 auto;
+		}
+
+		/* ==================== 8. FINAL CTA ==================== */
+		#about-cta{
+			padding:130px 0;
+			text-align:center;
+			border-top:1px solid var(--line);
+			background:radial-gradient(ellipse at 50% 100%,rgba(32,53,42,.5) 0%,#101312 70%);
+			position:relative;
+			overflow:hidden;
+		}
+		.particle-wave-container{
+			position:absolute;
+			inset:0;
+			width:100%;
+			height:100%;
+			pointer-events:none;
+			z-index:1;
+			overflow:hidden;
+		}
+		.particle-wave-container canvas{
+			display:block;
+			width:100%;
+			height:100%;
+		}
+		.wave-vignette{
+			position:absolute;
+			inset:0;
+			background:radial-gradient(ellipse at 50% 60%,transparent 35%,rgba(16,19,18,.7) 80%,#101312 100%),
+			           linear-gradient(to bottom,#101312 0%,transparent 18%,transparent 80%,#101312 100%);
+			pointer-events:none;
+		}
+		#about-cta .wrap{position:relative;z-index:2}
+		.cta-box{max-width:640px;margin:auto;position:relative;z-index:2}
+		.cta-box .section-title{font-size:clamp(40px,5.2vw,68px);margin:14px 0 18px;line-height:1.04}
+		.cta-box p{font-size:16px;color:#a2aaa1;margin:0 auto 34px;max-width:470px;line-height:1.65}
+		.cta-box .btn{padding:14px 28px;font-size:13px}
+
+		/* ==================== 9. FOOTER (EXACT HOMEPAGE MATCH) ==================== */
+		footer{padding:65px 0 30px;border-top:1px solid var(--line);background:var(--ink)}
+		.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:35px}
+		.brand-logo{width:175px;height:auto;display:block;object-fit:contain;opacity:1;transition:opacity .3s ease}
+		.footer-desc{color:#838b83;line-height:1.6;font-size:13px;max-width:230px;margin-top:20px}
+		.footer-col h4{font:10px var(--mono);color:var(--acid);margin:2px 0 20px;text-transform:uppercase;letter-spacing:.1em}
+		.footer-col a{display:block;font-size:12px;color:#969d96;margin:0 0 12px;transition:.2s}
+		.footer-col a:hover{color:var(--paper)}
+		.footer-bottom{border-top:1px solid var(--line);margin-top:70px;padding-top:18px;display:flex;justify-content:space-between;color:#626a62;font:10px var(--mono)}
+		.footer-bottom div{display:flex;gap:20px}
+
+		/* ==================== 11. RESPONSIVE ==================== */
+		@media(max-width:1100px) and (min-width:801px){
+			.process-row{grid-template-columns:repeat(3,1fr);gap:24px}
+			.approach-head{grid-template-columns:1fr;gap:24px}
+		}
+		@media(max-width:800px){
+			.wrap{width:min(100% - 32px,620px)}
+			.section{padding:80px 0}
+			nav{height:70px}
+			.nav-links,.nav-cta{display:none}
+			.hamb{display:block}
+			.mobile-open .nav-links{
+				display:flex;
+				position:absolute;
+				top:70px;
+				left:0;
+				width:100%;
+				padding:24px 16px;
+				flex-direction:column;
+				background:#171b19;
+				border-bottom:1px solid var(--line);
+			}
+			.mobile-open .nav-links a{font-size:18px}
+			.mobile-open .nav-links a.active:after{display:none}
+
+			/* Hero Mobile */
+			#about-hero{padding-top:125px;padding-bottom:60px;min-height:0}
+			.about-hero-grid{display:flex;flex-direction:column;gap:0}
+			.about-hero-copy{order:1}
+			.about-hero-copy h1{font-size:clamp(38px,11vw,56px);line-height:.98;margin:16px 0 20px}
+			.about-hero-copy p{font-size:15px;margin-bottom:26px}
+			.ecosystem-stage{
+				order:2;
+				width:100%;
+				max-width:440px;
+				height:420px;
+				margin:34px auto 26px;
+			}
+			.eco-center-card{
+				width:155px;
+				height:130px;
+				padding:14px 10px;
+			}
+			.center-logo{width:90px;margin:3px 0 2px}
+			.center-title{font-size:11px}
+			.center-subtitle{font-size:8px;letter-spacing:.14em}
+			.center-badge{font-size:8px;padding:1px 5px;margin-bottom:4px}
+			.eco-card{
+				width:118px;
+				padding:10px 9px;
+				border-radius:10px;
+			}
+			.card-strategy{left:4px;top:8px}
+			.card-design{right:4px;top:8px}
+			.card-build{left:4px;bottom:8px}
+			.card-grow{right:4px;bottom:8px}
+			.card-title{font-size:11px;margin-bottom:4px}
+			.card-words{font-size:8.5px;gap:1px}
+			.card-num{font-size:9px}
+			.card-icon{width:15px;height:15px}
+			.sys-tag{display:none}
+
+			.hero-indicators{
+				order:3;
+				margin-top:10px;
+				padding-top:20px;
+				gap:14px;
+				flex-wrap:wrap;
+			}
+			.indicator-divider{display:none}
+
+			/* Who We Are Mobile */
+			.who-grid{grid-template-columns:1fr;gap:36px}
+			.who-headline{font-size:clamp(32px,9vw,44px)}
+			.who-text{font-size:17px;margin-bottom:26px}
+
+			/* Services Mobile */
+			.services-grid{grid-template-columns:1fr;gap:12px}
+			.service-card-compact{padding:22px 20px}
+
+			/* How We Work Mobile: Vertical Process */
+			.process-row{
+				display:flex;
+				flex-direction:column;
+				gap:24px;
+				border-left:1px dashed var(--line);
+				padding-left:20px;
+				margin-left:8px;
+			}
+			.process-step-box{
+				border-top:0;
+				padding-top:0;
+			}
+			.process-step-box:before{
+				top:6px;
+				left:-23px;
+				width:6px;
+				height:6px;
+				border-radius:50%;
+				background:var(--acid);
+			}
+
+			/* Approach Mobile */
+			.approach-head{grid-template-columns:1fr;gap:20px;margin-bottom:36px}
+			.approach-grid{grid-template-columns:1fr;gap:26px;padding-top:30px}
+
+			/* Statement Mobile */
+			#statement{padding:90px 0}
+			.statement-content h2{font-size:clamp(26px,7.5vw,36px)}
+
+			/* CTA Mobile */
+			#about-cta{padding:90px 0}
+			.cta-box .section-title{font-size:clamp(36px,10.5vw,48px)}
+
+			/* Footer Mobile */
+			.brand-logo{width:min(175px,55vw)}
+			.footer-top{grid-template-columns:1fr 1fr;gap:28px 20px}
+			.footer-top>div:first-child{grid-column:1/-1}
+			.footer-bottom{display:block;line-height:2}
+			.footer-bottom div{margin-top:10px;flex-wrap:wrap}
+		}
+		@media(max-width:400px){
+			.wrap{width:calc(100% - 24px)}
+			.actions .btn{width:100%;justify-content:center}
+			.sys-pipeline{grid-template-columns:1fr}
+			.who-capabilities{grid-template-columns:1fr}
+			.footer-top{grid-template-columns:1fr}
+			.footer-top>div:first-child{grid-column:auto}
+		}
+	</style>
+</head>
+<body>
+	<!-- ==================== HEADER ==================== -->
+	<header id="header">
+		<nav class="wrap">
+			<a class="logo brand" href="index.html#hero">
+				<span class="brand-symbol"><img src="logo.png" alt="optyvibe" class="brand-logo"></span>
+				<span class="brand-name">optyvibe</span>
+			</a>
+			<div class="nav-links">
+				<a href="index.html#hero">Home</a>
+				<a href="index.html#services">Services</a>
+				<a href="index.html#work">Work</a>
+				<a href="index.html#process">Process</a>
+				<a href="about.html" class="active">About</a>
+				<a href="index.html#contact">Contact</a>
+			</div>
+			<a class="nav-cta" href="index.html#contact">Let's talk <span>↗</span></a>
+			<button class="hamb" aria-label="Open menu">☰</button>
+		</nav>
+	</header>
+
+	<main>
+		<!-- ==================== 1. HERO (DIGITAL ECOSYSTEM) ==================== -->
+		<section id="about-hero" class="section">
+			<div class="wrap about-hero-grid">
+				<div class="about-hero-copy">
+					<div class="eyebrow">ABOUT OPTYVIBE</div>
+					<h1>We don’t just build digital.<br>We build what <span class="accent">moves business forward.</span></h1>
+					<p>OPTYVIBE is a digital growth partner for ambitious brands. We bring strategy, design, development and marketing together to create meaningful digital experiences that deliver real results.</p>
+					<div class="actions">
+						<a class="btn primary" href="index.html#contact">Start Your Project <span>↗</span></a>
+						<a class="btn secondary" href="#who-we-are">Our Story ↓</a>
+					</div>
+					<div class="hero-indicators">
+						<div class="indicator-item">
+							<span class="indicator-num">01</span>
+							<span class="indicator-label">Strategy Led</span>
+						</div>
+						<div class="indicator-divider"></div>
+						<div class="indicator-item">
+							<span class="indicator-num">02</span>
+							<span class="indicator-label">End-to-End Partner</span>
+						</div>
+						<div class="indicator-divider"></div>
+						<div class="indicator-item">
+							<span class="indicator-num">03</span>
+							<span class="indicator-label">Focused on Growth</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Side: Digital Ecosystem Stage -->
+				<div class="ecosystem-stage" aria-label="OPTYVIBE Digital Ecosystem">
+					<!-- Subtle Technical Grid Background -->
+					<div class="tech-grid" aria-hidden="true"></div>
+
+					<!-- Digital Telemetry Tags -->
+					<div class="sys-tag top-left" aria-hidden="true">SYS // ACTIVE</div>
+					<div class="sys-tag top-right" aria-hidden="true">28.53°N // 77.39°E</div>
+					<div class="sys-tag bottom-left" aria-hidden="true">+ NODE // CORE 04</div>
+					<div class="sys-tag bottom-right" aria-hidden="true">LATENCY // 0.12MS</div>
+
+					<!-- Connected Curved SVG Lines & Orbital Rings -->
+					<svg class="eco-svg" viewBox="0 0 560 500" fill="none" aria-hidden="true">
+						<defs>
+							<radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+								<stop offset="0%" stop-color="rgba(92,134,105,0.3)"/>
+								<stop offset="60%" stop-color="rgba(217,250,98,0.05)"/>
+								<stop offset="100%" stop-color="rgba(16,19,18,0)"/>
+							</radialGradient>
+							<marker id="flowArrow" viewBox="0 0 6 6" refX="4" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+								<path d="M 0 1 L 5 3 L 0 5 z" fill="rgba(217,250,98,0.5)"/>
+							</marker>
+						</defs>
+
+						<!-- Central Ambient Glow -->
+						<circle cx="280" cy="250" r="160" fill="url(#centerGlow)"/>
+
+						<!-- Concentric Orbital / Circular System -->
+						<circle cx="280" cy="250" r="142" class="eco-orbit inner" stroke="rgba(243,240,233,0.08)" stroke-width="1" stroke-dasharray="3 5"/>
+						<circle cx="280" cy="250" r="215" class="eco-orbit outer" stroke="rgba(217,250,98,0.08)" stroke-width="1" stroke-dasharray="2 7"/>
+
+						<!-- Orbital Nodes -->
+						<circle cx="280" cy="108" r="2.5" class="orbit-node" fill="#d9fa62"/>
+						<circle cx="422" cy="250" r="2.5" class="orbit-node" fill="#d9fa62"/>
+						<circle cx="280" cy="392" r="2.5" class="orbit-node" fill="#d9fa62"/>
+						<circle cx="138" cy="250" r="2.5" class="orbit-node" fill="#d9fa62"/>
+
+						<!-- Sequence Flow Arcs: STRATEGY -> DESIGN -> GROW -> BUILD -> STRATEGY -->
+						<path d="M 160 50 C 225 24, 335 24, 400 50" class="flow-arc" stroke="rgba(243,240,233,0.14)" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#flowArrow)"/>
+						<path d="M 510 135 C 538 200, 538 300, 510 365" class="flow-arc" stroke="rgba(243,240,233,0.14)" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#flowArrow)"/>
+						<path d="M 400 450 C 335 476, 225 476, 160 450" class="flow-arc" stroke="rgba(243,240,233,0.14)" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#flowArrow)"/>
+						<path d="M 50 365 C 22 300, 22 200, 50 135" class="flow-arc" stroke="rgba(243,240,233,0.14)" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#flowArrow)"/>
+
+						<!-- Base Connection Lines (to Center) -->
+						<path class="eco-line line-strategy" d="M 148 90 C 205 95, 195 165, 205 205" stroke="rgba(243,240,233,0.18)" stroke-width="1.2"/>
+						<path class="eco-line line-design" d="M 412 90 C 355 95, 365 165, 355 205" stroke="rgba(243,240,233,0.18)" stroke-width="1.2"/>
+						<path class="eco-line line-build" d="M 148 410 C 205 405, 195 335, 205 295" stroke="rgba(243,240,233,0.18)" stroke-width="1.2"/>
+						<path class="eco-line line-grow" d="M 412 410 C 355 405, 365 335, 355 295" stroke="rgba(243,240,233,0.18)" stroke-width="1.2"/>
+
+						<!-- Animated Glowing Pulses traveling along paths -->
+						<path class="eco-pulse pulse-tl" d="M 148 90 C 205 95, 195 165, 205 205" stroke="#d9fa62" stroke-width="1.6" stroke-dasharray="12 110"/>
+						<path class="eco-pulse pulse-tr" d="M 412 90 C 355 95, 365 165, 355 205" stroke="#d9fa62" stroke-width="1.6" stroke-dasharray="12 110"/>
+						<path class="eco-pulse pulse-bl" d="M 148 410 C 205 405, 195 335, 205 295" stroke="#d9fa62" stroke-width="1.6" stroke-dasharray="12 110"/>
+						<path class="eco-pulse pulse-br" d="M 412 410 C 355 405, 365 335, 355 295" stroke="#d9fa62" stroke-width="1.6" stroke-dasharray="12 110"/>
+
+						<!-- Connection Nodes -->
+						<circle cx="205" cy="205" r="3.5" class="eco-node node-tl" fill="#d9fa62"/>
+						<circle cx="355" cy="205" r="3.5" class="eco-node node-tr" fill="#d9fa62"/>
+						<circle cx="205" cy="295" r="3.5" class="eco-node node-bl" fill="#d9fa62"/>
+						<circle cx="355" cy="295" r="3.5" class="eco-node node-br" fill="#d9fa62"/>
+					</svg>
+
+					<!-- Large Central Card: OPTYVIBE CORE -->
+					<div class="eco-center-card">
+						<div class="center-badge"><span class="center-pulse"></span> CORE // SYSTEM</div>
+						<img src="logo.png" alt="OPTYVIBE" class="center-logo">
+						<div class="center-title">OPTYVIBE</div>
+						<div class="center-subtitle">IDEAS TO IMPACT</div>
+					</div>
+
+					<!-- 01 STRATEGY (Top Left) -->
+					<div class="eco-card card-strategy">
+						<div class="card-head">
+							<span class="card-num">01</span>
+							<span class="card-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="12 8 15 15 8 12 12 8" fill="rgba(217,250,98,.15)"/></svg>
+							</span>
+						</div>
+						<div class="card-title">STRATEGY</div>
+						<div class="card-words">
+							<span>Research</span>
+							<span>Plan</span>
+							<span>Position</span>
+						</div>
+					</div>
+
+					<!-- 02 DESIGN (Top Right) -->
+					<div class="eco-card card-design">
+						<div class="card-head">
+							<span class="card-num">02</span>
+							<span class="card-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10M12 17v4M8 8h8M8 12h4"/></svg>
+							</span>
+						</div>
+						<div class="card-title">DESIGN</div>
+						<div class="card-words">
+							<span>UI/UX</span>
+							<span>Branding</span>
+							<span>Experience</span>
+						</div>
+					</div>
+
+					<!-- 03 BUILD (Bottom Left) -->
+					<div class="eco-card card-build">
+						<div class="card-head">
+							<span class="card-num">03</span>
+							<span class="card-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+							</span>
+						</div>
+						<div class="card-title">BUILD</div>
+						<div class="card-words">
+							<span>Development</span>
+							<span>Integrations</span>
+							<span>Performance</span>
+						</div>
+					</div>
+
+					<!-- 04 GROW (Bottom Right) -->
+					<div class="eco-card card-grow">
+						<div class="card-head">
+							<span class="card-num">04</span>
+							<span class="card-icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 16l5-6 4 4 6-8"/><polyline points="15 6 20 6 20 11"/></svg>
+							</span>
+						</div>
+						<div class="card-title">GROW</div>
+						<div class="card-words">
+							<span>Marketing</span>
+							<span>Marketplaces</span>
+							<span>Scale</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 3. SECTION — WHO WE ARE ==================== -->
+		<section id="who-we-are" class="section">
+			<div class="wrap who-grid">
+				<div>
+					<div class="eyebrow">WHO WE ARE</div>
+					<h2 class="who-headline">One partner.<br>From first idea to<br><span class="accent">ongoing growth.</span></h2>
+				</div>
+				<div>
+					<p class="who-text">OPTYVIBE brings strategy, design, development and digital growth together to help ambitious businesses build stronger digital experiences.</p>
+					<div class="who-capabilities">
+						<div class="capability-item">
+							<i>✦</i>
+							<span>STRATEGY</span>
+						</div>
+						<div class="capability-item">
+							<i>✦</i>
+							<span>DESIGN</span>
+						</div>
+						<div class="capability-item">
+							<i>✦</i>
+							<span>DEVELOPMENT</span>
+						</div>
+						<div class="capability-item">
+							<i>✦</i>
+							<span>GROWTH</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 4. SECTION — WHAT WE DO ==================== -->
+		<section id="what-we-do" class="section">
+			<div class="wrap">
+				<div class="services-intro-wrap">
+					<div class="eyebrow">WHAT WE DO</div>
+					<h2 class="section-title">Essential pieces, <span class="accent">working together.</span></h2>
+					<p class="section-intro">From digital experiences to marketplace growth, we bring the essential pieces of your digital presence together.</p>
+				</div>
+				<div class="services-grid">
+					<!-- 01 UI/UX Design -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">01 / DESIGN</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="12" width="46" height="36" rx="4"/><path d="M9 22h46M17 17h.01M22 17h.01M27 17h.01M18 31h13M18 38h22"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>01 UI/UX Design</h3>
+							<p>Intuitive, conversion-led interfaces and visual systems built around real user behavior.</p>
+						</div>
+					</article>
+
+					<!-- 02 Website Development -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">02 / CODE</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="11" width="48" height="40" rx="4"/><path d="M8 21h48M17 16h.01M22 16h.01M27 16h.01M18 30l5 5 8-9 7 7 8-8M18 43h28"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>02 Website Development</h3>
+							<p>Fast, responsive and scalable websites engineered to turn visitors into paying customers.</p>
+						</div>
+					</article>
+
+					<!-- 03 Marketplace Management -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">03 / COMMERCE</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M11 20h42v32H11zM11 20l7-9h28l7 9M25 30h14v10H25zM18 25h.01M24 25h.01"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>03 Marketplace Management</h3>
+							<p>End-to-end catalog, inventory operations and storefront optimization across major platforms.</p>
+						</div>
+					</article>
+
+					<!-- 04 Amazon & Flipkart Listing -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">04 / CATALOG</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="13" y="9" width="38" height="46" rx="3"/><path d="M20 19h24M20 27h24M20 35h13M20 44h18M39 35l4 4 7-8"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>04 Amazon &amp; Flipkart Listing</h3>
+							<p>Optimized product listings and A+ content designed to improve visibility, clicks and conversions.</p>
+						</div>
+					</article>
+
+					<!-- 05 Meta Ads -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">05 / ADS</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 47h44M14 42l10-12 8 7 15-20"/><path d="M40 17h7v7M47 17l-15 20"/><circle cx="14" cy="42" r="3"/><circle cx="24" cy="30" r="3"/><circle cx="32" cy="37" r="3"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>05 Meta Ads</h3>
+							<p>Performance-driven visual campaigns and targeted audience acquisition to scale revenue.</p>
+						</div>
+					</article>
+
+					<!-- 06 Amazon Ads -->
+					<article class="service-card-compact">
+						<div class="service-top">
+							<span class="service-num">06 / SCALE</span>
+							<span class="service-icon">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 18h44v31H10zM10 25h44M18 33h14M18 40h22"/><path d="M42 39l5-5 5 5M47 34v11"/></svg>
+							</span>
+						</div>
+						<div>
+							<h3>06 Amazon Ads</h3>
+							<p>Sponsored product advertising, intelligent bid management and profitable ROAS optimization.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 5. SECTION — HOW WE WORK ==================== -->
+		<section id="how-we-work" class="section">
+			<div class="wrap">
+				<div class="how-head">
+					<div class="eyebrow">HOW WE WORK</div>
+					<h2 class="section-title">A clear process keeps <span class="accent">every project focused.</span></h2>
+					<p class="section-intro">From the opening brief to long-term scaling, every phase is engineered for momentum and clarity.</p>
+				</div>
+				<div class="process-row">
+					<!-- 01 DISCOVER -->
+					<div class="process-step-box">
+						<span class="process-num">01 // STEP</span>
+						<h3>01 DISCOVER</h3>
+						<p>Understand the business, users and primary goals.</p>
+					</div>
+
+					<!-- 02 STRATEGIZE -->
+					<div class="process-step-box">
+						<span class="process-num">02 // STEP</span>
+						<h3>02 STRATEGIZE</h3>
+						<p>Define the right direction, architecture and roadmap.</p>
+					</div>
+
+					<!-- 03 DESIGN -->
+					<div class="process-step-box">
+						<span class="process-num">03 // STEP</span>
+						<h3>03 DESIGN</h3>
+						<p>Craft intuitive, conversion-led user experiences.</p>
+					</div>
+
+					<!-- 04 BUILD -->
+					<div class="process-step-box">
+						<span class="process-num">04 // STEP</span>
+						<h3>04 BUILD</h3>
+						<p>Develop, integrate and launch scalable solutions.</p>
+					</div>
+
+					<!-- 05 GROW -->
+					<div class="process-step-box">
+						<span class="process-num">05 // STEP</span>
+						<h3>05 GROW</h3>
+						<p>Optimize performance and compound digital results.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 6. TRUST / PARTNERSHIP SECTION ==================== -->
+		<section id="approach" class="section">
+			<div class="wrap">
+				<div class="approach-head">
+					<div>
+						<div class="eyebrow">OUR APPROACH</div>
+						<h2 class="section-title">Built around clarity, <span class="accent">not complexity.</span></h2>
+					</div>
+					<p class="section-intro">We believe good digital work starts with understanding the business, choosing the right direction and executing with purpose.</p>
+				</div>
+				<div class="approach-grid">
+					<!-- Principle 1 -->
+					<div class="approach-item">
+						<span class="approach-tag">01 // CLARITY</span>
+						<h3>CLEAR COMMUNICATION</h3>
+						<p>Keep decisions and progress easy to understand at every stage.</p>
+					</div>
+
+					<!-- Principle 2 -->
+					<div class="approach-item">
+						<span class="approach-tag">02 // PRECISION</span>
+						<h3>THOUGHTFUL EXECUTION</h3>
+						<p>Every design and development decision has a deliberate commercial purpose.</p>
+					</div>
+
+					<!-- Principle 3 -->
+					<div class="approach-item">
+						<span class="approach-tag">03 // EVOLUTION</span>
+						<h3>LONG-TERM THINKING</h3>
+						<p>Build a digital foundation that can evolve and scale with the business.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 7. WHY OPTYVIBE (STATEMENT) ==================== -->
+		<section id="statement" class="section">
+			<div class="wrap">
+				<div class="statement-content">
+					<div class="eyebrow" style="margin-bottom:20px">THE OPTYVIBE STANDARD</div>
+					<h2>Good digital work isn't about adding more.<br>It's about making the right things work together.</h2>
+					<p>Strategy, design, technology and growth work better when they move in the same direction.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 8. FINAL CTA ==================== -->
+		<section id="about-cta" class="section">
+			<div class="particle-wave-container" aria-hidden="true"><canvas id="aboutWaveCanvas"></canvas><div class="wave-vignette"></div></div>
+			<div class="wrap">
+				<div class="cta-box">
+					<div class="eyebrow" style="margin-bottom:14px">START A CONVERSATION</div>
+					<h2 class="section-title">Ready to build <span class="accent">what's next?</span></h2>
+					<p>Tell us where you want to go. We'll help you figure out how to get there.</p>
+					<a class="btn primary" href="index.html#contact">Start Your Project <span>↗</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ==================== 9. FOOTER (EXACT HOMEPAGE MATCH) ==================== -->
+	<footer>
+		<div class="wrap">
+			<div class="footer-top">
+				<div>
+					<a class="logo" href="index.html#hero"><img src="logo.png" alt="OPTYVIBE" class="brand-logo"></a>
+					<p class="footer-desc">Designing digital experiences and building growth for ambitious brands.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<a href="index.html#services">Services</a>
+					<a href="index.html#work">Work</a>
+					<a href="about.html">About</a>
+					<a href="index.html#process">Process</a>
+					<a href="index.html#contact">Contact</a>
+				</div>
+				<div class="footer-col">
+					<h4>Services</h4>
+					<a href="index.html#services">UI/UX Design</a>
+					<a href="index.html#services">Website Development</a>
+					<a href="index.html#services">Marketplace Management</a>
+					<a href="index.html#services">Performance Marketing</a>
+				</div>
+				<div class="footer-col">
+					<h4>Social</h4>
+					<a href="index.html#contact">LinkedIn ↗</a>
+					<a href="index.html#contact">Instagram ↗</a>
+					<a href="index.html#contact">Facebook ↗</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>© 2026 OPTYVIBE. All rights reserved.</span>
+				<div>
+					<a href="index.html#hero">Privacy Policy</a>
+					<a href="index.html#hero">Terms</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		const header=document.getElementById('header');
+		window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+		const hamburger=document.querySelector('.hamb');
+		hamburger.onclick=()=>{
+			const isOpen=document.body.classList.toggle('mobile-open');
+			hamburger.textContent=isOpen?'×':'☰';
+			hamburger.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+		};
+		document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>{
+			document.body.classList.remove('mobile-open');
+			hamburger.textContent='☰';
+			hamburger.setAttribute('aria-label','Open menu');
+		});
+
+		(function initAboutParticleWave(){
+			const canvas=document.getElementById('aboutWaveCanvas');
+			if(!canvas)return;
+			const ctx=canvas.getContext('2d');
+			if(!ctx)return;
+			const section=document.getElementById('about-cta');
+			if(!section)return;
+
+			let width=0,height=0,dpr=1,animId=null,isVisible=false,time=0,lastTime=0;
+			const mediaQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+			let prefersReduced=mediaQuery.matches;
+
+			function resize(){
+				const rect=canvas.getBoundingClientRect();
+				width=Math.floor(rect.width);
+				height=Math.floor(rect.height);
+				if(width<=0||height<=0)return;
+				dpr=Math.min(window.devicePixelRatio||1,2);
+				canvas.width=Math.floor(width*dpr);
+				canvas.height=Math.floor(height*dpr);
+			}
+
+			function renderFrame(t){
+				if(width<=0||height<=0)return;
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+
+				const isMobile=width<=800;
+				const cols=isMobile?38:66;
+				const rows=isMobile?20:28;
+				const theta=0.44;
+				const cosT=Math.cos(theta);
+				const sinT=Math.sin(theta);
+				const D=510;
+				const F=440;
+				const horizonY=height*0.50;
+				const zMin=120;
+				const zMax=800;
+				const xSpan=width*(isMobile?0.78:0.68);
+
+				const grid=[];
+				for(let j=0;j<rows;j++){
+					const zRatio=j/(rows-1);
+					const z=zMin+zRatio*(zMax-zMin);
+					const pz=1-zRatio;
+					const fadeZ=Math.sin(zRatio*Math.PI);
+					const rowPoints=[];
+
+					for(let i=0;i<cols;i++){
+						const xRatio=i/(cols-1);
+						const x=-xSpan+xRatio*(2*xSpan);
+						const fadeX=Math.sin(xRatio*Math.PI);
+						const edgeAlpha=Math.pow(fadeX*fadeZ,0.72);
+
+						const w1=Math.sin(x*0.004+t*0.85)*30;
+						const w2=Math.cos(z*0.0038-t*0.95)*34;
+						const w3=Math.cos((x*0.0026-z*0.0036)+t*0.65)*24;
+						const Y=w1+w2+w3;
+
+						const yRot=Y*cosT-z*sinT;
+						const zRot=Y*sinT+z*cosT+D;
+						const scale=(F/zRot)*dpr;
+						const sx=(width/2)*dpr+x*scale;
+						const sy=horizonY*dpr+yRot*scale;
+						const normH=Math.max(0,Math.min(1,(Y+68)/136));
+
+						rowPoints.push({sx,sy,pz,edgeAlpha,normH,scale});
+					}
+					grid.push(rowPoints);
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					const zRatio=j/(rows-1);
+					const pz=1-zRatio;
+					const fadeZ=Math.sin(zRatio*Math.PI);
+
+					ctx.beginPath();
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(i===0)ctx.moveTo(pt.sx,pt.sy);
+						else ctx.lineTo(pt.sx,pt.sy);
+					}
+					const lineAlpha=(0.025+0.10*pz)*fadeZ;
+					ctx.strokeStyle=`rgba(175,200,185,${lineAlpha.toFixed(3)})`;
+					ctx.lineWidth=Math.max(0.5,(0.5+0.55*pz)*dpr);
+					ctx.stroke();
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(pt.edgeAlpha<0.01)continue;
+
+						const isCrest=pt.normH>0.66;
+						let r,g,b,alpha,ptRadius;
+
+						if(isCrest){
+							const crestRatio=(pt.normH-0.66)/0.34;
+							r=Math.round(180+(217-180)*crestRatio);
+							g=Math.round(200+(250-200)*crestRatio);
+							b=Math.round(185+(98-185)*crestRatio);
+							alpha=(0.22+0.46*pt.pz*(0.5+0.5*crestRatio))*pt.edgeAlpha;
+							ptRadius=(0.9+1.2*pt.pz+0.5*crestRatio)*dpr;
+
+							if(crestRatio>0.55&&pt.edgeAlpha>0.4){
+								ctx.beginPath();
+								ctx.arc(pt.sx,pt.sy,ptRadius*2.2,0,Math.PI*2);
+								ctx.fillStyle=`rgba(217,250,98,${(alpha*0.3).toFixed(3)})`;
+								ctx.fill();
+							}
+						}else{
+							r=160;g=180;b=170;
+							alpha=(0.09+0.30*pt.pz*(0.5+0.5*pt.normH))*pt.edgeAlpha;
+							ptRadius=(0.8+0.95*pt.pz)*dpr;
+						}
+
+						ctx.beginPath();
+						ctx.arc(pt.sx,pt.sy,ptRadius,0,Math.PI*2);
+						ctx.fillStyle=`rgba(${r},${g},${b},${alpha.toFixed(3)})`;
+						ctx.fill();
+					}
+				}
+			}
+
+			function loop(now){
+				if(!lastTime)lastTime=now;
+				const delta=Math.min((now-lastTime)/1000,0.1);
+				lastTime=now;
+				time+=delta;
+
+				renderFrame(time);
+
+				if(isVisible&&!prefersReduced){
+					animId=requestAnimationFrame(loop);
+				}else{
+					animId=null;
+				}
+			}
+
+			function start(){
+				if(!animId&&!prefersReduced){
+					lastTime=0;
+					animId=requestAnimationFrame(loop);
+				}
+			}
+
+			function stop(){
+				if(animId){
+					cancelAnimationFrame(animId);
+					animId=null;
+				}
+			}
+
+			const observer=new IntersectionObserver(entries=>{
+				entries.forEach(entry=>{
+					isVisible=entry.isIntersecting;
+					if(isVisible){
+						resize();
+						if(prefersReduced){
+							renderFrame(0);
+						}else{
+							start();
+						}
+					}else{
+						stop();
+					}
+				});
+			},{threshold:0.05});
+
+			observer.observe(section);
+
+			let resizeTimer;
+			window.addEventListener('resize',()=>{
+				clearTimeout(resizeTimer);
+				resizeTimer=setTimeout(()=>{
+					resize();
+					if(prefersReduced||!isVisible){
+						renderFrame(time);
+					}
+				},150);
+			});
+
+			mediaQuery.addEventListener('change',e=>{
+				prefersReduced=e.matches;
+				if(prefersReduced){
+					stop();
+					renderFrame(0);
+				}else if(isVisible){
+					start();
+				}
+			});
+
+			resize();
+			if(prefersReduced)renderFrame(0);
+		})();
+	</script>
+</body>
+</html>
