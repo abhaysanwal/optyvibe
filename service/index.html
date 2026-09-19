@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="OPTYVIBE provides website development, UI/UX design, marketplace management, Amazon and Flipkart listing, Meta Ads and Amazon Ads." />
+	<title>OPTYVIBE — Digital Services for Business Growth</title>
+	<link rel="canonical" href="https://optyvibe.com/service/" />
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		:root{
+			--ink:#101312;
+			--paper:#f3f0e9;
+			--muted:#8d918b;
+			--line:rgba(243,240,233,.14);
+			--acid:#d9fa62;
+			--teal:#76c9b4;
+			--card:#141918;
+			--card-hover:#181f1b;
+			--sans:'Manrope',sans-serif;
+			--mono:'DM Mono',monospace;
+		}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth}
+		body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);overflow-x:hidden}
+		a{color:inherit;text-decoration:none}
+		button,input,select,textarea{font:inherit}
+		button{cursor:pointer;border:0}
+		.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+		.eyebrow{font:11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--acid)}
+		.section{padding:120px 0;position:relative}
+		.section-title{font-size:clamp(38px,5vw,68px);line-height:1.02;letter-spacing:-.06em;margin:18px 0 22px}
+		.section-intro{color:#a2aba1;max-width:560px;line-height:1.7;font-size:15px}
+		.accent{color:var(--acid)}
+
+		/* ==================== HEADER ==================== */
+		header{position:fixed;top:0;left:0;width:100%;z-index:30;transition:.3s;border-bottom:1px solid transparent}
+		header.scrolled{background:rgba(16,19,18,.88);backdrop-filter:blur(16px);border-color:var(--line)}
+		nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+		.brand{display:flex;align-items:center;gap:0px;color:var(--acid);text-decoration:none;line-height:1}
+		.brand-name{font:700 clamp(1.2rem,1.1vw + .65rem,1.5rem)/1 var(--sans);letter-spacing:-.045em;white-space:nowrap;transition:opacity .3s ease;position:relative;top:8px;margin:0;padding:0}
+		.brand-symbol{position:relative;width:100px;height:96px;flex:0 0 100px;overflow:hidden;margin:0;padding:0}
+		.brand-symbol .brand-logo{position:absolute;width:522px;height:522px;max-width:none;left:-199px;top:-183px;display:block;object-fit:contain}
+		@media(min-width:801px){header .brand{transform:translateX(calc(80px - max(24px,(100vw - 1180px) / 2)))}}
+		@media(min-width:801px) and (max-width:1100px){.brand-symbol{width:80px;height:84px;flex-basis:80px}.brand-symbol .brand-logo{width:424px;height:424px;left:-162px;top:-146px}header .brand-name{font-size:1.25rem}}
+		@media(max-width:800px){header .brand{max-width:calc(100% - 48px);transform:translateY(6px)}.brand-symbol{width:80px;height:76px;flex-basis:80px}.brand-symbol .brand-logo{width:413px;height:413px;left:-158px;top:-145px}header .brand-name{font-size:clamp(.95rem,4.7vw,1.2rem);top:2px}}
+
+		.nav-links{display:flex;gap:31px;color:#a6aca5;font-size:12px}
+		.nav-links a{transition:.2s}
+		.nav-links a:hover{color:var(--paper)}
+		.nav-links a.active{color:var(--acid);font-weight:700;position:relative}
+		.nav-links a.active:after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--acid);border-radius:1px}
+
+		.nav-cta,.btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1px solid var(--line);font-size:12px;transition:.25s}
+		.nav-cta:hover,.btn.secondary:hover{border-color:var(--acid);color:var(--acid)}
+		.btn.primary{background:var(--acid);color:var(--ink);border-color:var(--acid);font-weight:800}
+		.btn.primary:hover{background:#efff99;transform:translateY(-2px)}
+		.hamb{display:none;background:none;color:var(--paper);font-size:22px}
+
+		/* ==================== 1. SERVICES HERO ==================== */
+		#services-hero{
+			padding-top:175px;
+			padding-bottom:110px;
+			min-height:640px;
+			background:radial-gradient(ellipse at 85% 25%,rgba(92,134,105,.18),transparent 45%),radial-gradient(ellipse at 12% 85%,rgba(217,250,98,.04),transparent 40%),#101312;
+			position:relative;
+			overflow:hidden;
+		}
+		#services-hero:after{
+			content:'';
+			position:absolute;
+			inset:0;
+			z-index:0;
+			opacity:.18;
+			background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+			background-size:75px 75px;
+			mask-image:linear-gradient(to bottom,#000 65%,transparent 95%);
+			pointer-events:none;
+		}
+		.services-hero-grid{
+			display:grid;
+			grid-template-columns:1.05fr .95fr;
+			gap:48px;
+			align-items:center;
+			position:relative;
+			z-index:1;
+		}
+		.services-hero-copy h1{
+			font-size:clamp(44px,5.2vw,74px);
+			line-height:.98;
+			letter-spacing:-.065em;
+			margin:20px 0 24px;
+			font-weight:800;
+		}
+		.services-hero-copy p{
+			max-width:530px;
+			color:#a8b0a7;
+			line-height:1.75;
+			font-size:16px;
+			margin:0 0 32px;
+		}
+		.hero-actions{
+			display:flex;
+			gap:14px;
+			flex-wrap:wrap;
+		}
+		.hero-badge-strip{
+			display:flex;
+			gap:10px;
+			margin-top:40px;
+			flex-wrap:wrap;
+		}
+		.hero-badge{
+			border:1px solid var(--line);
+			background:rgba(20,25,24,.75);
+			padding:7px 12px;
+			font:10px var(--mono);
+			color:#8e968d;
+			letter-spacing:.06em;
+		}
+
+		/* Hero Architectural Graphic */
+		.services-hero-visual{
+			position:relative;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			min-height:380px;
+		}
+		.hero-frame{
+			position:relative;
+			width:100%;
+			max-width:480px;
+			height:360px;
+			border:1px solid rgba(243,240,233,.12);
+			background:linear-gradient(145deg,rgba(20,25,24,.92),rgba(14,17,16,.85));
+			box-shadow:0 30px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);
+			padding:24px;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			overflow:hidden;
+		}
+		.hero-frame:before{
+			content:'';
+			position:absolute;
+			top:-50px;
+			right:-50px;
+			width:160px;
+			height:160px;
+			background:var(--acid);
+			filter:blur(80px);
+			opacity:.07;
+			pointer-events:none;
+		}
+		.frame-top{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			font:10px var(--mono);
+			color:#777f77;
+			border-bottom:1px solid var(--line);
+			padding-bottom:14px;
+		}
+		.frame-top .dots{display:flex;gap:5px}
+		.frame-top .dots i{width:6px;height:6px;border-radius:50%;background:#4a544b}
+		.frame-body{
+			display:grid;
+			grid-template-columns:1fr 1fr;
+			gap:16px;
+			margin:16px 0;
+		}
+		.frame-card{
+			border:1px solid var(--line);
+			background:rgba(23,28,26,.65);
+			padding:16px;
+			transition:.3s;
+		}
+		.frame-card:hover{border-color:rgba(217,250,98,.4)}
+		.frame-card small{font:9px var(--mono);color:var(--acid);letter-spacing:.1em;display:block;margin-bottom:6px}
+		.frame-card strong{font-size:14px;color:var(--paper);display:block;letter-spacing:-.03em}
+		.frame-card span{font:10px var(--mono);color:#7f877e;display:block;margin-top:6px}
+		.frame-bottom{
+			border-top:1px solid var(--line);
+			padding-top:12px;
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			font:10px var(--mono);
+			color:#8a9289;
+		}
+		.frame-bottom b{color:var(--acid);font-weight:500}
+
+		/* ==================== 2. CORE SERVICES GRID ==================== */
+		#services-grid{
+			background:#101312;
+			border-top:1px solid var(--line);
+		}
+		.services-head{
+			display:flex;
+			justify-content:space-between;
+			align-items:flex-end;
+			margin-bottom:60px;
+			gap:40px;
+		}
+		.service-grid{
+			display:grid;
+			grid-template-columns:repeat(3,1fr);
+			gap:18px;
+		}
+		.service-card{
+			min-height:360px;
+			padding:32px;
+			background:#141918;
+			border:1px solid rgba(243,240,233,.16);
+			box-shadow:inset 0 1px 0 rgba(255,255,255,.02),0 12px 24px rgba(0,0,0,.08);
+			display:flex;
+			flex-direction:column;
+			position:relative;
+			overflow:hidden;
+			cursor:pointer;
+			transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+		}
+		.service-card:before{
+			content:'';
+			position:absolute;
+			width:220px;
+			height:220px;
+			right:-100px;
+			bottom:-120px;
+			background:var(--acid);
+			filter:blur(90px);
+			opacity:0;
+			transition:opacity .35s ease;
+			pointer-events:none;
+		}
+		.service-card:hover{
+			transform:translateY(-4px);
+			border-color:rgba(217,250,98,.55);
+			box-shadow:inset 0 1px 0 rgba(255,255,255,.03),0 16px 32px rgba(0,0,0,.18),0 0 0 1px rgba(217,250,98,.08);
+		}
+		.service-card:hover:before{opacity:.08}
+		.card-top{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			margin-bottom:24px;
+			font:11px var(--mono);
+			color:#777f78;
+		}
+		.card-top .num{
+			color:#777f78;
+			font-size:12px;
+		}
+		.service-visual{
+			width:58px;
+			height:58px;
+			border:1px solid rgba(217,250,98,.16);
+			background:rgba(217,250,98,.02);
+			display:grid;
+			place-items:center;
+			color:var(--acid);
+			transition:transform .28s ease,border-color .28s ease,filter .28s ease;
+		}
+		.service-visual svg{
+			width:34px;
+			height:34px;
+			stroke:currentColor;
+			fill:none;
+			stroke-width:1.35;
+			stroke-linecap:round;
+			stroke-linejoin:round;
+		}
+		.service-card:hover .service-visual{
+			transform:scale(1.05);
+			border-color:rgba(217,250,98,.35);
+			filter:drop-shadow(0 0 8px rgba(217,250,98,.15));
+		}
+		.service-content h3{
+			font-size:23px;
+			line-height:1.15;
+			letter-spacing:-.05em;
+			margin:0 0 12px;
+			font-weight:700;
+		}
+		.service-content p{
+			color:#929a92;
+			font-size:13.5px;
+			line-height:1.65;
+			margin:0 0 20px;
+		}
+		.card-deliverables{
+			display:flex;
+			flex-wrap:wrap;
+			gap:6px;
+			margin-top:auto;
+			padding-top:14px;
+			border-top:1px dashed rgba(243,240,233,.1);
+		}
+		.card-deliverables span{
+			font:9.5px var(--mono);
+			color:#8a9489;
+			background:rgba(255,255,255,.025);
+			border:1px solid rgba(243,240,233,.08);
+			padding:4px 8px;
+			border-radius:2px;
+		}
+		.card-arrow{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			margin-top:18px;
+			color:var(--acid);
+			font:11px var(--mono);
+			letter-spacing:.04em;
+			text-transform:uppercase;
+		}
+		.card-arrow span{
+			font-size:18px;
+			line-height:1;
+			transition:transform .25s ease;
+		}
+		.service-card:hover .card-arrow span{
+			transform:translateX(5px);
+		}
+
+		/* ==================== 3. SERVICE DETAILS (GROWTH JOURNEY) ==================== */
+		#growth-journey{
+			background:#121614;
+			border-top:1px solid var(--line);
+		}
+		.journey-head{
+			max-width:680px;
+			margin-bottom:60px;
+		}
+		.journey-grid{
+			display:grid;
+			grid-template-columns:repeat(4,1fr);
+			gap:16px;
+			position:relative;
+		}
+		.journey-card{
+			background:#161c19;
+			border:1px solid var(--line);
+			padding:32px 26px;
+			position:relative;
+			display:flex;
+			flex-direction:column;
+			transition:transform .25s ease,border-color .25s ease;
+		}
+		.journey-card:hover{
+			border-color:rgba(217,250,98,.4);
+			transform:translateY(-3px);
+		}
+		.journey-step{
+			font:10.5px var(--mono);
+			color:var(--acid);
+			letter-spacing:.12em;
+			margin-bottom:20px;
+			display:block;
+		}
+		.journey-card h3{
+			font-size:25px;
+			letter-spacing:-.045em;
+			margin:0 0 12px;
+			font-weight:800;
+		}
+		.journey-card .summary{
+			color:var(--paper);
+			font-size:14px;
+			line-height:1.55;
+			font-weight:600;
+			margin:0 0 14px;
+		}
+		.journey-card .desc{
+			color:#8a9389;
+			font-size:12.5px;
+			line-height:1.65;
+			margin:0;
+		}
+
+		/* ==================== 4. WHY OPTYVIBE ==================== */
+		#why-optyvibe{
+			background:#101312;
+			border-top:1px solid var(--line);
+		}
+		.why-grid{
+			display:grid;
+			grid-template-columns:repeat(4,1fr);
+			gap:16px;
+			margin-top:55px;
+		}
+		.why-card{
+			background:#141816;
+			border:1px solid var(--line);
+			padding:30px 24px;
+			display:flex;
+			flex-direction:column;
+			position:relative;
+			transition:transform .28s ease,border-color .28s ease;
+		}
+		.why-card:hover{
+			border-color:rgba(217,250,98,.45);
+			transform:translateY(-3px);
+		}
+		.why-card-top{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			margin-bottom:26px;
+		}
+		.why-card-top span{
+			font:11px var(--mono);
+			color:#777f78;
+		}
+		.why-icon{
+			width:42px;
+			height:42px;
+			color:var(--acid);
+			display:grid;
+			place-items:center;
+			transition:transform .25s ease;
+		}
+		.why-icon svg{
+			width:100%;
+			height:100%;
+			fill:none;
+			stroke:currentColor;
+			stroke-width:1.35;
+			stroke-linecap:round;
+			stroke-linejoin:round;
+		}
+		.why-card:hover .why-icon{
+			transform:scale(1.06);
+		}
+		.why-card h3{
+			font-size:20px;
+			letter-spacing:-.04em;
+			margin:0 0 12px;
+			font-weight:700;
+		}
+		.why-card p{
+			color:#8b9389;
+			font-size:13px;
+			line-height:1.65;
+			margin:0;
+		}
+
+		/* ==================== 5. FINAL CTA ==================== */
+		#service-cta{
+			padding:130px 0;
+			text-align:center;
+			border-top:1px solid var(--line);
+			background:radial-gradient(ellipse at 50% 100%,rgba(32,53,42,.5) 0%,#101312 70%);
+			position:relative;
+			overflow:hidden;
+		}
+		.particle-wave-container{
+			position:absolute;
+			inset:0;
+			width:100%;
+			height:100%;
+			pointer-events:none;
+			z-index:1;
+			overflow:hidden;
+		}
+		.particle-wave-container canvas{
+			display:block;
+			width:100%;
+			height:100%;
+		}
+		.wave-vignette{
+			position:absolute;
+			inset:0;
+			background:radial-gradient(ellipse at 50% 60%,transparent 35%,rgba(16,19,18,.7) 80%,#101312 100%),
+			           linear-gradient(to bottom,#101312 0%,transparent 18%,transparent 80%,#101312 100%);
+			pointer-events:none;
+		}
+		#service-cta .wrap{position:relative;z-index:2}
+		.cta-box{max-width:640px;margin:auto;position:relative;z-index:2}
+		.cta-box .section-title{font-size:clamp(40px,5.2vw,68px);margin:14px 0 18px;line-height:1.04}
+		.cta-box p{font-size:16px;color:#a2aaa1;margin:0 auto 34px;max-width:480px;line-height:1.65}
+		.cta-box .btn{padding:14px 28px;font-size:13px}
+
+		/* ==================== 6. MODAL ==================== */
+		.modal{
+			position:fixed;
+			inset:0;
+			background:rgba(14,17,16,.86);
+			backdrop-filter:blur(10px);
+			z-index:50;
+			display:none;
+			place-items:center;
+			padding:25px;
+		}
+		.modal.open{display:grid}
+		.modal-box{
+			background:#1d2320;
+			border:1px solid var(--acid);
+			max-width:580px;
+			width:100%;
+			padding:40px;
+			position:relative;
+			box-shadow:0 25px 60px rgba(0,0,0,.6);
+		}
+		.modal-box h2{
+			font-size:38px;
+			letter-spacing:-.06em;
+			margin:12px 0;
+		}
+		.modal-box p{
+			color:#a4ada5;
+			line-height:1.7;
+			font-size:14px;
+		}
+		.modal-box h4{
+			font:11px var(--mono);
+			color:var(--acid);
+			margin:28px 0 12px;
+			letter-spacing:.1em;
+		}
+		.modal-box ul{
+			padding-left:18px;
+			margin:0 0 28px;
+		}
+		.modal-box li{
+			color:#cfd6ce;
+			margin:8px 0;
+			font-size:13px;
+			line-height:1.5;
+		}
+		.modal-close{
+			position:absolute;
+			right:18px;
+			top:16px;
+			background:none;
+			color:var(--paper);
+			font-size:24px;
+			line-height:1;
+			padding:4px;
+		}
+
+		/* ==================== 7. FOOTER ==================== */
+		footer{padding:65px 0 30px;border-top:1px solid var(--line);background:#101312}
+		.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:35px}
+		.brand-logo{width:175px;height:auto;display:block;object-fit:contain;opacity:1;transition:opacity .3s ease}
+		.footer-desc{color:#838b83;line-height:1.6;font-size:13px;max-width:230px;margin-top:20px}
+		.footer-col h4{font:10px var(--mono);color:var(--acid);margin:2px 0 20px;text-transform:uppercase;letter-spacing:.1em}
+		.footer-col a{display:block;font-size:12px;color:#969d96;margin:0 0 12px;transition:.2s}
+		.footer-col a:hover{color:var(--paper)}
+		.footer-bottom{border-top:1px solid var(--line);margin-top:70px;padding-top:18px;display:flex;justify-content:space-between;color:#626a62;font:10px var(--mono)}
+		.footer-bottom div{display:flex;gap:20px}
+
+		/* ==================== 8. RESPONSIVE ==================== */
+		@media(max-width:1100px) and (min-width:801px){
+			.service-grid{grid-template-columns:repeat(2,1fr)}
+			.journey-grid{grid-template-columns:repeat(2,1fr)}
+			.why-grid{grid-template-columns:repeat(2,1fr)}
+			.footer-top{grid-template-columns:repeat(2,1fr)}
+		}
+		@media(max-width:800px){
+			.wrap{width:min(100% - 32px,620px)}
+			.section{padding:76px 0}
+			nav{height:70px}
+			.nav-links,.nav-cta{display:none}
+			.hamb{display:block}
+			.mobile-open .nav-links{
+				display:flex;
+				position:absolute;
+				top:70px;
+				left:0;
+				width:100%;
+				padding:24px 16px;
+				flex-direction:column;
+				background:#171b19;
+				border-bottom:1px solid var(--line);
+			}
+			.mobile-open .nav-links a{font-size:18px}
+			.mobile-open .nav-links a.active:after{display:none}
+
+			/* Hero Mobile */
+			#services-hero{padding-top:125px;padding-bottom:60px;min-height:0}
+			.services-hero-grid{grid-template-columns:1fr;gap:36px}
+			.services-hero-copy h1{font-size:clamp(38px,11vw,56px);line-height:.98;margin:16px 0 20px}
+			.services-hero-copy p{font-size:15px;margin-bottom:26px}
+			.services-hero-visual{min-height:0}
+			.hero-frame{height:auto;padding:18px}
+			.frame-body{grid-template-columns:1fr;gap:10px}
+
+			/* Grids Mobile */
+			.services-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:36px}
+			.service-grid{grid-template-columns:1fr;gap:14px}
+			.service-card{min-height:0;padding:24px 22px}
+			.service-content h3{font-size:21px}
+			.journey-grid{grid-template-columns:1fr;gap:12px}
+			.journey-card{padding:24px 20px}
+			.why-grid{grid-template-columns:1fr;gap:12px;margin-top:36px}
+			.why-card{padding:24px 20px}
+
+			/* Footer Mobile */
+			.footer-top{grid-template-columns:1fr 1fr;gap:28px}
+			.footer-top>div:first-child{grid-column:1/-1}
+			.footer-bottom{flex-direction:column;gap:12px}
+			#service-cta{padding:90px 0}
+			.modal-box{padding:26px 20px}
+			.modal-box h2{font-size:28px}
+		}
+		@media(max-width:480px){
+			.footer-top{grid-template-columns:1fr}
+		}
+	</style>
+</head>
+<body>
+	<!-- ==================== HEADER ==================== -->
+	<header id="header">
+		<nav class="wrap">
+			<a class="logo brand" href="/">
+				<span class="brand-symbol"><img src="../logo.png" alt="optyvibe" class="brand-logo"></span>
+				<span class="brand-name">optyvibe</span>
+			</a>
+			<div class="nav-links">
+				<a href="/">Home</a>
+				<a href="/service/" class="active">Services</a>
+				<a href="/#work">Work</a>
+				<a href="/#process">Process</a>
+				<a href="/about-us">About</a>
+				<a href="/#contact">Contact</a>
+			</div>
+			<a class="nav-cta" href="/#contact">Let's talk <span>↗</span></a>
+			<button class="hamb" aria-label="Open menu">☰</button>
+		</nav>
+	</header>
+
+	<main>
+		<!-- ==================== 1. SERVICES HERO ==================== -->
+		<section id="services-hero" class="section">
+			<div class="wrap services-hero-grid">
+				<div class="services-hero-copy">
+					<div class="eyebrow">WHAT WE DO</div>
+					<h1>Digital services built to move your business <span class="accent">forward.</span></h1>
+					<p>From strategy and design to development, marketplaces and performance marketing — we bring the digital pieces together under one roof.</p>
+					<div class="hero-actions">
+						<a class="btn primary" href="/#contact">Start Your Project <span>↗</span></a>
+						<a class="btn secondary" href="#services-grid">Explore Services <span>↓</span></a>
+					</div>
+					<div class="hero-badge-strip">
+						<span class="hero-badge">UI/UX</span>
+						<span class="hero-badge">WEBSITE DEVELOPMENT</span>
+						<span class="hero-badge">MARKETPLACES</span>
+						<span class="hero-badge">PERFORMANCE ADS</span>
+					</div>
+				</div>
+				<div class="services-hero-visual" aria-hidden="true">
+					<div class="hero-frame">
+						<div class="frame-top">
+							<div class="dots"><i></i><i></i><i></i></div>
+							<span>OPTYVIBE // SERVICE ARCHITECTURE</span>
+							<span>V 2.6</span>
+						</div>
+						<div class="frame-body">
+							<div class="frame-card">
+								<small>DISCIPLINE 01</small>
+								<strong>EXPERIENCE &amp; CODE</strong>
+								<span>Websites · UX Systems</span>
+							</div>
+							<div class="frame-card">
+								<small>DISCIPLINE 02</small>
+								<strong>COMMERCE CHANNELS</strong>
+								<span>Amazon · Flipkart Ops</span>
+							</div>
+							<div class="frame-card">
+								<small>DISCIPLINE 03</small>
+								<strong>PAID ACQUISITION</strong>
+								<span>Meta Ads · Amazon Ads</span>
+							</div>
+							<div class="frame-card">
+								<small>DISCIPLINE 04</small>
+								<strong>COMPOUND GROWTH</strong>
+								<span>Analytics · CRO Lifecycles</span>
+							</div>
+						</div>
+						<div class="frame-bottom">
+							<span>METHODOLOGY: <b>INTEGRATED STACK</b></span>
+							<span>STATUS: <b>DEPLOYED</b></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 2. CORE SERVICES GRID ==================== -->
+		<section id="services-grid" class="section">
+			<div class="wrap">
+				<div class="services-head">
+					<div>
+						<div class="eyebrow">CORE CAPABILITIES</div>
+						<h2 class="section-title">Everything you need to <span class="accent">grow online.</span></h2>
+					</div>
+					<p class="section-intro">From your first screen to your next sale, we combine design, technology, e-commerce, and performance marketing to move businesses forward.</p>
+				</div>
+				<div class="service-grid" id="serviceGrid">
+					<!-- 01 Website Development -->
+					<article class="service-card" tabindex="0" data-index="0">
+						<div class="card-top">
+							<span class="num">01 // DEV</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="11" width="48" height="40" rx="4"/><path d="M8 21h48M17 16h.01M22 16h.01M27 16h.01M18 30l5 5 8-9 7 7 8-8M18 43h28"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>Website Development</h3>
+							<p>Fast, responsive and scalable websites built to turn visitors into customers.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>Responsive builds</span>
+							<span>CMS integrations</span>
+							<span>Speed &amp; QA testing</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+
+					<!-- 02 UI/UX Design -->
+					<article class="service-card" tabindex="0" data-index="1">
+						<div class="card-top">
+							<span class="num">02 // DESIGN</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="12" width="46" height="36" rx="4"/><path d="M9 22h46M17 17h.01M22 17h.01M27 17h.01M18 31h13M18 38h22"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>UI/UX Design</h3>
+							<p>Intuitive, modern interfaces designed around real users and real business goals.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>User journeys</span>
+							<span>Design systems</span>
+							<span>Clickable prototypes</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+
+					<!-- 03 Marketplace Management -->
+					<article class="service-card" tabindex="0" data-index="2">
+						<div class="card-top">
+							<span class="num">03 // COMMERCE</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M11 20h42v32H11zM11 20l7-9h28l7 9M25 30h14v10H25zM18 25h.01M24 25h.01"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>Marketplace Management</h3>
+							<p>End-to-end management for your e-commerce marketplace presence.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>Catalog operations</span>
+							<span>Account health</span>
+							<span>Weekly reporting</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+
+					<!-- 04 Amazon & Flipkart Listing -->
+					<article class="service-card" tabindex="0" data-index="3">
+						<div class="card-top">
+							<span class="num">04 // LISTING</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="13" y="9" width="38" height="46" rx="3"/><path d="M20 19h24M20 27h24M20 35h13M20 44h18M39 35l4 4 7-8"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>Amazon &amp; Flipkart Listing</h3>
+							<p>Optimized product listings designed to improve visibility, clicks and conversions.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>Keyword strategy</span>
+							<span>A+ / EBC imagery</span>
+							<span>Search rank push</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+
+					<!-- 05 Meta Ads -->
+					<article class="service-card" tabindex="0" data-index="4">
+						<div class="card-top">
+							<span class="num">05 // ADS</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 47h44M14 42l10-12 8 7 15-20"/><path d="M40 17h7v7M47 17l-15 20"/><circle cx="14" cy="42" r="3"/><circle cx="24" cy="30" r="3"/><circle cx="32" cy="37" r="3"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>Meta Ads</h3>
+							<p>Performance-driven campaigns designed to reach the right audience and generate measurable growth.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>Audience targeting</span>
+							<span>Creative testing</span>
+							<span>ROAS optimization</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+
+					<!-- 06 Amazon Ads -->
+					<article class="service-card" tabindex="0" data-index="5">
+						<div class="card-top">
+							<span class="num">06 // ADS</span>
+							<span class="service-visual">
+								<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 18h44v31H10zM10 25h44M18 33h14M18 40h22"/><path d="M42 39l5-5 5 5M47 34v11"/></svg>
+							</span>
+						</div>
+						<div class="service-content">
+							<h3>Amazon Ads</h3>
+							<p>Strategic advertising designed to increase product visibility and profitable sales.</p>
+						</div>
+						<div class="card-deliverables">
+							<span>Sponsored Products</span>
+							<span>Bid management</span>
+							<span>ACoS reduction</span>
+						</div>
+						<div class="card-arrow">View details <span>→</span></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 3. SERVICE DETAILS (GROWTH JOURNEY) ==================== -->
+		<section id="growth-journey" class="section">
+			<div class="wrap">
+				<div class="journey-head">
+					<div class="eyebrow">THE DIGITAL GROWTH JOURNEY</div>
+					<h2 class="section-title">How OPTYVIBE works across <span class="accent">every stage.</span></h2>
+					<p class="section-intro">Sustainable growth happens when strategy, design, code, and marketing work in lockstep rather than in isolated silos.</p>
+				</div>
+				<div class="journey-grid">
+					<!-- STRATEGY -->
+					<div class="journey-card">
+						<span class="journey-step">01 // STAGE</span>
+						<h3>STRATEGY</h3>
+						<p class="summary">Understand the business, audience and opportunity.</p>
+						<p class="desc">We analyze your market landscape, customer expectations, and competitive gaps to establish a clear digital roadmap built on measurable commercial targets.</p>
+					</div>
+
+					<!-- DESIGN -->
+					<div class="journey-card">
+						<span class="journey-step">02 // STAGE</span>
+						<h3>DESIGN</h3>
+						<p class="summary">Create clear, premium and conversion-focused experiences.</p>
+						<p class="desc">We craft user journeys and interface systems where every layout choice, visual detail, and interaction reduces friction and drives user trust.</p>
+					</div>
+
+					<!-- BUILD -->
+					<div class="journey-card">
+						<span class="journey-step">03 // STAGE</span>
+						<h3>BUILD</h3>
+						<p class="summary">Develop fast, responsive and scalable digital products.</p>
+						<p class="desc">We engineer performant digital foundations with clean architectures, ensuring lightning-fast load times, solid security, and seamless CMS integrations.</p>
+					</div>
+
+					<!-- GROW -->
+					<div class="journey-card">
+						<span class="journey-step">04 // STAGE</span>
+						<h3>GROW</h3>
+						<p class="summary">Use marketing, marketplaces and performance channels to drive growth.</p>
+						<p class="desc">We deploy targeted advertising, marketplace listings, and data-driven optimizations to scale profitable acquisition and customer lifetime value.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 4. WHY OPTYVIBE ==================== -->
+		<section id="why-optyvibe" class="section">
+			<div class="wrap">
+				<div class="eyebrow">WHY OPTYVIBE</div>
+				<h2 class="section-title">More than a <span class="accent">service provider.</span></h2>
+				<p class="section-intro">We connect strategy, design, technology and marketing so your digital presence works as one system.</p>
+				<div class="why-grid">
+					<article class="why-card">
+						<div class="why-card-top">
+							<span>01</span>
+							<span class="why-icon">
+								<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 15v9l6 4M12 13l-3-3M36 13l3-3"/></svg>
+							</span>
+						</div>
+						<h3>Strategic Thinking</h3>
+						<p>We don't just execute tasks. We understand the business behind them.</p>
+					</article>
+					<article class="why-card">
+						<div class="why-card-top">
+							<span>02</span>
+							<span class="why-icon">
+								<svg viewBox="0 0 48 48" aria-hidden="true"><path d="m12 29 7 7 17-20"/><path d="M9 13h30M9 19h18"/></svg>
+							</span>
+						</div>
+						<h3>Premium Execution</h3>
+						<p>Every touchpoint is designed and delivered with attention to detail.</p>
+					</article>
+					<article class="why-card">
+						<div class="why-card-top">
+							<span>03</span>
+							<span class="why-icon">
+								<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 36h30M13 31l7-8 5 4 10-13"/><path d="M29 14h6v6"/></svg>
+							</span>
+						</div>
+						<h3>Performance Focused</h3>
+						<p>We focus on outcomes, not just deliverables.</p>
+					</article>
+					<article class="why-card">
+						<div class="why-card-top">
+							<span>04</span>
+							<span class="why-icon">
+								<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 38s-14-8-14-19a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 11-14 19-14 19Z"/><path d="M17 24h5l2-4 3 8 2-4h3"/></svg>
+							</span>
+						</div>
+						<h3>Long-Term Partnership</h3>
+						<p>From launch to growth, we're here when your business evolves.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== 5. FINAL CTA ==================== -->
+		<section id="service-cta" class="section">
+			<div class="particle-wave-container" aria-hidden="true"><canvas id="serviceWaveCanvas"></canvas><div class="wave-vignette"></div></div>
+			<div class="wrap">
+				<div class="cta-box">
+					<div class="eyebrow" style="margin-bottom:14px">START A CONVERSATION</div>
+					<h2 class="section-title">Ready to build <span class="accent">what's next?</span></h2>
+					<p>Tell us where you want to go. We'll help you figure out how to get there.</p>
+					<a class="btn primary" href="/#contact">Start Your Project <span>↗</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ==================== 6. MODAL ==================== -->
+	<div class="modal" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+		<div class="modal-box">
+			<button class="modal-close" aria-label="Close service details">×</button>
+			<div class="eyebrow" id="modalEyebrow"></div>
+			<h2 id="modalTitle"></h2>
+			<p id="modalDescription"></p>
+			<h4>WHAT WE DELIVER</h4>
+			<ul id="modalList"></ul>
+			<a href="/#contact" class="btn primary" id="modalCta">Start a conversation ↗</a>
+		</div>
+	</div>
+
+	<!-- ==================== 7. FOOTER ==================== -->
+	<footer>
+		<div class="wrap">
+			<div class="footer-top">
+				<div>
+					<a class="logo brand" href="/">
+						<span class="brand-symbol"><img src="../logo.png" alt="optyvibe" class="brand-logo"></span>
+						<span class="brand-name">optyvibe</span>
+					</a>
+					<p class="footer-desc">Designing digital experiences and building growth for ambitious brands.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<a href="/service/">Services</a>
+					<a href="/#work">Work</a>
+					<a href="/about-us">About</a>
+					<a href="/#process">Process</a>
+					<a href="/#contact">Contact</a>
+				</div>
+				<div class="footer-col">
+					<h4>Services</h4>
+					<a href="/service/">UI/UX Design</a>
+					<a href="/service/">Website Development</a>
+					<a href="/service/">Marketplace Management</a>
+					<a href="/service/">Performance Marketing</a>
+				</div>
+				<div class="footer-col">
+					<h4>Social</h4>
+					<a href="https://www.linkedin.com/company/optyvibe" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+					<a href="/#contact">Instagram ↗</a>
+					<a href="/#contact">Facebook ↗</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>© 2026 OPTYVIBE. All rights reserved.</span>
+				<div>
+					<a href="/#hero">Privacy Policy</a>
+					<a href="/#hero">Terms</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		// Header scroll behavior
+		const header=document.getElementById('header');
+		window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+
+		// Mobile Navigation
+		const hamburger=document.querySelector('.hamb');
+		hamburger.onclick=()=>{
+			const isOpen=document.body.classList.toggle('mobile-open');
+			hamburger.textContent=isOpen?'×':'☰';
+			hamburger.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+		};
+		document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>{
+			document.body.classList.remove('mobile-open');
+			hamburger.textContent='☰';
+			hamburger.setAttribute('aria-label','Open menu');
+		});
+
+		// Service Data for Modals
+		const serviceDetails=[
+			{
+				title:'Website Development',
+				desc:'Fast, responsive and scalable websites built to turn visitors into customers.',
+				deliver:['Responsive front-end builds','CMS and commerce integrations','Performance, speed and QA testing','Cross-browser and mobile optimization']
+			},
+			{
+				title:'UI/UX Design',
+				desc:'Intuitive, modern interfaces designed around real users and real business goals.',
+				deliver:['User research and customer journeys','Wireframes, UX flow and visual design systems','Interactive clickable prototypes','Design-to-code handoff specifications']
+			},
+			{
+				title:'Marketplace Management',
+				desc:'End-to-end management for your e-commerce marketplace presence.',
+				deliver:['Catalog and inventory synchronization','Seller account health monitoring','Buy Box and pricing strategy','Weekly performance analytics and reporting']
+			},
+			{
+				title:'Amazon & Flipkart Listing',
+				desc:'Optimized product listings designed to improve visibility, clicks and conversions.',
+				deliver:['Keyword-rich search content strategy','A+ Content, EBC & brand store direction','Conversion-focused product image strategy','Organic search rank optimization']
+			},
+			{
+				title:'Meta Ads',
+				desc:'Performance-driven campaigns designed to reach the right audience and generate measurable growth.',
+				deliver:['Custom audience segmentation and lookalikes','Creative copywriting and ad testing','Pixel, CAPI and attribution setup','Daily bid management and ROAS scaling']
+			},
+			{
+				title:'Amazon Ads',
+				desc:'Strategic advertising designed to increase product visibility and profitable sales.',
+				deliver:['Sponsored Products, Brands and Display strategy','Negative keyword harvesting and bid pruning','ACoS / TACoS focused campaign scaling','Competitor and category conquesting']
+			}
+		];
+
+		const modal=document.getElementById('serviceModal');
+		function openServiceModal(index){
+			const s=serviceDetails[index];
+			document.getElementById('modalEyebrow').textContent=`0${index+1} // CAPABILITY`;
+			document.getElementById('modalTitle').textContent=s.title;
+			document.getElementById('modalDescription').textContent=s.desc;
+			document.getElementById('modalList').innerHTML=s.deliver.map(item=>`<li>${item}</li>`).join('');
+			modal.classList.add('open');
+			document.querySelector('.modal-close').focus();
+		}
+		function closeModal(){modal.classList.remove('open')}
+		document.querySelector('.modal-close').onclick=closeModal;
+		modal.onclick=e=>{if(e.target===modal)closeModal()};
+		document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+		document.getElementById('modalCta').onclick=closeModal;
+
+		document.querySelectorAll('.service-card').forEach(card=>{
+			const idx=parseInt(card.dataset.index,10);
+			card.onclick=()=>openServiceModal(idx);
+			card.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openServiceModal(idx)};
+		});
+
+		// Particle Wave Animation for Service CTA
+		(function initParticleWave(){
+			const canvas=document.getElementById('serviceWaveCanvas');
+			if(!canvas)return;
+			const ctx=canvas.getContext('2d');
+			const section=document.getElementById('service-cta');
+
+			let width=0,height=0,dpr=1;
+			let animId=null,time=0,lastTime=0;
+			let isVisible=false;
+
+			const mediaQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+			let prefersReduced=mediaQuery.matches;
+
+			function resize(){
+				const rect=section.getBoundingClientRect();
+				width=rect.width;
+				height=rect.height;
+				dpr=Math.min(window.devicePixelRatio||1,2);
+
+				canvas.width=Math.round(width*dpr);
+				canvas.height=Math.round(height*dpr);
+				canvas.style.width=width+'px';
+				canvas.style.height=height+'px';
+			}
+
+			function renderFrame(t){
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+
+				const isMobile=width<768;
+				const cols=isMobile?26:44;
+				const rows=isMobile?13:20;
+				const gridWidth=width*1.15;
+				const gridDepth=isMobile?280:360;
+
+				const horizonY=height*0.50;
+				const F=isMobile?320:440;
+				const D=isMobile?180:220;
+				const tilt=12*Math.PI/180;
+				const cosT=Math.cos(tilt),sinT=Math.sin(tilt);
+
+				const grid=[];
+
+				for(let j=0;j<rows;j++){
+					const zRatio=j/(rows-1);
+					const z=zRatio*gridDepth;
+					const pz=1-zRatio;
+					const rowPoints=[];
+
+					for(let i=0;i<cols;i++){
+						const xRatio=i/(cols-1);
+						const x=(xRatio-0.5)*gridWidth;
+
+						const kx=x*0.0055;
+						const kz=z*0.010;
+						const wave1=Math.sin(kx*1.4+kz*1.1-t*1.05)*26;
+						const wave2=Math.sin(-kx*1.8+kz*2.0+t*1.35)*14;
+						const wave3=Math.cos(kx*0.9-kz*1.5+t*0.75)*12;
+						const wave4=Math.sin(Math.sqrt(kx*kx+kz*kz)*2.5-t*1.6)*8;
+						const Y=wave1+wave2+wave3+wave4;
+
+						const distCenter=Math.abs(xRatio-0.5)*2;
+						const edgeAlpha=Math.max(0,1-Math.pow(distCenter,2.2));
+
+						const yRot=Y*cosT-z*sinT;
+						const zRot=Y*sinT+z*cosT+D;
+						const scale=(F/zRot)*dpr;
+						const sx=(width/2)*dpr+x*scale;
+						const sy=horizonY*dpr+yRot*scale;
+						const normH=Math.max(0,Math.min(1,(Y+68)/136));
+
+						rowPoints.push({sx,sy,pz,edgeAlpha,normH,scale});
+					}
+					grid.push(rowPoints);
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					const zRatio=j/(rows-1);
+					const pz=1-zRatio;
+					const fadeZ=Math.sin(zRatio*Math.PI);
+
+					ctx.beginPath();
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(i===0)ctx.moveTo(pt.sx,pt.sy);
+						else ctx.lineTo(pt.sx,pt.sy);
+					}
+					const lineAlpha=(0.025+0.10*pz)*fadeZ;
+					ctx.strokeStyle=`rgba(175,200,185,${lineAlpha.toFixed(3)})`;
+					ctx.lineWidth=Math.max(0.5,(0.5+0.55*pz)*dpr);
+					ctx.stroke();
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(pt.edgeAlpha<0.01)continue;
+
+						const isCrest=pt.normH>0.66;
+						let r,g,b,alpha,ptRadius;
+
+						if(isCrest){
+							const crestRatio=(pt.normH-0.66)/0.34;
+							r=Math.round(180+(217-180)*crestRatio);
+							g=Math.round(200+(250-200)*crestRatio);
+							b=Math.round(185+(98-185)*crestRatio);
+							alpha=(0.22+0.46*pt.pz*(0.5+0.5*crestRatio))*pt.edgeAlpha;
+							ptRadius=(0.9+1.2*pt.pz+0.5*crestRatio)*dpr;
+
+							if(crestRatio>0.55&&pt.edgeAlpha>0.4){
+								ctx.beginPath();
+								ctx.arc(pt.sx,pt.sy,ptRadius*2.2,0,Math.PI*2);
+								ctx.fillStyle=`rgba(217,250,98,${(alpha*0.3).toFixed(3)})`;
+								ctx.fill();
+							}
+						}else{
+							r=160;g=180;b=170;
+							alpha=(0.09+0.30*pt.pz*(0.5+0.5*pt.normH))*pt.edgeAlpha;
+							ptRadius=(0.8+0.95*pt.pz)*dpr;
+						}
+
+						ctx.beginPath();
+						ctx.arc(pt.sx,pt.sy,ptRadius,0,Math.PI*2);
+						ctx.fillStyle=`rgba(${r},${g},${b},${alpha.toFixed(3)})`;
+						ctx.fill();
+					}
+				}
+			}
+
+			function loop(now){
+				if(!lastTime)lastTime=now;
+				const delta=Math.min((now-lastTime)/1000,0.1);
+				lastTime=now;
+				time+=delta;
+
+				renderFrame(time);
+
+				if(isVisible&&!prefersReduced){
+					animId=requestAnimationFrame(loop);
+				}else{
+					animId=null;
+				}
+			}
+
+			function start(){
+				if(!animId&&!prefersReduced){
+					lastTime=0;
+					animId=requestAnimationFrame(loop);
+				}
+			}
+
+			function stop(){
+				if(animId){
+					cancelAnimationFrame(animId);
+					animId=null;
+				}
+			}
+
+			const observer=new IntersectionObserver(entries=>{
+				entries.forEach(entry=>{
+					isVisible=entry.isIntersecting;
+					if(isVisible){
+						resize();
+						if(prefersReduced){
+							renderFrame(0);
+						}else{
+							start();
+						}
+					}else{
+						stop();
+					}
+				});
+			},{threshold:0.05});
+
+			observer.observe(section);
+
+			let resizeTimer;
+			window.addEventListener('resize',()=>{
+				clearTimeout(resizeTimer);
+				resizeTimer=setTimeout(()=>{
+					resize();
+					if(prefersReduced||!isVisible){
+						renderFrame(time);
+					}
+				},150);
+			});
+
+			mediaQuery.addEventListener('change',e=>{
+				prefersReduced=e.matches;
+				if(prefersReduced){
+					stop();
+					renderFrame(0);
+				}else if(isVisible){
+					start();
+				}
+			});
+
+			resize();
+			if(prefersReduced)renderFrame(0);
+		})();
+	</script>
+</body>
+</html>
+
