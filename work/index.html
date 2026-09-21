@@ -121,18 +121,32 @@
 			background:rgba(217,250,98,.05);
 		}
 
-		/* ==================== WORK SHOWCASE GRID ==================== */
+		/* ==================== UNIFIED PORTFOLIO GRID & CARD SYSTEM ==================== */
+		.portfolio-section{
+			padding:100px 0 130px;
+			position:relative;
+		}
 		#work-showcase{
-			padding:90px 0 130px;
 			background:#0b0e0d;
 		}
-		.work-grid{
+		#uiux-showcase{
+			background:#090c0b;
+			border-top:1px solid var(--line);
+		}
+		.portfolio-head{
+			display:flex;
+			justify-content:space-between;
+			align-items:flex-end;
+			gap:32px;
+			margin-bottom:52px;
+		}
+		.portfolio-grid{
 			display:grid;
-			grid-template-columns:repeat(12, 1fr);
+			grid-template-columns:repeat(2, minmax(0, 1fr));
 			gap:28px;
 		}
 
-		/* Card Base Styling */
+		/* Common Project Card */
 		.project-card{
 			background:#121615;
 			border:1px solid rgba(255,255,255,.08);
@@ -160,48 +174,17 @@
 			color:inherit;
 		}
 
-		/* Column Spanning */
-		.project-card.project-01{
-			grid-column:1 / -1;
-			padding:32px 32px 30px;
-			background:linear-gradient(180deg, #151a18 0%, #111514 100%);
-		}
-		@media(min-width:960px){
-			.project-card.project-01 .project-card-inner{
-				display:grid;
-				grid-template-columns:1.32fr 0.68fr;
-				gap:40px;
-				align-items:center;
-			}
-			.project-card.project-01 .project-preview{
-				height:420px;
-				margin-bottom:0;
-			}
-		}
-
-		.project-card.project-02{
-			grid-column:span 7;
-		}
-		.project-card.project-03{
-			grid-column:span 5;
-		}
-		.project-card.project-04{
-			grid-column:span 5;
-		}
-		.project-card.project-05{
-			grid-column:span 7;
-		}
-
-		@media(max-width:900px){
-			.project-card.project-02,
-			.project-card.project-03,
-			.project-card.project-04,
-			.project-card.project-05{
+		/* Balanced 5th Item (Clapton) in 2-Column Grid */
+		@media(min-width:861px){
+			.portfolio-grid .project-card.project-balanced{
 				grid-column:1 / -1;
+				justify-self:center;
+				width:100%;
+				max-width:calc(50% - 14px);
 			}
 		}
 
-		/* Browser / Viewport Frame */
+		/* Universal Browser / Viewport Frame */
 		.project-preview{
 			background:#080b0a;
 			border:1px solid rgba(255,255,255,.08);
@@ -210,7 +193,7 @@
 			position:relative;
 			box-shadow:0 12px 32px rgba(0,0,0,.4);
 			height:320px;
-			margin-bottom:24px;
+			margin-bottom:22px;
 			display:flex;
 			flex-direction:column;
 		}
@@ -238,27 +221,42 @@
 			font:9.5px var(--mono);
 			color:#6d756e;
 			letter-spacing:.02em;
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+			max-width:260px;
 		}
 		.browser-badge{
 			font:9px var(--mono);
 			color:var(--acid);
 			letter-spacing:.04em;
-			opacity:.75;
+			opacity:.85;
+			white-space:nowrap;
 		}
 		.browser-viewport{
 			position:relative;
 			flex:1;
 			overflow:hidden;
+			background:#0b0e0d;
+			display:flex;
+			align-items:center;
+			justify-content:center;
 		}
 
-		/* Screenshot Image */
+		/* Screenshot Rendering */
 		.project-screenshot{
 			width:100%;
 			height:100%;
-			object-fit:cover;
-			object-position:top center;
 			display:block;
 			transition:transform 500ms cubic-bezier(.16,1,.3,1);
+		}
+		.website-viewport .project-screenshot{
+			object-fit:cover;
+			object-position:top center;
+		}
+		.uiux-viewport .project-screenshot{
+			object-fit:contain;
+			object-position:center;
 		}
 		.project-card:hover .project-screenshot{
 			transform:scale(1.025);
@@ -290,7 +288,7 @@
 			font-size:10.5px;
 		}
 		.project-title{
-			font-size:26px;
+			font-size:24px;
 			font-weight:700;
 			line-height:1.15;
 			letter-spacing:-.035em;
@@ -313,6 +311,7 @@
 			letter-spacing:.12em;
 			text-transform:uppercase;
 			color:var(--acid);
+			margin-top:auto;
 			transition:color .2s ease,gap .2s ease;
 		}
 		.project-arrow{
@@ -428,75 +427,8 @@
 			gap:20px;
 		}
 
-		/* ==================== UI/UX SHOWCASE SECTION ==================== */
-		#uiux-showcase{
-			padding:110px 0 130px;
-			background:#090c0b;
-			border-top:1px solid var(--line);
-		}
-		.uiux-head{
-			display:flex;
-			justify-content:space-between;
-			align-items:flex-end;
-			margin-bottom:52px;
-		}
-		.uiux-grid{
-			display:grid;
-			grid-template-columns:repeat(12, 1fr);
-			gap:28px;
-		}
-		.uiux-card.uiux-eatoggy{
-			grid-column:1 / -1;
-			padding:32px 32px 30px;
-			background:linear-gradient(180deg, #151a18 0%, #111514 100%);
-		}
-		@media(min-width:960px){
-			.uiux-card.uiux-eatoggy .project-card-inner{
-				display:grid;
-				grid-template-columns:1.32fr 0.68fr;
-				gap:40px;
-				align-items:center;
-			}
-			.uiux-card.uiux-eatoggy .project-preview{
-				height:420px;
-				margin-bottom:0;
-			}
-		}
-
-		.uiux-card .browser-viewport{
-			background:#0b0e0d;
-		}
-		.uiux-card .project-screenshot{
-			object-fit:contain;
-			object-position:center;
-		}
-		.uiux-card.uiux-norozz{
-			grid-column:span 7;
-		}
-		.uiux-card.uiux-goindiacab{
-			grid-column:span 5;
-		}
-		.uiux-card.uiux-nobrokery{
-			grid-column:1 / -1;
-			padding:32px 32px 30px;
-			background:linear-gradient(180deg, #131716 0%, #0f1312 100%);
-		}
-		@media(min-width:960px){
-			.uiux-card.uiux-nobrokery .project-card-inner{
-				display:grid;
-				grid-template-columns:1.2fr 0.8fr;
-				gap:40px;
-				align-items:center;
-			}
-			.uiux-card.uiux-nobrokery .project-preview{
-				height:360px;
-				margin-bottom:0;
-			}
-		}
-
-
 		/* ==================== RESPONSIVE ==================== */
-		@media(max-width:800px){
+		@media(max-width:860px){
 			.wrap{width:min(100% - 32px,620px)}
 			.section{padding:80px 0}
 			nav{height:70px}
@@ -520,14 +452,10 @@
 			.work-hero-title{font-size:clamp(36px,10vw,52px);line-height:1.02}
 			.work-hero-desc{font-size:14.5px;margin-bottom:28px}
 
-			#work-showcase{padding:60px 0 90px}
-			#uiux-showcase{padding:60px 0 90px}
-			.uiux-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:36px}
-			.uiux-grid{grid-template-columns:1fr;gap:20px}
-			.uiux-card.uiux-norozz,
-			.uiux-card.uiux-goindiacab,
-			.uiux-card.uiux-nobrokery{grid-column:1 / -1}
-			.work-grid{grid-template-columns:1fr;gap:20px}
+			.portfolio-section{padding:60px 0 90px}
+			.portfolio-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:36px}
+			.portfolio-grid{grid-template-columns:1fr;gap:20px}
+			.portfolio-grid .project-card.project-balanced{max-width:100%;grid-column:auto}
 			.project-card{padding:20px}
 			.project-preview{height:250px;margin-bottom:18px}
 			.project-title{font-size:22px}
@@ -589,12 +517,23 @@
 			</div>
 		</section>
 
-		<!-- ==================== WORK SHOWCASE ==================== -->
-		<section id="work-showcase" aria-label="Client Projects">
+		<!-- ==================== WEBSITES / E-COMMERCE SHOWCASE ==================== -->
+		<section id="work-showcase" class="portfolio-section" aria-label="Websites and E-Commerce Projects">
 			<div class="wrap">
-				<div class="work-grid">
-					<!-- 01 Celebrity Luxe (Large Featured Project) -->
-					<article class="project-card project-01">
+				<div class="portfolio-head">
+					<div>
+						<div class="eyebrow work-hero-eyebrow">
+							<span class="eyebrow-dot"></span>
+							<span>WEBSITES / E-COMMERCE</span>
+						</div>
+						<h2 class="section-title">Digital storefronts built for <span class="accent">real brands.</span></h2>
+					</div>
+					<p class="section-intro">High-performance e-commerce storefronts and brand websites crafted with precision, speed and seamless customer journeys.</p>
+				</div>
+
+				<div class="portfolio-grid">
+					<!-- 01 Celebrity Luxe -->
+					<article class="project-card">
 						<a href="https://celebrityluxe.in/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Celebrity Luxe - View Website">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -606,7 +545,7 @@
 									<span class="browser-domain">celebrityluxe.in</span>
 									<span class="browser-badge">LIVE SITE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport website-viewport">
 									<img src="/assets/work/celebrity-luxe-home.webp" alt="Celebrity Luxe Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
 								</div>
 							</div>
@@ -623,7 +562,7 @@
 					</article>
 
 					<!-- 02 Luka Originals -->
-					<article class="project-card project-02">
+					<article class="project-card">
 						<a href="https://lukaoriginals.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Luka Originals - View Website">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -635,7 +574,7 @@
 									<span class="browser-domain">lukaoriginals.com</span>
 									<span class="browser-badge">LIVE SITE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport website-viewport">
 									<img src="/assets/work/luka-originals-home.webp" alt="Luka Originals Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
 								</div>
 							</div>
@@ -652,7 +591,7 @@
 					</article>
 
 					<!-- 03 Kalsa Foods -->
-					<article class="project-card project-03">
+					<article class="project-card">
 						<a href="https://kalsafoods.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Kalsa Foods - View Website">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -664,7 +603,7 @@
 									<span class="browser-domain">kalsafoods.com</span>
 									<span class="browser-badge">LIVE SITE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport website-viewport">
 									<img src="/assets/work/kalsa-foods-home.webp" alt="Kalsa Foods Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
 								</div>
 							</div>
@@ -681,7 +620,7 @@
 					</article>
 
 					<!-- 04 Aisen Studio -->
-					<article class="project-card project-04">
+					<article class="project-card">
 						<a href="https://aisenstudio.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Aisen Studio - View Website">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -693,7 +632,7 @@
 									<span class="browser-domain">aisenstudio.com</span>
 									<span class="browser-badge">LIVE SITE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport website-viewport">
 									<img src="/assets/work/aisen-studio-home.webp" alt="Aisen Studio Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
 								</div>
 							</div>
@@ -709,8 +648,8 @@
 						</a>
 					</article>
 
-					<!-- 05 Clapton -->
-					<article class="project-card project-05">
+					<!-- 05 Clapton (Balanced / Centered 5th Item) -->
+					<article class="project-card project-balanced">
 						<a href="https://clapton.in/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Clapton - View Website">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -722,7 +661,7 @@
 									<span class="browser-domain">clapton.in</span>
 									<span class="browser-badge">LIVE SITE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport website-viewport">
 									<img src="/assets/work/clapton-home.webp" alt="Clapton Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
 								</div>
 							</div>
@@ -742,9 +681,9 @@
 		</section>
 
 		<!-- ==================== UI/UX DESIGN SHOWCASE ==================== -->
-		<section id="uiux-showcase" class="section" aria-label="UI/UX Design Projects">
+		<section id="uiux-showcase" class="portfolio-section" aria-label="UI/UX Design Projects">
 			<div class="wrap">
-				<div class="uiux-head">
+				<div class="portfolio-head">
 					<div>
 						<div class="eyebrow work-hero-eyebrow">
 							<span class="eyebrow-dot"></span>
@@ -755,9 +694,9 @@
 					<p class="section-intro">From mobile apps to web platforms, we design clear, intuitive digital experiences built around real users and real product needs.</p>
 				</div>
 
-				<div class="uiux-grid">
-					<!-- 01 EATOGGY (Large Featured Project) -->
-					<article class="project-card uiux-card uiux-eatoggy">
+				<div class="portfolio-grid">
+					<!-- 01 EATOGGY -->
+					<article class="project-card">
 						<a href="https://www.figma.com/design/4y1MyXe3i8bsvG7DJBomzh/EATOGGY?node-id=2-2189" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="EATOGGY - View Project on Figma">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -769,7 +708,7 @@
 									<span class="browser-domain">figma.com / EATOGGY</span>
 									<span class="browser-badge">FIGMA DESIGN ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport uiux-viewport">
 									<img src="/assets/work/eatoggy-screens.webp" alt="EATOGGY Mobile App UI/UX Design Screens" class="project-screenshot" loading="lazy" width="1280" height="720">
 								</div>
 							</div>
@@ -785,8 +724,8 @@
 						</a>
 					</article>
 
-					<!-- 02 NOROZZ (Large / Medium Project) -->
-					<article class="project-card uiux-card uiux-norozz">
+					<!-- 02 NOROZZ -->
+					<article class="project-card">
 						<a href="https://www.figma.com/design/5xwLPFvOGMD912rWezragm/Norozz-Ui" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="NOROZZ - View Project on Figma">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -798,7 +737,7 @@
 									<span class="browser-domain">figma.com / Norozz-Ui</span>
 									<span class="browser-badge">FIGMA DESIGN ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport uiux-viewport">
 									<img src="/assets/work/norozz-screens.webp" alt="NOROZZ Product Platform UI/UX Screens" class="project-screenshot" loading="lazy" width="1280" height="720">
 								</div>
 							</div>
@@ -814,9 +753,9 @@
 						</a>
 					</article>
 
-					<!-- 03 GOINDIACAB (Medium Project) -->
-					<article class="project-card uiux-card uiux-goindiacab">
-						<a href="https://www.figma.com/make/hRDKdhtbb68kqCbV9sHxvs/Goindiacan-website" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="GOINDIACAB - View Project on Figma Make">
+					<!-- 03 GOINDIACAB -->
+					<article class="project-card">
+						<a href="https://www.figma.com/make/hRDKdhtbb68kqCabV9sHxvs/Goindiacan-website" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="GOINDIACAB - View Project on Figma Make">
 							<div class="project-preview">
 								<div class="browser-top-bar">
 									<div class="browser-dots">
@@ -827,7 +766,7 @@
 									<span class="browser-domain">figma.com / make / Goindiacan-website</span>
 									<span class="browser-badge">FIGMA MAKE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport uiux-viewport">
 									<img src="/assets/work/goindiacab-screens.webp" alt="GOINDIACAB Travel Platform UI Design" class="project-screenshot" loading="lazy" width="1280" height="720">
 								</div>
 							</div>
@@ -843,8 +782,8 @@
 						</a>
 					</article>
 
-					<!-- 04 NOBROKERY (Large / Medium Project) -->
-					<article class="project-card uiux-card uiux-nobrokery">
+					<!-- 04 NOBROKERY -->
+					<article class="project-card">
 						<a href="https://www.figma.com/make/I6qzZtqYQrAr8qSKC1ta5N/NOBROKERY?fullscreen=1&amp;code-node-id=0-6" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="NOBROKERY - View Project on Figma Make">
 							<div class="project-preview">
 								<div class="browser-top-bar">
@@ -856,7 +795,7 @@
 									<span class="browser-domain">figma.com / make / NOBROKERY</span>
 									<span class="browser-badge">FIGMA MAKE ↗</span>
 								</div>
-								<div class="browser-viewport">
+								<div class="browser-viewport uiux-viewport">
 									<img src="/assets/work/nobrokery-screens.webp" alt="NOBROKERY Website UX Design Screens" class="project-screenshot" loading="lazy" width="1280" height="720">
 								</div>
 							</div>
