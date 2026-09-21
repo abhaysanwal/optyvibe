@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>body { background: #111; color: #fff; font-family: monospace; }</style>
+</head>
+<body>
+<h3>Candidate Screens for Eatoggy</h3>
+<div id="c"></div>
+<script>
+async function run() {
+  const img = new Image();
+  img.src = '/assets/eatoggy_dpr3.png';
+  await new Promise(r => img.onload = r);
+
+  const tests = [
+    { title: '1. Welcome & Register', sx: 2468, sy: 436, sw: 236, sh: 508 },
+    { title: '2. Preparation 25:00', sx: 2468, sy: 1020, sw: 236, sh: 460 },
+    { title: '3. Ready for Pickup', sx: 2800, sy: 1020, sw: 236, sh: 460 },
+    { title: '4. Revenue & Earnings', sx: 2468, sy: 2340, sw: 236, sh: 470 },
+    { title: '5. Login Screen', sx: 1804, sy: 436, sw: 236, sh: 508 }
+  ];
+
+  tests.forEach(t => {
+    const d = document.createElement('div');
+    d.style.display = 'inline-block';
+    d.style.margin = '10px';
+    d.innerHTML = '<div>' + t.title + '</div>';
+    const c = document.createElement('canvas');
+    c.width = t.sw;
+    c.height = t.sh;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(img, t.sx, t.sy, t.sw, t.sh, 0, 0, t.sw, t.sh);
+    d.appendChild(c);
+    document.getElementById('c').appendChild(d);
+  });
+}
+run();
+</script>
+</body>
+</html>
+

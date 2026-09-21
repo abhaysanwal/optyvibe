@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fine Tune Crops</title>
+<style>
+body { background: #0c100e; color: #fff; padding: 20px; font-family: monospace; }
+.crop-box { margin-bottom: 24px; display: inline-block; margin-right: 20px; vertical-align: top; }
+canvas { border: 2px solid #2df; background: #000; display: block; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h1>Fine Tuned Screen Crops</h1>
+<div id="status">Loading...</div>
+<div id="canvases"></div>
+
+<script>
+async function loadImage(url) {
+  const img = new Image();
+  img.src = url;
+  await new Promise((res, rej) => { img.onload = res; img.onerror = rej; });
+  return img;
+}
+
+function makeCrop(title, img, sx, sy, sw, sh, scale = 1) {
+  const div = document.createElement('div');
+  div.className = 'crop-box';
+  const label = document.createElement('div');
+  label.textContent = `${title}: [${sx}, ${sy}, ${sw}, ${sh}] -> (${sw*scale}x${sh*scale})`;
+  const c = document.createElement('canvas');
+  c.width = sw * scale;
+  c.height = sh * scale;
+  const ctx = c.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(img, sx, sy, sw, sh, 0, 0, c.width, c.height);
+  div.appendChild(label);
+  div.appendChild(c);
+  document.getElementById('canvases').appendChild(div);
+  return c;
+}
+
+async function run() {
+  const [eat, nor] = await Promise.all([
+    loadImage('/assets/eatoggy_dpr3.png'),
+    loadImage('/assets/norozz_hires.png')
+  ]);
+  document.getElementById('status').textContent = 'Loaded!';
+
+  // Eatoggy exact screens (from 5760x3240)
+  // Screen width is ~236px, height is ~508px
+  makeCrop('Eatoggy 1: Welcome/Auth', eat, 2468, 436, 236, 508);
+  makeCrop('Eatoggy 2: Dashboard', eat, 2468, 1098, 236, 508);
+  makeCrop('Eatoggy 3: Preparation 25:00', eat, 2800, 1098, 236, 508);
+  makeCrop('Eatoggy 4: Handover/Summary', eat, 3132, 1098, 236, 508);
+
+  // Norozz exact screens (from 2542x1344)
+  makeCrop('Norozz 1: Green Brand Splash', nor, 716, 192, 72, 155, 3);
+  makeCrop('Norozz 2: Doorstep Services', nor, 794, 192, 72, 155, 3);
+  makeCrop('Norozz 3: Live Map Tracking', nor, 794, 530, 72, 155, 3);
+  makeCrop('Norozz 4: Service Booking & Pay', nor, 1018, 360, 72, 155, 3);
+
+  window.__FINE_DONE__ = true;
+}
+run();
+</script>
+</body>
+</html>

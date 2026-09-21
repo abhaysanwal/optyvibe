@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Eatoggy Crop Candidates</title>
+<style>
+body { background: #111; color: #fff; font-family: monospace; padding: 20px; }
+.card { display: inline-block; margin: 10px; vertical-align: top; }
+canvas { border: 1px solid #444; display: block; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h2>Eatoggy Screen Candidates</h2>
+<div id="canvases"></div>
+<script>
+async function run() {
+  const img = new Image();
+  img.src = '/assets/eatoggy_dpr3.png';
+  await new Promise(r => img.onload = r);
+  
+  const screens = [
+    { title: 'Col 2: Login', sx: 1804, sy: 436, sw: 236, sh: 508 },
+    { title: 'Col 3: OTP Verification', sx: 2136, sy: 436, sw: 236, sh: 508 },
+    { title: 'Col 4: Welcome & Register', sx: 2468, sy: 436, sw: 236, sh: 508 },
+    { title: 'Col 5: Business Details', sx: 2800, sy: 436, sw: 236, sh: 508 },
+    { title: 'Col 6: Kitchen Hygiene', sx: 3132, sy: 436, sw: 236, sh: 508 },
+    { title: 'Col 7: Document Upload', sx: 3464, sy: 436, sw: 236, sh: 508 }
+  ];
+
+  const cont = document.getElementById('canvases');
+  screens.forEach(s => {
+    const d = document.createElement('div');
+    d.className = 'card';
+    d.innerHTML = '<div>' + s.title + '</div>';
+    const c = document.createElement('canvas');
+    c.width = s.sw;
+    c.height = s.sh;
+    const ctx = c.getContext('2d');
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, s.sx, s.sy, s.sw, s.sh, 0, 0, s.sw, s.sh);
+    d.appendChild(c);
+    cont.appendChild(d);
+  });
+  window.__DONE__ = true;
+}
+run();
+</script>
+</body>
+</html>
+

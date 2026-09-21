@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test Screen Crops</title>
+<style>
+body { background: #111; color: #fff; padding: 20px; font-family: monospace; }
+.crop-box { margin-bottom: 20px; display: inline-block; margin-right: 20px; }
+canvas { border: 1px solid #555; background: #000; }
+</style>
+</head>
+<body>
+<h1>Candidate Screen Crops</h1>
+<div id="status">Loading...</div>
+<div id="canvases"></div>
+
+<script>
+async function loadImage(url) {
+  const img = new Image();
+  img.src = url;
+  await new Promise((res, rej) => { img.onload = res; img.onerror = rej; });
+  return img;
+}
+
+function makeCanvas(title, w, h) {
+  const div = document.createElement('div');
+  div.className = 'crop-box';
+  const label = document.createElement('div');
+  label.textContent = title + ` (${w}x${h})`;
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  div.appendChild(label);
+  div.appendChild(c);
+  document.getElementById('canvases').appendChild(div);
+  return c;
+}
+
+async function run() {
+  const [eat, nor] = await Promise.all([
+    loadImage('/assets/eatoggy_dpr3.png'),
+    loadImage('/assets/norozz_hires.png')
+  ]);
+  document.getElementById('status').textContent = `Loaded Eatoggy (${eat.width}x${eat.height}), Norozz (${nor.width}x${nor.height})`;
+
+  // Let's find coordinates in Eatoggy (5760x3240):
+  // Let's crop candidate regions for Eatoggy:
+  // Row 1: y around 400 to 1150
+  // Splash: x around 2200 to 2600
+  // Dashboard: x around 2200 to 2600, y around 1000 to 1800
+  // Let's inspect a few slices:
+  const eatSlices = [
+    { title: 'Eatoggy Splash Candidate', sx: 2420, sy: 420, sw: 330, sh: 700 },
+    { title: 'Eatoggy Dashboard Candidate', sx: 2420, sy: 1080, sw: 330, sh: 700 },
+    { title: 'Eatoggy Orders Candidate', sx: 2680, sy: 1080, sw: 330, sh: 700 },
+    { title: 'Eatoggy Menu Candidate', sx: 2940, sy: 1740, sw: 330, sh: 700 }
+  ];
+
+  for (const s of eatSlices) {
+    const c = makeCanvas(s.title, s.sw, s.sh);
+    const ctx = c.getContext('2d');
+    ctx.drawImage(eat, s.sx, s.sy, s.sw, s.sh, 0, 0, s.sw, s.sh);
+  }
+
+  // Norozz (2542x1344)
+  // Top row: splash around x: 740, y: 190, w: 90, h: 180
+  // Live service (row 3): map around x: 865, y: 535, w: 90, h: 180
+  // Dashboard (row 2): around x: 1050, y: 370, w: 90, h: 180
+  const norSlices = [
+    { title: 'Norozz Splash', sx: 740, sy: 195, sw: 95, sh: 190 },
+    { title: 'Norozz Dashboard', sx: 1050, sy: 370, sw: 95, sh: 190 },
+    { title: 'Norozz Live Map', sx: 865, sy: 535, sw: 95, sh: 190 }
+  ];
+
+  for (const s of norSlices) {
+    const c = makeCanvas(s.title, s.sw * 2, s.sh * 2);
+    const ctx = c.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
+    ctx.drawImage(nor, s.sx, s.sy, s.sw, s.sh, 0, 0, s.sw * 2, s.sh * 2);
+  }
+
+  window.__CROPS_DONE__ = true;
+}
+run();
+</script>
+</body>
+</html>
+
