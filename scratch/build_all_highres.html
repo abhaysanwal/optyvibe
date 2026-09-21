@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Build High Res WebP Assets</title>
+<style>
+body { background: #000; color: #fff; font-family: monospace; padding: 20px; }
+canvas { border: 2px solid #333; margin-bottom: 20px; max-width: 600px; display: block; }
+</style>
+</head>
+<body>
+<h1>Building 4 High-Res Assets</h1>
+<div id="status">Starting...</div>
+
+<canvas id="eatoggy" width="2400" height="1350"></canvas>
+<canvas id="norozz" width="2400" height="1350"></canvas>
+<canvas id="goindiacab" width="1920" height="885"></canvas>
+<canvas id="nobrokery" width="1920" height="830"></canvas>
+
+<script>
+async function loadImage(url) {
+  const img = new Image();
+  img.src = url;
+  await new Promise((res, rej) => { img.onload = res; img.onerror = rej; });
+  return img;
+}
+
+function drawAtmosphere(ctx, w, h, glowColor) {
+  // Deep obsidian base
+  ctx.fillStyle = '#0b0e0d';
+  ctx.fillRect(0, 0, w, h);
+
+  // Soft atmospheric radial gradient
+  const rGlow = ctx.createRadialGradient(w / 2, h / 2 + 60, 80, w / 2, h / 2 + 60, w * 0.55);
+  rGlow.addColorStop(0, glowColor);
+  rGlow.addColorStop(0.5, glowColor.replace(/[\d\.]+\)$/, '0.02)'));
+  rGlow.addColorStop(1, 'rgba(11, 14, 13, 0)');
+  ctx.fillStyle = rGlow;
+  ctx.fillRect(0, 0, w, h);
+
+  // Subtle architectural grid
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.025)';
+  ctx.lineWidth = 1;
+  for (let x = 60; x < w; x += 100) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+  }
+  for (let y = 60; y < h; y += 100) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+  }
+}
+
+function drawPhone(ctx, x, y, width, height, img, sx, sy, sw, sh, isFeatured, accentBorderColor) {
+  ctx.save();
+  ctx.translate(x, y);
+
+  const radius = 50;
+  const bezel = 14;
+  const screenW = width - bezel * 2;
+  const screenH = height - bezel * 2;
+  const screenR = radius - 6;
+
+  // Outer shadow
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+  ctx.shadowBlur = isFeatured ? 70 : 46;
+  ctx.shadowOffsetY = isFeatured ? 36 : 24;
+
+  // Phone body base
+  ctx.fillStyle = '#0c100f';
+  ctx.beginPath();
+  ctx.roundRect(-width / 2, -height / 2, width, height, radius);
+  ctx.fill();
+
+  // Reset shadow for crisp borders
+  ctx.shadowColor = 'transparent';
+
+  // Body rim highlight
+  ctx.strokeStyle = isFeatured ? accentBorderColor : 'rgba(255, 255, 255, 0.14)';
+  ctx.lineWidth = isFeatured ? 2.5 : 1.5;
+  ctx.stroke();
+
+  // Screen area clipping
+  ctx.save();
+  ctx.beginPath();
+  ctx.roundRect(-screenW / 2, -screenH / 2, screenW, screenH, screenR);
+  ctx.clip();
+
+  // Screen black background
+  ctx.fillStyle = '#000000';
+  ctx.fillRect(-screenW / 2, -screenH / 2, screenW, screenH);
+
+  // Draw real Figma screen
+  const srcAspect = sw / sh;
+  const dstAspect = screenW / screenH;
+  let drawW, drawH, drawX, drawY;
+  if (srcAspect > dstAspect) {
+    drawH = screenH;
+    drawW = screenH * srcAspect;
+    drawX = -drawW / 2;
+    drawY = -screenH / 2;
+  } else {
+    drawW = screenW;
+    drawH = screenW / srcAspect;
+    drawX = -screenW / 2;
+    drawY = -screenH / 2;
+  }
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(img, sx, sy, sw, sh, drawX, drawY, drawW, drawH);
+
+  // Glass specular highlight
+  const grad = ctx.createLinearGradient(-screenW / 2, -screenH / 2, screenW / 2, screenH / 2);
+  grad.addColorStop(0, 'rgba(255, 255, 255, 0.08)');
+  grad.addColorStop(0.35, 'rgba(255, 255, 255, 0.02)');
+  grad.addColorStop(0.55, 'transparent');
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  ctx.restore();
+
+  // Top speaker pill / Dynamic Island
+  ctx.fillStyle = '#000000';
+  ctx.beginPath();
+  ctx.roundRect(-46, -screenH / 2 + 10, 92, 22, 11);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+window.__ASSETS__ = {};
+
+async function build() {
+  document.getElementById('status').textContent = 'Loading source images...';
+  const [eatImg, norImg, cabImg, nobImg] = await Promise.all([
+    loadImage('/assets/raw_sources/eatoggy.png'),
+    loadImage('/assets/raw_sources/norozz.png'),
+    loadImage('/assets/raw_sources/goindiacab.png'),
+    loadImage('/assets/raw_sources/nobrokery.png')
+  ]);
+
+  document.getElementById('status').textContent = 'Composing Eatoggy...';
+  // 1. EATOGGY (2400 x 1350)
+  const cEat = document.getElementById('eatoggy');
+  const ctxEat = cEat.getContext('2d');
+  drawAtmosphere(ctxEat, 2400, 1350, 'rgba(217, 250, 98, 0.08)');
+
+  // Left Phone: Onboarding & Registration (Col 4)
+  drawPhone(ctxEat, 640, 750, 440, 920, eatImg, 2468, 436, 236, 508, false, 'rgba(217, 250, 98, 0.35)');
+
+  // Right Phone: Revenue & Earnings (Row 4 Col 5) - cut at sh=385 above blue banner
+  drawPhone(ctxEat, 1760, 750, 440, 920, eatImg, 2468, 2340, 236, 385, false, 'rgba(217, 250, 98, 0.35)');
+
+  // Center Phone: Order Preparation 25:00 Remaining (Row 2 Col 4)
+  drawPhone(ctxEat, 1200, 700, 480, 1000, eatImg, 2468, 1020, 236, 460, true, 'rgba(217, 250, 98, 0.45)');
+
+  window.__ASSETS__.eatoggy = cEat.toDataURL('image/webp', 0.94);
+
+
+  document.getElementById('status').textContent = 'Composing Norozz...';
+  // 2. NOROZZ (2400 x 1350)
+  const cNor = document.getElementById('norozz');
+  const ctxNor = cNor.getContext('2d');
+  drawAtmosphere(ctxNor, 2400, 1350, 'rgba(118, 201, 180, 0.08)');
+
+  // Left Phone: Categories / Home Cleaning List (starts cleanly at status bar)
+  drawPhone(ctxNor, 640, 750, 440, 920, norImg, 1025, 437, 220, 442, false, 'rgba(118, 201, 180, 0.35)');
+
+  // Right Phone: Package Selection (Basic Clean, Standard Deep Clean, Ultra Premium Scrub)
+  drawPhone(ctxNor, 1760, 750, 440, 920, norImg, 1575, 437, 220, 442, false, 'rgba(118, 201, 180, 0.35)');
+
+  // Center Phone: Full Home Deep Cleaning Details & Booking (starts cleanly at status bar)
+  drawPhone(ctxNor, 1200, 700, 480, 1000, norImg, 1300, 437, 220, 442, true, 'rgba(118, 201, 180, 0.45)');
+
+  window.__ASSETS__.norozz = cNor.toDataURL('image/webp', 0.94);
+
+
+  document.getElementById('status').textContent = 'Cropping GoIndiaCab...';
+  // 3. GOINDIACAB (1920 x 885 - completely cuts out cookie banner)
+  const cCab = document.getElementById('goindiacab');
+  const ctxCab = cCab.getContext('2d');
+  ctxCab.imageSmoothingEnabled = true;
+  ctxCab.imageSmoothingQuality = 'high';
+  ctxCab.drawImage(cabImg, 0, 45, 1920, 885, 0, 0, 1920, 885);
+  window.__ASSETS__.goindiacab = cCab.toDataURL('image/webp', 0.94);
+
+
+  document.getElementById('status').textContent = 'Cropping NoBrokery...';
+  // 4. NOBROKERY (1920 x 830 - completely cuts out cookie banner)
+  const cNob = document.getElementById('nobrokery');
+  const ctxNob = cNob.getContext('2d');
+  ctxNob.imageSmoothingEnabled = true;
+  ctxNob.imageSmoothingQuality = 'high';
+  ctxNob.drawImage(nobImg, 0, 89, 1920, 830, 0, 0, 1920, 830);
+  window.__ASSETS__.nobrokery = cNob.toDataURL('image/webp', 0.94);
+
+  document.getElementById('status').textContent = 'All 4 assets built successfully!';
+  window.__ALL_BUILT__ = true;
+}
+
+build();
+</script>
+</body>
+</html>

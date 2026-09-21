@@ -463,6 +463,13 @@
 			}
 		}
 
+		.uiux-card .browser-viewport{
+			background:#0b0e0d;
+		}
+		.uiux-card .project-screenshot{
+			object-fit:contain;
+			object-position:center;
+		}
 		.uiux-card.uiux-norozz{
 			grid-column:span 7;
 		}
@@ -487,101 +494,6 @@
 			}
 		}
 
-		/* Presentation Canvas for Figma Make wireframe/prototype (NOBROKERY) */
-		.presentation-canvas{
-			position:relative;
-			flex:1;
-			background:#090d0b;
-			display:flex;
-			flex-direction:column;
-			align-items:center;
-			justify-content:center;
-			padding:28px 24px;
-			overflow:hidden;
-		}
-		.presentation-blueprint-grid{
-			position:absolute;
-			inset:0;
-			background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-			                 linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-			background-size:24px 24px;
-			pointer-events:none;
-		}
-		.presentation-wireframe-content{
-			position:relative;
-			z-index:2;
-			width:100%;
-			max-width:540px;
-			display:flex;
-			flex-direction:column;
-			gap:14px;
-		}
-		.wireframe-bar-top{
-			display:flex;
-			align-items:center;
-			justify-content:space-between;
-			gap:10px;
-			flex-wrap:wrap;
-		}
-		.wireframe-pill{
-			font:10px var(--mono);
-			letter-spacing:.08em;
-			color:#8a938c;
-			background:rgba(255,255,255,.04);
-			border:1px solid rgba(255,255,255,.08);
-			padding:4px 10px;
-			border-radius:4px;
-		}
-		.wireframe-pill.accent-pill{
-			color:var(--acid);
-			background:rgba(217,250,98,.07);
-			border-color:rgba(217,250,98,.25);
-		}
-		.wireframe-modules{
-			display:flex;
-			flex-direction:column;
-			gap:12px;
-		}
-		.wireframe-block{
-			background:#0f1412;
-			border:1px solid rgba(255,255,255,.07);
-			border-radius:8px;
-			padding:18px 20px;
-			display:flex;
-			flex-direction:column;
-			gap:8px;
-		}
-		.wireframe-block.hero-block{
-			border-color:rgba(217,250,98,.18);
-		}
-		.wireframe-label{
-			font:10.5px var(--mono);
-			font-weight:600;
-			color:#d0d7cf;
-			letter-spacing:.04em;
-		}
-		.wireframe-line{
-			height:6px;
-			background:rgba(255,255,255,.08);
-			border-radius:3px;
-		}
-		.wireframe-line.w-60{width:60%}
-		.wireframe-line.w-40{width:40%}
-		.wireframe-row{
-			display:grid;
-			grid-template-columns:1fr 1fr;
-			gap:12px;
-		}
-		.wireframe-block.card-block{
-			padding:14px 16px;
-			min-height:64px;
-			justify-content:center;
-		}
-		.wireframe-mini-tag{
-			font:9.5px var(--mono);
-			color:#778077;
-			letter-spacing:.06em;
-		}
 
 		/* ==================== RESPONSIVE ==================== */
 		@media(max-width:800px){
@@ -944,29 +856,8 @@
 									<span class="browser-domain">figma.com / make / NOBROKERY</span>
 									<span class="browser-badge">FIGMA MAKE ↗</span>
 								</div>
-								<div class="presentation-canvas">
-									<div class="presentation-blueprint-grid"></div>
-									<div class="presentation-wireframe-content">
-										<div class="wireframe-bar-top">
-											<span class="wireframe-pill">NAVIGATION &amp; STRUCTURE</span>
-											<span class="wireframe-pill accent-pill">FIGMA MAKE PROTOTYPE</span>
-										</div>
-										<div class="wireframe-modules">
-											<div class="wireframe-block hero-block">
-												<span class="wireframe-label">FOCUSED HERO &amp; SEARCH JOURNEY</span>
-												<div class="wireframe-line w-60"></div>
-												<div class="wireframe-line w-40"></div>
-											</div>
-											<div class="wireframe-row">
-												<div class="wireframe-block card-block">
-													<span class="wireframe-mini-tag">PROPERTY FLOW</span>
-												</div>
-												<div class="wireframe-block card-block">
-													<span class="wireframe-mini-tag">DIRECT BROKERAGE-FREE</span>
-												</div>
-											</div>
-										</div>
-									</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/nobrokery-screens.webp" alt="NOBROKERY Website UX Design Screens" class="project-screenshot" loading="lazy" width="1280" height="720">
 								</div>
 							</div>
 							<div class="project-content">
