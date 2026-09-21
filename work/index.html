@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="A selection of digital experiences we've designed and built for ambitious brands across beauty, fashion, food and e-commerce." />
+	<title>OPTYVIBE — Our Work | Digital Experiences for Real Brands</title>
+	<link rel="canonical" href="https://optyvibe.com/work/" />
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		:root{
+			--ink:#101312;
+			--paper:#f3f0e9;
+			--muted:#8d918b;
+			--line:rgba(243,240,233,.14);
+			--acid:#d9fa62;
+			--teal:#76c9b4;
+			--card:#141918;
+			--card-hover:#181f1b;
+			--sans:'Manrope',sans-serif;
+			--mono:'DM Mono',monospace;
+		}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth}
+		body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);overflow-x:hidden}
+		a{color:inherit;text-decoration:none}
+		button,input,select,textarea{font:inherit}
+		button{cursor:pointer;border:0}
+		.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+		.eyebrow{font:11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--acid)}
+		.section{padding:120px 0;position:relative}
+		.section-title{font-size:clamp(38px,5vw,68px);line-height:1.02;letter-spacing:-.06em;margin:18px 0 22px}
+		.section-intro{color:#a2aba1;max-width:580px;line-height:1.7;font-size:15px}
+		.accent{color:var(--acid)}
+
+		/* ==================== HEADER ==================== */
+		header{position:fixed;top:0;left:0;width:100%;z-index:30;transition:.3s;border-bottom:1px solid transparent}
+		header.scrolled{background:rgba(16,19,18,.88);backdrop-filter:blur(16px);border-color:var(--line)}
+		nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+		.brand{display:flex;align-items:center;gap:0px;color:var(--acid);text-decoration:none;line-height:1}
+		.brand-name{font:700 clamp(1.2rem,1.1vw + .65rem,1.5rem)/1 var(--sans);letter-spacing:-.045em;white-space:nowrap;transition:opacity .3s ease;position:relative;top:8px;margin:0;padding:0}
+		.brand-symbol{position:relative;width:100px;height:96px;flex:0 0 100px;overflow:hidden;margin:0;padding:0}
+		.brand-symbol .brand-logo{position:absolute;width:522px;height:522px;max-width:none;left:-199px;top:-183px;display:block;object-fit:contain}
+		@media(min-width:801px){header .brand{transform:translateX(calc(80px - max(24px,(100vw - 1180px) / 2)))}}
+		@media(min-width:801px) and (max-width:1100px){.brand-symbol{width:80px;height:84px;flex-basis:80px}.brand-symbol .brand-logo{width:424px;height:424px;left:-162px;top:-146px}header .brand-name{font-size:1.25rem}}
+		@media(max-width:800px){header .brand{max-width:calc(100% - 48px);transform:translateY(6px)}.brand-symbol{width:80px;height:76px;flex-basis:80px}.brand-symbol .brand-logo{width:413px;height:413px;left:-158px;top:-145px}header .brand-name{font-size:clamp(.95rem,4.7vw,1.2rem);top:2px}}
+
+		.nav-links{display:flex;gap:31px;color:#a6aca5;font-size:12px}
+		.nav-links a{transition:.2s}
+		.nav-links a:hover{color:var(--paper)}
+		.nav-links a.active{color:var(--acid);font-weight:700;position:relative}
+		.nav-links a.active:after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--acid);border-radius:1px}
+
+		.nav-cta,.btn{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1px solid var(--line);font-size:12px;transition:.25s}
+		.nav-cta:hover,.btn.secondary:hover{border-color:var(--acid);color:var(--acid)}
+		.btn.primary{background:var(--acid);color:var(--ink);border-color:var(--acid);font-weight:800}
+		.btn.primary:hover{background:#efff99;transform:translateY(-2px)}
+		.hamb{display:none;background:none;color:var(--paper);font-size:22px}
+
+		/* ==================== WORK HERO ==================== */
+		#work-hero{
+			padding-top:165px;
+			padding-bottom:70px;
+			position:relative;
+			background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(217,250,98,.06), transparent 70%), var(--ink);
+			border-bottom:1px solid var(--line);
+		}
+		.work-hero-content{
+			max-width:840px;
+		}
+		.work-hero-eyebrow{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			margin-bottom:18px;
+		}
+		.eyebrow-dot{
+			width:6px;
+			height:6px;
+			border-radius:50%;
+			background:var(--acid);
+			box-shadow:0 0 8px var(--acid);
+		}
+		.work-hero-title{
+			font-size:clamp(42px,5.8vw,78px);
+			line-height:1.02;
+			letter-spacing:-.06em;
+			margin:0 0 24px;
+			font-weight:800;
+		}
+		.work-hero-desc{
+			font-size:clamp(16px,1.5vw,19px);
+			line-height:1.65;
+			color:#a2aba1;
+			margin:0 0 36px;
+			max-width:680px;
+		}
+		.work-tags-bar{
+			display:flex;
+			flex-wrap:wrap;
+			gap:10px;
+			align-items:center;
+		}
+		.work-tag{
+			display:inline-flex;
+			align-items:center;
+			padding:6px 14px;
+			background:rgba(255,255,255,.04);
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:999px;
+			font:11px var(--mono);
+			color:#9ea59d;
+			letter-spacing:.04em;
+		}
+		.work-tag.highlight{
+			color:var(--acid);
+			border-color:rgba(217,250,98,.25);
+			background:rgba(217,250,98,.05);
+		}
+
+		/* ==================== WORK SHOWCASE GRID ==================== */
+		#work-showcase{
+			padding:90px 0 130px;
+			background:#0b0e0d;
+		}
+		.work-grid{
+			display:grid;
+			grid-template-columns:repeat(12, 1fr);
+			gap:28px;
+		}
+
+		/* Card Base Styling */
+		.project-card{
+			background:#121615;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:20px;
+			padding:24px;
+			display:flex;
+			flex-direction:column;
+			position:relative;
+			overflow:hidden;
+			transition:transform .32s cubic-bezier(.16,1,.3,1),border-color .28s ease,box-shadow .28s ease;
+		}
+		.project-card:hover{
+			transform:translateY(-5px);
+			border-color:rgba(217,250,98,.36);
+			box-shadow:0 24px 48px rgba(0,0,0,.55),0 0 28px rgba(217,250,98,.06);
+		}
+		.project-card:focus-within{
+			border-color:var(--acid);
+		}
+		.project-card-inner{
+			display:flex;
+			flex-direction:column;
+			height:100%;
+			text-decoration:none;
+			color:inherit;
+		}
+
+		/* Column Spanning */
+		.project-card.project-01{
+			grid-column:1 / -1;
+			padding:32px 32px 30px;
+			background:linear-gradient(180deg, #151a18 0%, #111514 100%);
+		}
+		@media(min-width:960px){
+			.project-card.project-01 .project-card-inner{
+				display:grid;
+				grid-template-columns:1.32fr 0.68fr;
+				gap:40px;
+				align-items:center;
+			}
+			.project-card.project-01 .project-preview{
+				height:420px;
+				margin-bottom:0;
+			}
+		}
+
+		.project-card.project-02{
+			grid-column:span 7;
+		}
+		.project-card.project-03{
+			grid-column:span 5;
+		}
+		.project-card.project-04{
+			grid-column:span 5;
+		}
+		.project-card.project-05{
+			grid-column:span 7;
+		}
+
+		@media(max-width:900px){
+			.project-card.project-02,
+			.project-card.project-03,
+			.project-card.project-04,
+			.project-card.project-05{
+				grid-column:1 / -1;
+			}
+		}
+
+		/* Browser / Viewport Frame */
+		.project-preview{
+			background:#080b0a;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:14px;
+			overflow:hidden;
+			position:relative;
+			box-shadow:0 12px 32px rgba(0,0,0,.4);
+			height:320px;
+			margin-bottom:24px;
+			display:flex;
+			flex-direction:column;
+		}
+		.browser-top-bar{
+			height:26px;
+			background:#0a0e0c;
+			border-bottom:1px solid rgba(255,255,255,.06);
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			padding:0 12px;
+			flex-shrink:0;
+		}
+		.browser-dots{
+			display:flex;
+			gap:5px;
+		}
+		.browser-dot{
+			width:6px;
+			height:6px;
+			border-radius:50%;
+			background:rgba(255,255,255,.2);
+		}
+		.browser-domain{
+			font:9.5px var(--mono);
+			color:#6d756e;
+			letter-spacing:.02em;
+		}
+		.browser-badge{
+			font:9px var(--mono);
+			color:var(--acid);
+			letter-spacing:.04em;
+			opacity:.75;
+		}
+		.browser-viewport{
+			position:relative;
+			flex:1;
+			overflow:hidden;
+		}
+
+		/* Screenshot Image */
+		.project-screenshot{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+			object-position:top center;
+			display:block;
+			transition:transform 500ms cubic-bezier(.16,1,.3,1);
+		}
+		.project-card:hover .project-screenshot{
+			transform:scale(1.025);
+		}
+
+		/* Content Block */
+		.project-content{
+			display:flex;
+			flex-direction:column;
+			flex:1;
+		}
+		.project-meta{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			margin-bottom:12px;
+			color:#8a938c;
+			font:11px var(--mono);
+		}
+		.project-num{
+			font-size:13px;
+			font-weight:700;
+			color:var(--acid);
+			letter-spacing:.06em;
+		}
+		.project-cat{
+			text-transform:uppercase;
+			letter-spacing:.1em;
+			font-size:10.5px;
+		}
+		.project-title{
+			font-size:26px;
+			font-weight:700;
+			line-height:1.15;
+			letter-spacing:-.035em;
+			color:var(--paper);
+			margin:0 0 10px;
+		}
+		.project-desc{
+			font-size:14px;
+			line-height:1.6;
+			color:#9da59c;
+			margin:0 0 24px;
+			flex:1;
+		}
+		.project-link{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			font:11px var(--mono);
+			font-weight:600;
+			letter-spacing:.12em;
+			text-transform:uppercase;
+			color:var(--acid);
+			transition:color .2s ease,gap .2s ease;
+		}
+		.project-arrow{
+			transition:transform .2s ease;
+		}
+		.project-card:hover .project-link{
+			color:#efff99;
+			gap:11px;
+		}
+		.project-card:hover .project-arrow{
+			transform:translate(2px, -2px);
+		}
+
+		/* ==================== CTA SECTION ==================== */
+		#work-cta{
+			padding:110px 0;
+			background:var(--ink);
+			position:relative;
+			overflow:hidden;
+			border-top:1px solid var(--line);
+		}
+		.particle-wave-container{
+			position:absolute;
+			inset:0;
+			width:100%;
+			height:100%;
+			pointer-events:none;
+			z-index:1;
+			overflow:hidden;
+		}
+		.particle-wave-container canvas{
+			display:block;
+			width:100%;
+			height:100%;
+		}
+		.wave-vignette{
+			position:absolute;
+			inset:0;
+			background:radial-gradient(ellipse at 50% 60%,transparent 35%,rgba(16,19,18,.7) 80%,#101312 100%),
+			           linear-gradient(to bottom,#101312 0%,transparent 18%,transparent 80%,#101312 100%);
+			pointer-events:none;
+		}
+		.cta-box{
+			max-width:640px;
+			margin:auto;
+			position:relative;
+			z-index:2;
+			text-align:center;
+		}
+		.cta-box .section-title{
+			font-size:clamp(38px,5vw,64px);
+			margin:14px 0 18px;
+			line-height:1.04;
+		}
+		.cta-box p{
+			font-size:16px;
+			color:#a2aaa1;
+			margin:0 auto 34px;
+			max-width:470px;
+			line-height:1.65;
+		}
+
+		/* ==================== FOOTER ==================== */
+		footer{
+			padding:65px 0 30px;
+			border-top:1px solid var(--line);
+			background:var(--ink);
+		}
+		.footer-top{
+			display:grid;
+			grid-template-columns:1.3fr 1fr 1fr 1fr;
+			gap:35px;
+		}
+		.footer-desc{
+			color:#838b83;
+			line-height:1.6;
+			font-size:13px;
+			max-width:230px;
+			margin-top:20px;
+		}
+		.footer-col h4{
+			font:10px var(--mono);
+			color:var(--acid);
+			margin:2px 0 20px;
+			text-transform:uppercase;
+			letter-spacing:.1em;
+		}
+		.footer-col a{
+			display:block;
+			font-size:12px;
+			color:#969d96;
+			margin:0 0 12px;
+			transition:.2s;
+		}
+		.footer-col a:hover{
+			color:var(--paper);
+		}
+		.footer-col a.active{
+			color:var(--acid);
+			font-weight:700;
+		}
+		.footer-bottom{
+			border-top:1px solid var(--line);
+			margin-top:70px;
+			padding-top:18px;
+			display:flex;
+			justify-content:space-between;
+			color:#626a62;
+			font:10px var(--mono);
+		}
+		.footer-bottom div{
+			display:flex;
+			gap:20px;
+		}
+
+		/* ==================== RESPONSIVE ==================== */
+		@media(max-width:800px){
+			.wrap{width:min(100% - 32px,620px)}
+			.section{padding:80px 0}
+			nav{height:70px}
+			.nav-links,.nav-cta{display:none}
+			.hamb{display:block}
+			.mobile-open .nav-links{
+				display:flex;
+				position:absolute;
+				top:70px;
+				left:0;
+				width:100%;
+				padding:24px 16px;
+				flex-direction:column;
+				background:#171b19;
+				border-bottom:1px solid var(--line);
+			}
+			.mobile-open .nav-links a{font-size:18px}
+			.mobile-open .nav-links a.active:after{display:none}
+
+			#work-hero{padding-top:125px;padding-bottom:50px}
+			.work-hero-title{font-size:clamp(36px,10vw,52px);line-height:1.02}
+			.work-hero-desc{font-size:14.5px;margin-bottom:28px}
+
+			#work-showcase{padding:60px 0 90px}
+			.work-grid{grid-template-columns:1fr;gap:20px}
+			.project-card{padding:20px}
+			.project-preview{height:250px;margin-bottom:18px}
+			.project-title{font-size:22px}
+			.project-desc{font-size:13.5px;margin-bottom:18px}
+
+			.footer-top{grid-template-columns:1fr 1fr;gap:28px 20px}
+			.footer-top>div:first-child{grid-column:1/-1}
+			.footer-bottom{display:block;line-height:2}
+			.footer-bottom div{margin-top:10px;flex-wrap:wrap}
+		}
+		@media(max-width:480px){
+			.wrap{width:calc(100% - 24px)}
+			.project-preview{height:220px}
+			.footer-top{grid-template-columns:1fr}
+			.footer-top>div:first-child{grid-column:auto}
+		}
+	</style>
+</head>
+<body>
+	<!-- ==================== HEADER ==================== -->
+	<header id="header">
+		<nav class="wrap">
+			<a class="logo brand" href="/">
+				<span class="brand-symbol"><img src="/logo.png" alt="optyvibe" class="brand-logo"></span>
+				<span class="brand-name">optyvibe</span>
+			</a>
+			<div class="nav-links">
+				<a href="/">Home</a>
+				<a href="/service/">Services</a>
+				<a href="/work/" class="active">Work</a>
+				<a href="/#process">Process</a>
+				<a href="/about-us">About</a>
+				<a href="/#contact">Contact</a>
+			</div>
+			<a class="nav-cta" href="/#contact">Let's talk <span>↗</span></a>
+			<button class="hamb" aria-label="Open menu">☰</button>
+		</nav>
+	</header>
+
+	<main>
+		<!-- ==================== WORK HERO ==================== -->
+		<section id="work-hero" aria-label="OPTYVIBE Portfolio">
+			<div class="wrap">
+				<div class="work-hero-content">
+					<div class="eyebrow work-hero-eyebrow">
+						<span class="eyebrow-dot"></span>
+						<span>OUR WORK</span>
+					</div>
+					<h1 class="work-hero-title">Digital experiences built for <span class="accent">real brands.</span></h1>
+					<p class="work-hero-desc">From e-commerce stores to digital brand experiences, we design and build digital platforms that help ambitious brands move forward.</p>
+					<div class="work-tags-bar">
+						<span class="work-tag highlight">Featured Projects</span>
+						<span class="work-tag">Beauty</span>
+						<span class="work-tag">Fashion</span>
+						<span class="work-tag">Food</span>
+						<span class="work-tag">E-Commerce</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== WORK SHOWCASE ==================== -->
+		<section id="work-showcase" aria-label="Client Projects">
+			<div class="wrap">
+				<div class="work-grid">
+					<!-- 01 Celebrity Luxe (Large Featured Project) -->
+					<article class="project-card project-01">
+						<a href="https://celebrityluxe.in/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Celebrity Luxe - View Website">
+							<div class="project-preview">
+								<div class="browser-top-bar">
+									<div class="browser-dots">
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+									</div>
+									<span class="browser-domain">celebrityluxe.in</span>
+									<span class="browser-badge">LIVE SITE ↗</span>
+								</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/celebrity-luxe-home.webp" alt="Celebrity Luxe Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
+								</div>
+							</div>
+							<div class="project-content">
+								<div class="project-meta">
+									<span class="project-num">01</span>
+									<span class="project-cat">Beauty · E-commerce</span>
+								</div>
+								<h2 class="project-title">Celebrity Luxe</h2>
+								<p class="project-desc">Luxury beauty e-commerce experience designed for a premium cosmetics brand.</p>
+								<div class="project-link">VIEW WEBSITE <span class="project-arrow">↗</span></div>
+							</div>
+						</a>
+					</article>
+
+					<!-- 02 Luka Originals -->
+					<article class="project-card project-02">
+						<a href="https://lukaoriginals.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Luka Originals - View Website">
+							<div class="project-preview">
+								<div class="browser-top-bar">
+									<div class="browser-dots">
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+									</div>
+									<span class="browser-domain">lukaoriginals.com</span>
+									<span class="browser-badge">LIVE SITE ↗</span>
+								</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/luka-originals-home.webp" alt="Luka Originals Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
+								</div>
+							</div>
+							<div class="project-content">
+								<div class="project-meta">
+									<span class="project-num">02</span>
+									<span class="project-cat">Fashion · E-commerce</span>
+								</div>
+								<h2 class="project-title">Luka Originals</h2>
+								<p class="project-desc">Contemporary fashion e-commerce experience built for an apparel brand.</p>
+								<div class="project-link">VIEW WEBSITE <span class="project-arrow">↗</span></div>
+							</div>
+						</a>
+					</article>
+
+					<!-- 03 Kalsa Foods -->
+					<article class="project-card project-03">
+						<a href="https://kalsafoods.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Kalsa Foods - View Website">
+							<div class="project-preview">
+								<div class="browser-top-bar">
+									<div class="browser-dots">
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+									</div>
+									<span class="browser-domain">kalsafoods.com</span>
+									<span class="browser-badge">LIVE SITE ↗</span>
+								</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/kalsa-foods-home.webp" alt="Kalsa Foods Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
+								</div>
+							</div>
+							<div class="project-content">
+								<div class="project-meta">
+									<span class="project-num">03</span>
+									<span class="project-cat">Food · E-commerce</span>
+								</div>
+								<h2 class="project-title">Kalsa Foods</h2>
+								<p class="project-desc">Digital storefront created for a packaged food and consumer brand.</p>
+								<div class="project-link">VIEW WEBSITE <span class="project-arrow">↗</span></div>
+							</div>
+						</a>
+					</article>
+
+					<!-- 04 Aisen Studio -->
+					<article class="project-card project-04">
+						<a href="https://aisenstudio.com/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Aisen Studio - View Website">
+							<div class="project-preview">
+								<div class="browser-top-bar">
+									<div class="browser-dots">
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+									</div>
+									<span class="browser-domain">aisenstudio.com</span>
+									<span class="browser-badge">LIVE SITE ↗</span>
+								</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/aisen-studio-home.webp" alt="Aisen Studio Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
+								</div>
+							</div>
+							<div class="project-content">
+								<div class="project-meta">
+									<span class="project-num">04</span>
+									<span class="project-cat">Fashion · E-commerce</span>
+								</div>
+								<h2 class="project-title">Aisen Studio</h2>
+								<p class="project-desc">Modern fashion e-commerce experience for an ethnic and modest-wear brand.</p>
+								<div class="project-link">VIEW WEBSITE <span class="project-arrow">↗</span></div>
+							</div>
+						</a>
+					</article>
+
+					<!-- 05 Clapton -->
+					<article class="project-card project-05">
+						<a href="https://clapton.in/" target="_blank" rel="noopener noreferrer" class="project-card-inner" aria-label="Clapton - View Website">
+							<div class="project-preview">
+								<div class="browser-top-bar">
+									<div class="browser-dots">
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+										<span class="browser-dot"></span>
+									</div>
+									<span class="browser-domain">clapton.in</span>
+									<span class="browser-badge">LIVE SITE ↗</span>
+								</div>
+								<div class="browser-viewport">
+									<img src="/assets/work/clapton-home.webp" alt="Clapton Homepage" class="project-screenshot" loading="lazy" width="1440" height="900">
+								</div>
+							</div>
+							<div class="project-content">
+								<div class="project-meta">
+									<span class="project-num">05</span>
+									<span class="project-cat">Fashion · E-commerce</span>
+								</div>
+								<h2 class="project-title">Clapton</h2>
+								<p class="project-desc">Contemporary fashion e-commerce experience focused on a clean shopping journey.</p>
+								<div class="project-link">VIEW WEBSITE <span class="project-arrow">↗</span></div>
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==================== CTA SECTION ==================== -->
+		<section id="work-cta" class="section">
+			<div class="particle-wave-container" aria-hidden="true">
+				<canvas id="workWaveCanvas"></canvas>
+				<div class="wave-vignette"></div>
+			</div>
+			<div class="wrap">
+				<div class="cta-box">
+					<div class="eyebrow" style="margin-bottom:14px">START A CONVERSATION</div>
+					<h2 class="section-title">Ready to build <span class="accent">what's next?</span></h2>
+					<p>Tell us where you want to go. We'll help you figure out how to get there.</p>
+					<a class="btn primary" href="/#contact">Start Your Project <span>↗</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ==================== FOOTER ==================== -->
+	<footer>
+		<div class="wrap">
+			<div class="footer-top">
+				<div>
+					<a class="logo brand" href="/">
+						<span class="brand-symbol"><img src="/logo.png" alt="optyvibe" class="brand-logo"></span>
+						<span class="brand-name">optyvibe</span>
+					</a>
+					<p class="footer-desc">Designing digital experiences and building growth for ambitious brands.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Explore</h4>
+					<a href="/service/">Services</a>
+					<a href="/work/" class="active">Work</a>
+					<a href="/about-us">About</a>
+					<a href="/#process">Process</a>
+					<a href="/#contact">Contact</a>
+				</div>
+				<div class="footer-col">
+					<h4>Services</h4>
+					<a href="/service/">UI/UX Design</a>
+					<a href="/service/">Website Development</a>
+					<a href="/service/">Marketplace Management</a>
+					<a href="/service/">Performance Marketing</a>
+				</div>
+				<div class="footer-col">
+					<h4>Social</h4>
+					<a href="https://www.linkedin.com/company/optyvibe" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+					<a href="/#contact">Instagram ↗</a>
+					<a href="/#contact">Facebook ↗</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>© 2026 OPTYVIBE. All rights reserved.</span>
+				<div>
+					<a href="/#hero">Privacy Policy</a>
+					<a href="/#hero">Terms</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		// Header scroll behavior
+		const header=document.getElementById('header');
+		window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+
+		// Mobile Navigation
+		const hamburger=document.querySelector('.hamb');
+		hamburger.onclick=()=>{
+			const isOpen=document.body.classList.toggle('mobile-open');
+			hamburger.textContent=isOpen?'×':'☰';
+			hamburger.setAttribute('aria-label',isOpen?'Close menu':'Open menu');
+		};
+		document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>{
+			document.body.classList.remove('mobile-open');
+			hamburger.textContent='☰';
+			hamburger.setAttribute('aria-label','Open menu');
+		});
+
+		// Interactive Particle Wave in CTA section
+		(function initWorkWaveCanvas(){
+			const canvas=document.getElementById('workWaveCanvas');
+			if(!canvas)return;
+			const ctx=canvas.getContext('2d');
+			if(!ctx)return;
+			const section=document.getElementById('work-cta');
+			if(!section)return;
+
+			let width=0,height=0,dpr=1,animId=null,isVisible=false,time=0,lastTime=0;
+			const mediaQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+			let prefersReduced=mediaQuery.matches;
+
+			function resize(){
+				const rect=canvas.getBoundingClientRect();
+				width=Math.floor(rect.width);
+				height=Math.floor(rect.height);
+				if(width<=0||height<=0)return;
+				dpr=Math.min(window.devicePixelRatio||1,2);
+				canvas.width=Math.floor(width*dpr);
+				canvas.height=Math.floor(height*dpr);
+			}
+
+			function renderFrame(t){
+				if(width<=0||height<=0)return;
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+
+				const isMobile=width<=800;
+				const cols=isMobile?36:64;
+				const rows=isMobile?18:26;
+				const theta=0.38;
+				const cosT=Math.cos(theta);
+				const sinT=Math.sin(theta);
+				const D=520;
+				const F=430;
+				const horizonY=height*0.54;
+				const zMin=130;
+				const zMax=820;
+				const xSpan=width*(isMobile?0.75:0.65);
+
+				const grid=[];
+				for(let j=0;j<rows;j++){
+					const zRatio=j/(rows-1);
+					const z=zMin+zRatio*(zMax-zMin);
+					const pz=1-zRatio;
+					const fadeZ=Math.sin(zRatio*Math.PI);
+					const rowPoints=[];
+
+					for(let i=0;i<cols;i++){
+						const xRatio=i/(cols-1);
+						const x=-xSpan+xRatio*(2*xSpan);
+						const fadeX=Math.sin(xRatio*Math.PI);
+						const edgeAlpha=Math.pow(fadeX*fadeZ,0.75);
+
+						const w1=Math.sin(x*0.0032+t*0.9)*32;
+						const w2=Math.cos(z*0.0048-t*0.75)*22;
+						const w3=Math.sin((x+z)*0.0028+t*0.5)*18;
+						const y=w1+w2+w3;
+
+						const camY=y*cosT-z*sinT;
+						const camZ=y*sinT+z*cosT+D;
+
+						const scale=F/camZ;
+						const sx=Math.round((width*0.5+x*scale)*dpr);
+						const sy=Math.round((horizonY+camY*scale)*dpr);
+
+						rowPoints.push({sx,sy,pz,edgeAlpha,scale});
+					}
+					grid.push(rowPoints);
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					const zRatio=j/(rows-1);
+					const pz=1-zRatio;
+					const fadeZ=Math.sin(zRatio*Math.PI);
+
+					ctx.beginPath();
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(i===0)ctx.moveTo(pt.sx,pt.sy);
+						else ctx.lineTo(pt.sx,pt.sy);
+					}
+					const lineAlpha=(0.04+0.16*pz)*fadeZ;
+					ctx.strokeStyle=`rgba(217,250,98,${lineAlpha.toFixed(3)})`;
+					ctx.lineWidth=Math.max(0.5,(0.5+0.6*pz)*dpr);
+					ctx.stroke();
+				}
+
+				for(let j=0;j<rows;j++){
+					const row=grid[j];
+					for(let i=0;i<cols;i++){
+						const pt=row[i];
+						if(pt.edgeAlpha<0.02)continue;
+
+						const alpha=(0.1+0.45*pt.pz)*pt.edgeAlpha;
+						const radius=(0.8+1.2*pt.pz)*dpr;
+
+						ctx.beginPath();
+						ctx.arc(pt.sx,pt.sy,radius,0,Math.PI*2);
+						ctx.fillStyle=`rgba(217,250,98,${alpha.toFixed(3)})`;
+						ctx.fill();
+					}
+				}
+			}
+
+			function loop(now){
+				if(!lastTime)lastTime=now;
+				const delta=Math.min((now-lastTime)/1000,0.1);
+				lastTime=now;
+				time+=delta;
+
+				renderFrame(time);
+
+				if(isVisible&&!prefersReduced){
+					animId=requestAnimationFrame(loop);
+				}else{
+					animId=null;
+				}
+			}
+
+			function start(){
+				if(!animId&&!prefersReduced){
+					lastTime=0;
+					animId=requestAnimationFrame(loop);
+				}
+			}
+
+			function stop(){
+				if(animId){
+					cancelAnimationFrame(animId);
+					animId=null;
+				}
+			}
+
+			const observer=new IntersectionObserver(entries=>{
+				entries.forEach(entry=>{
+					isVisible=entry.isIntersecting;
+					if(isVisible){
+						resize();
+						if(prefersReduced){
+							renderFrame(0);
+						}else{
+							start();
+						}
+					}else{
+						stop();
+					}
+				});
+			},{threshold:0.05});
+
+			observer.observe(section);
+
+			let resizeTimer;
+			window.addEventListener('resize',()=>{
+				clearTimeout(resizeTimer);
+				resizeTimer=setTimeout(()=>{
+					resize();
+					if(prefersReduced||!isVisible){
+						renderFrame(time);
+					}
+				},150);
+			});
+
+			mediaQuery.addEventListener('change',e=>{
+				prefersReduced=e.matches;
+				if(prefersReduced){
+					stop();
+					renderFrame(0);
+				}else if(isVisible){
+					start();
+				}
+			});
+
+			resize();
+			if(prefersReduced)renderFrame(0);
+		})();
+	</script>
+</body>
+</html>
+
