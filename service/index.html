@@ -1085,6 +1085,458 @@
 			border-radius:3px 3px 0 0;
 		}
 
+		/* Visual 02: App Development Mockup */
+		.mockup-appdev-wrap{
+			width:90%;
+			height:88%;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			background:#0a0d0c;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:14px;
+			padding:10px 12px;
+			position:relative;
+			box-shadow:0 10px 24px rgba(0,0,0,.45);
+		}
+		.appdev-top-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			border-bottom:1px solid rgba(255,255,255,.06);
+			padding-bottom:8px;
+		}
+		.appdev-notch-bar{
+			display:flex;
+			align-items:center;
+			gap:6px;
+		}
+		.appdev-notch{
+			width:36px;
+			height:6px;
+			background:#1d2421;
+			border-radius:4px;
+		}
+		.appdev-platforms{
+			display:flex;
+			gap:4px;
+		}
+		.appdev-os-pill{
+			font:8px var(--mono);
+			padding:2px 6px;
+			border-radius:4px;
+			background:rgba(255,255,255,.04);
+			color:#9da6a0;
+			border:1px solid rgba(255,255,255,.08);
+		}
+		.appdev-os-pill.active{
+			background:rgba(217,250,98,.12);
+			color:var(--acid);
+			border-color:rgba(217,250,98,.3);
+		}
+		.appdev-body{
+			display:flex;
+			flex-direction:column;
+			gap:8px;
+			margin:6px 0;
+		}
+		.appdev-card-widget{
+			background:#131816;
+			border:1px solid rgba(255,255,255,.06);
+			border-radius:8px;
+			padding:8px 10px;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+		}
+		.appdev-widget-left{
+			display:flex;
+			align-items:center;
+			gap:8px;
+		}
+		.appdev-app-icon{
+			width:24px;
+			height:24px;
+			border-radius:6px;
+			background:linear-gradient(135deg,#24322d,#121715);
+			border:1px solid rgba(217,250,98,.25);
+			display:grid;
+			place-items:center;
+			color:var(--acid);
+		}
+		.appdev-app-info b{
+			font-size:10px;
+			color:#ffffff;
+			display:block;
+			letter-spacing:-.01em;
+		}
+		.appdev-app-info small{
+			font:7.5px var(--mono);
+			color:#7e8881;
+		}
+		.appdev-status-badge{
+			font:7.5px var(--mono);
+			color:var(--acid);
+			background:rgba(217,250,98,.08);
+			padding:2px 6px;
+			border-radius:999px;
+			border:1px solid rgba(217,250,98,.2);
+		}
+		.appdev-code-strip{
+			background:#080a0a;
+			border-radius:6px;
+			padding:6px 8px;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			font:8px var(--mono);
+			color:#8a948d;
+			border:1px solid rgba(255,255,255,.04);
+		}
+		.appdev-code-strip span{color:var(--acid)}
+		.appdev-footer-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			font:8px var(--mono);
+			color:#6b756e;
+			padding-top:4px;
+		}
+
+		/* Visual 08: Social Media Mockup */
+		.mockup-social-wrap{
+			width:90%;
+			height:88%;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			background:#0a0d0c;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:14px;
+			padding:10px 12px;
+			box-shadow:0 10px 24px rgba(0,0,0,.45);
+		}
+		.social-header-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			border-bottom:1px solid rgba(255,255,255,.06);
+			padding-bottom:8px;
+		}
+		.social-handle-box{
+			display:flex;
+			align-items:center;
+			gap:6px;
+		}
+		.social-handle-avatar{
+			width:16px;
+			height:16px;
+			border-radius:50%;
+			background:var(--acid);
+			color:#000;
+			font-size:9px;
+			font-weight:700;
+			display:grid;
+			place-items:center;
+		}
+		.social-handle-text{
+			font:9px var(--mono);
+			color:#fff;
+		}
+		.social-growth-pill{
+			font:8px var(--mono);
+			color:var(--acid);
+			background:rgba(217,250,98,.1);
+			border:1px solid rgba(217,250,98,.25);
+			padding:2px 7px;
+			border-radius:999px;
+		}
+		.social-feed-grid{
+			display:grid;
+			grid-template-columns:repeat(3,1fr);
+			gap:6px;
+			margin:8px 0;
+		}
+		.social-feed-card{
+			background:#131816;
+			border:1px solid rgba(255,255,255,.06);
+			border-radius:6px;
+			padding:6px;
+			height:64px;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			position:relative;
+			overflow:hidden;
+		}
+		.social-feed-card.highlight{
+			border-color:rgba(217,250,98,.3);
+			background:#161d19;
+		}
+		.social-post-tag{
+			font:7px var(--mono);
+			color:#88928b;
+		}
+		.social-feed-card.highlight .social-post-tag{
+			color:var(--acid);
+		}
+		.social-feed-preview{
+			width:100%;
+			height:22px;
+			background:rgba(255,255,255,.03);
+			border-radius:3px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			color:#6d7770;
+		}
+		.social-post-metric{
+			font:7.5px var(--mono);
+			color:#d1d7d2;
+			font-weight:600;
+		}
+		.social-bottom-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			font:8px var(--mono);
+			color:#79837c;
+			background:#080a0a;
+			padding:5px 8px;
+			border-radius:6px;
+			border:1px solid rgba(255,255,255,.04);
+		}
+		.social-bottom-row span b{
+			color:#ffffff;
+		}
+
+		/* Visual 09: Graphic Design Mockup */
+		.mockup-graphic-wrap{
+			width:90%;
+			height:88%;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			background:#0a0d0c;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:14px;
+			padding:10px 12px;
+			position:relative;
+			box-shadow:0 10px 24px rgba(0,0,0,.45);
+		}
+		.graphic-top-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			border-bottom:1px solid rgba(255,255,255,.06);
+			padding-bottom:6px;
+		}
+		.graphic-tools-bar{
+			display:flex;
+			align-items:center;
+			gap:5px;
+		}
+		.graphic-tool-btn{
+			width:18px;
+			height:18px;
+			border-radius:4px;
+			background:rgba(255,255,255,.04);
+			border:1px solid rgba(255,255,255,.08);
+			display:grid;
+			place-items:center;
+			color:#9da6a0;
+		}
+		.graphic-tool-btn.active{
+			background:rgba(217,250,98,.12);
+			border-color:rgba(217,250,98,.35);
+			color:var(--acid);
+		}
+		.graphic-canvas-box{
+			height:94px;
+			background:#121715;
+			border:1px dashed rgba(255,255,255,.14);
+			border-radius:8px;
+			margin:6px 0;
+			position:relative;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			overflow:hidden;
+		}
+		.graphic-node-point{
+			position:absolute;
+			width:6px;
+			height:6px;
+			background:var(--acid);
+			border:1px solid #101312;
+			border-radius:1px;
+		}
+		.graphic-node-tl{top:8px;left:8px}
+		.graphic-node-tr{top:8px;right:8px}
+		.graphic-node-bl{bottom:8px;left:8px}
+		.graphic-node-br{bottom:8px;right:8px}
+		.graphic-hero-letter{
+			font-size:42px;
+			font-weight:900;
+			color:#ffffff;
+			line-height:1;
+			letter-spacing:-.04em;
+			opacity:.9;
+		}
+		.graphic-vector-curve{
+			position:absolute;
+			inset:0;
+			pointer-events:none;
+		}
+		.graphic-bottom-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			padding-top:4px;
+		}
+		.graphic-swatches{
+			display:flex;
+			align-items:center;
+			gap:5px;
+		}
+		.graphic-swatch{
+			width:10px;
+			height:10px;
+			border-radius:50%;
+			border:1px solid rgba(255,255,255,.15);
+		}
+		.graphic-dim-tag{
+			font:7.5px var(--mono);
+			color:#77817a;
+		}
+
+		/* Visual 10: Shiprocket Mockup */
+		.mockup-shiprocket-wrap{
+			width:90%;
+			height:88%;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			background:#0a0d0c;
+			border:1px solid rgba(255,255,255,.08);
+			border-radius:14px;
+			padding:10px 12px;
+			box-shadow:0 10px 24px rgba(0,0,0,.45);
+		}
+		.ship-top-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			border-bottom:1px solid rgba(255,255,255,.06);
+			padding-bottom:8px;
+		}
+		.ship-awb-box{
+			display:flex;
+			align-items:center;
+			gap:6px;
+		}
+		.ship-icon-box{
+			width:18px;
+			height:18px;
+			border-radius:4px;
+			background:linear-gradient(135deg,#7b3ff2,#4a1ab2);
+			display:grid;
+			place-items:center;
+			color:#fff;
+		}
+		.ship-awb-text{
+			font:8.5px var(--mono);
+			color:#ffffff;
+		}
+		.ship-status-pill{
+			font:8px var(--mono);
+			color:var(--acid);
+			background:rgba(217,250,98,.08);
+			border:1px solid rgba(217,250,98,.22);
+			padding:2px 7px;
+			border-radius:999px;
+		}
+		.ship-pipeline-wrap{
+			margin:8px 0;
+			background:#121715;
+			border:1px solid rgba(255,255,255,.06);
+			border-radius:8px;
+			padding:10px 8px;
+		}
+		.ship-steps-bar{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			position:relative;
+			margin-bottom:6px;
+		}
+		.ship-steps-bar::before{
+			content:'';
+			position:absolute;
+			top:5px;
+			left:6px;
+			right:6px;
+			height:2px;
+			background:#232b27;
+			z-index:1;
+		}
+		.ship-steps-progress{
+			position:absolute;
+			top:5px;
+			left:6px;
+			width:65%;
+			height:2px;
+			background:var(--acid);
+			z-index:2;
+			box-shadow:0 0 8px rgba(217,250,98,.5);
+		}
+		.ship-step-node{
+			width:12px;
+			height:12px;
+			border-radius:50%;
+			background:#1d2421;
+			border:2px solid #36423d;
+			position:relative;
+			z-index:3;
+		}
+		.ship-step-node.done{
+			background:var(--acid);
+			border-color:#101312;
+		}
+		.ship-step-node.current{
+			background:#101312;
+			border-color:var(--acid);
+			box-shadow:0 0 6px var(--acid);
+		}
+		.ship-step-labels{
+			display:flex;
+			justify-content:space-between;
+			font:7px var(--mono);
+			color:#77817a;
+		}
+		.ship-step-labels span.active{
+			color:var(--acid);
+		}
+		.ship-metrics-row{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			font:8px var(--mono);
+			color:#8a948d;
+			background:#080a0a;
+			padding:5px 8px;
+			border-radius:6px;
+			border:1px solid rgba(255,255,255,.04);
+		}
+		.ship-metrics-row span b{
+			color:#ffffff;
+		}
+
+		@media(min-width:1025px){
+			.service-grid > .service-card:nth-child(10){
+				grid-column: 2;
+			}
+		}
 		@media(max-width:1024px){
 			.service-grid{
 				grid-template-columns:repeat(2,1fr);
@@ -1274,39 +1726,81 @@
 		}
 		.modal.open{display:grid}
 		.modal-box{
-			background:#1d2320;
+			background:#161c19;
 			border:1px solid var(--acid);
-			max-width:580px;
+			max-width:600px;
 			width:100%;
-			padding:40px;
+			padding:36px 32px 30px;
 			position:relative;
-			box-shadow:0 25px 60px rgba(0,0,0,.6);
+			max-height:88vh;
+			overflow-y:auto;
+			border-radius:14px;
+			box-shadow:0 25px 60px rgba(0,0,0,.7);
+		}
+		.modal-box::-webkit-scrollbar{
+			width:5px;
+		}
+		.modal-box::-webkit-scrollbar-thumb{
+			background:rgba(217,250,98,.25);
+			border-radius:4px;
 		}
 		.modal-box h2{
-			font-size:38px;
-			letter-spacing:-.06em;
-			margin:12px 0;
+			font-size:clamp(28px,4vw,38px);
+			letter-spacing:-.05em;
+			margin:10px 0;
+			line-height:1.15;
 		}
 		.modal-box p{
 			color:#a4ada5;
-			line-height:1.7;
-			font-size:14px;
+			line-height:1.6;
+			font-size:13.5px;
+			margin:0 0 6px;
 		}
 		.modal-box h4{
 			font:11px var(--mono);
 			color:var(--acid);
-			margin:28px 0 12px;
-			letter-spacing:.1em;
+			margin:20px 0 12px;
+			letter-spacing:.08em;
 		}
-		.modal-box ul{
-			padding-left:18px;
-			margin:0 0 28px;
+		.modal-subservices-list{
+			display:flex;
+			flex-direction:column;
+			gap:10px;
+			margin:0 0 24px;
 		}
-		.modal-box li{
-			color:#cfd6ce;
-			margin:8px 0;
-			font-size:13px;
-			line-height:1.5;
+		.subservice-item{
+			background:rgba(255,255,255,.03);
+			border:1px solid rgba(255,255,255,.07);
+			border-radius:8px;
+			padding:11px 13px;
+			transition:border-color .2s ease,background .2s ease;
+		}
+		.subservice-item:hover{
+			background:rgba(255,255,255,.05);
+			border-color:rgba(217,250,98,.25);
+		}
+		.subservice-header{
+			display:flex;
+			align-items:baseline;
+			gap:7px;
+			margin-bottom:3px;
+		}
+		.subservice-num{
+			font:11.5px var(--mono);
+			font-weight:600;
+			color:var(--acid);
+		}
+		.subservice-title{
+			font-size:14px;
+			font-weight:700;
+			color:#ffffff;
+			letter-spacing:-.01em;
+		}
+		.subservice-desc{
+			font-size:12px;
+			color:#9ea89f;
+			line-height:1.45;
+			margin:0;
 		}
 		.modal-close{
 			position:absolute;
@@ -1317,6 +1811,8 @@
 			font-size:24px;
 			line-height:1;
 			padding:4px;
+			border:none;
+			cursor:pointer;
 		}
 
 		/* ==================== 7. FOOTER ==================== */
@@ -1597,7 +2093,7 @@
 					</div>
 					<div class="services-head-right">
 						<div class="services-badge">
-							<span class="badge-code">// 06 SERVICES</span>
+							<span class="badge-code">// 10 SERVICES</span>
 							<span class="badge-sub">ONE GROWTH PARTNER</span>
 							<div class="badge-line"></div>
 						</div>
@@ -1638,42 +2134,88 @@
 									</div>
 									<svg class="mockup-browser-mountain" viewBox="0 0 160 110" preserveAspectRatio="xMidYMax meet">
 										<defs>
-											<linearGradient id="mtnL1" x1="0%" y1="0%" x2="100%" y2="100%">
+											<linearGradient id="mtnL1_srv" x1="0%" y1="0%" x2="100%" y2="100%">
 												<stop offset="0%" stop-color="#4a5551"/>
 												<stop offset="100%" stop-color="#191e1d"/>
 											</linearGradient>
-											<linearGradient id="mtnL2" x1="0%" y1="0%" x2="100%" y2="100%">
+											<linearGradient id="mtnL2_srv" x1="0%" y1="0%" x2="100%" y2="100%">
 												<stop offset="0%" stop-color="#323b38"/>
 												<stop offset="100%" stop-color="#0f1312"/>
 											</linearGradient>
-											<linearGradient id="mtnL3" x1="0%" y1="0%" x2="100%" y2="100%">
+											<linearGradient id="mtnL3_srv" x1="0%" y1="0%" x2="100%" y2="100%">
 												<stop offset="0%" stop-color="#67756f"/>
 												<stop offset="100%" stop-color="#242b29"/>
 											</linearGradient>
-											<linearGradient id="mtnRidge" x1="0%" y1="0%" x2="0%" y2="100%">
+											<linearGradient id="mtnRidge_srv" x1="0%" y1="0%" x2="0%" y2="100%">
 												<stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
 												<stop offset="100%" stop-color="#8a9993" stop-opacity="0.2"/>
 											</linearGradient>
 										</defs>
 										<!-- Mountain Silhouette & Ridges -->
 										<polygon points="160,110 30,110 70,55 95,22 135,68 160,42" fill="#121715"/>
-										<polygon points="95,22 70,55 88,110 95,110" fill="url(#mtnL1)"/>
-										<polygon points="95,22 135,68 120,110 95,110" fill="url(#mtnL2)"/>
-										<polygon points="135,68 160,42 160,110 120,110" fill="url(#mtnL3)"/>
+										<polygon points="95,22 70,55 88,110 95,110" fill="url(#mtnL1_srv)"/>
+										<polygon points="95,22 135,68 120,110 95,110" fill="url(#mtnL2_srv)"/>
+										<polygon points="135,68 160,42 160,110 120,110" fill="url(#mtnL3_srv)"/>
 										<polygon points="70,55 35,85 55,110 88,110" fill="#18201d"/>
 										<!-- Sharp Ridge Light Lines -->
-										<polyline points="95,22 70,55 35,85" stroke="url(#mtnRidge)" stroke-width="1.2" fill="none"/>
-										<polyline points="95,22 135,68 160,42" stroke="url(#mtnRidge)" stroke-width="1.5" fill="none"/>
-										<line x1="95" y1="22" x2="98" y2="110" stroke="url(#mtnRidge)" stroke-width="0.9"/>
+										<polyline points="95,22 70,55 35,85" stroke="url(#mtnRidge_srv)" stroke-width="1.2" fill="none"/>
+										<polyline points="95,22 135,68 160,42" stroke="url(#mtnRidge_srv)" stroke-width="1.5" fill="none"/>
+										<line x1="95" y1="22" x2="98" y2="110" stroke="url(#mtnRidge_srv)" stroke-width="0.9"/>
 									</svg>
 								</div>
 							</div>
 						</div>
 					</article>
 
-					<!-- 02 UI/UX Design -->
-					<article class="service-card" tabindex="0" data-index="1" aria-label="Service 02 UI/UX Design">
+					<!-- 02 App Development -->
+					<article class="service-card" tabindex="0" data-index="1" aria-label="Service 02 App Development">
 						<span class="card-num">02</span>
+						<div class="card-arrow-circle" aria-hidden="true">
+							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+						</div>
+						<h3 class="card-title">App<br>Development</h3>
+						<p class="card-desc">High-performance iOS, Android and cross-platform mobile apps built for scale.</p>
+						<div class="card-visual-frame">
+							<div class="mockup-appdev-wrap">
+								<div class="appdev-top-row">
+									<div class="appdev-notch-bar">
+										<div class="appdev-notch"></div>
+									</div>
+									<div class="appdev-platforms">
+										<span class="appdev-os-pill active">iOS</span>
+										<span class="appdev-os-pill active">Android</span>
+										<span class="appdev-os-pill">Flutter</span>
+									</div>
+								</div>
+								<div class="appdev-body">
+									<div class="appdev-card-widget">
+										<div class="appdev-widget-left">
+											<div class="appdev-app-icon">
+												<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+											</div>
+											<div class="appdev-app-info">
+												<b>Native Mobile Core</b>
+												<small>Swift · Kotlin · Cross-Platform</small>
+											</div>
+										</div>
+										<span class="appdev-status-badge">LIVE 60FPS</span>
+									</div>
+									<div class="appdev-code-strip">
+										<span>// App Store &amp; Play Store</span>
+										<span>v2.4.0</span>
+									</div>
+								</div>
+								<div class="appdev-footer-row">
+									<span>High Performance</span>
+									<span>Single &amp; Native Codebases</span>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<!-- 03 UI/UX Design -->
+					<article class="service-card" tabindex="0" data-index="2" aria-label="Service 03 UI/UX Design">
+						<span class="card-num">03</span>
 						<div class="card-arrow-circle" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
 						</div>
@@ -1712,9 +2254,9 @@
 						</div>
 					</article>
 
-					<!-- 03 Marketplace Management -->
-					<article class="service-card" tabindex="0" data-index="2" aria-label="Service 03 Marketplace Management">
-						<span class="card-num">03</span>
+					<!-- 04 Marketplace Management -->
+					<article class="service-card" tabindex="0" data-index="3" aria-label="Service 04 Marketplace Management">
+						<span class="card-num">04</span>
 						<div class="card-arrow-circle" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
 						</div>
@@ -1770,9 +2312,9 @@
 						</div>
 					</article>
 
-					<!-- 04 Amazon & Flipkart Listing -->
-					<article class="service-card" tabindex="0" data-index="3" aria-label="Service 04 Amazon & Flipkart Listing">
-						<span class="card-num">04</span>
+					<!-- 05 Amazon & Flipkart Listing -->
+					<article class="service-card" tabindex="0" data-index="4" aria-label="Service 05 Amazon & Flipkart Listing">
+						<span class="card-num">05</span>
 						<div class="card-arrow-circle" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
 						</div>
@@ -1823,9 +2365,9 @@
 						</div>
 					</article>
 
-					<!-- 05 Meta Ads -->
-					<article class="service-card" tabindex="0" data-index="4" aria-label="Service 05 Meta Ads">
-						<span class="card-num">05</span>
+					<!-- 06 Meta Ads -->
+					<article class="service-card" tabindex="0" data-index="5" aria-label="Service 06 Meta Ads">
+						<span class="card-num">06</span>
 						<div class="card-arrow-circle" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
 						</div>
@@ -1857,9 +2399,9 @@
 						</div>
 					</article>
 
-					<!-- 06 Amazon Ads -->
-					<article class="service-card" tabindex="0" data-index="5" aria-label="Service 06 Amazon Ads">
-						<span class="card-num">06</span>
+					<!-- 07 Amazon Ads -->
+					<article class="service-card" tabindex="0" data-index="6" aria-label="Service 07 Amazon Ads">
+						<span class="card-num">07</span>
 						<div class="card-arrow-circle" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
 						</div>
@@ -1871,12 +2413,12 @@
 									<div class="amzads-brand-col">
 										<svg width="58" height="18" viewBox="0 0 603 182" aria-label="Amazon Ads">
 											<defs>
-												<path id="amz-a-card" d="M 55.288261,59.75829 V 55.7209 c -13.475471,0 -27.711211,2.88385 -27.711211,18.77125 0,8.04857 4.16847,13.50169 11.32567,13.50169 5.24337,0 9.93618,-3.22467 12.8987,-8.46805 3.670341,-6.44935 3.486841,-12.50544 3.486841,-19.7675 m 18.79747,45.43378 c -1.23219,1.10111 -3.01495,1.17976 -4.40444,0.4457 -6.18716,-5.1385 -7.28828,-7.52423 -10.69647,-12.42678 -10.224571,10.4343 -17.460401,13.55409 -30.726141,13.55409 -15.67768,0 -27.89471,-9.67401 -27.89471,-29.04824 0,-15.12713 8.20587,-25.43035 19.87236,-30.46398 10.1197,-4.45688 24.25058,-5.24337 35.051931,-6.47556 v -2.41195 c 0,-4.43066 0.34082,-9.67403 -2.25465,-13.50167 -2.280881,-3.43442 -6.632861,-4.85013 -10.460531,-4.85013 -7.10475,0 -13.44924,3.64414 -14.99603,11.19459 -0.31461,1.67789 -1.5468,3.32955 -3.22467,3.4082 L 6.26276,32.67628 C 4.74218,32.33548 3.0643,31.10327 3.48377,28.76999 7.65225,6.85271 27.44596,0.24605 45.16856,0.24605 c 9.071011,0 20.921021,2.41195 28.078221,9.28076 9.07104,8.46804 8.20587,19.7675 8.20587,32.06321 v 29.04826 c 0,8.73022 3.61794,12.55786 7.02613,17.27691 1.20597,1.67786 1.46814,3.69656 -0.05244,4.95497 -3.80144,3.17225 -10.56538,9.07104 -14.28819,12.37436 l -0.05242,-0.0525"/>
+												<path id="amz-a-card-srv" d="M 55.288261,59.75829 V 55.7209 c -13.475471,0 -27.711211,2.88385 -27.711211,18.77125 0,8.04857 4.16847,13.50169 11.32567,13.50169 5.24337,0 9.93618,-3.22467 12.8987,-8.46805 3.670341,-6.44935 3.486841,-12.50544 3.486841,-19.7675 m 18.79747,45.43378 c -1.23219,1.10111 -3.01495,1.17976 -4.40444,0.4457 -6.18716,-5.1385 -7.28828,-7.52423 -10.69647,-12.42678 -10.224571,10.4343 -17.460401,13.55409 -30.726141,13.55409 -15.67768,0 -27.89471,-9.67401 -27.89471,-29.04824 0,-15.12713 8.20587,-25.43035 19.87236,-30.46398 10.1197,-4.45688 24.25058,-5.24337 35.051931,-6.47556 v -2.41195 c 0,-4.43066 0.34082,-9.67403 -2.25465,-13.50167 -2.280881,-3.43442 -6.632861,-4.85013 -10.460531,-4.85013 -7.10475,0 -13.44924,3.64414 -14.99603,11.19459 -0.31461,1.67789 -1.5468,3.32955 -3.22467,3.4082 L 6.26276,32.67628 C 4.74218,32.33548 3.0643,31.10327 3.48377,28.76999 7.65225,6.85271 27.44596,0.24605 45.16856,0.24605 c 9.071011,0 20.921021,2.41195 28.078221,9.28076 9.07104,8.46804 8.20587,19.7675 8.20587,32.06321 v 29.04826 c 0,8.73022 3.61794,12.55786 7.02613,17.27691 1.20597,1.67786 1.46814,3.69656 -0.05244,4.95497 -3.80144,3.17225 -10.56538,9.07104 -14.28819,12.37436 l -0.05242,-0.0525"/>
 											</defs>
 											<g fill="#ffffff">
-												<use href="#amz-a-card"/>
+												<use href="#amz-a-card-srv"/>
 												<path d="m 124.99883,105.45424 h -18.64017 c -1.78273,-0.13107 -3.19845,-1.46813 -3.32954,-3.17224 V 6.61676 c 0,-1.91383 1.59923,-3.43442 3.59171,-3.43442 h 17.38176 c 1.80898,0.0786 3.25089,1.46814 3.38199,3.19845 v 12.50545 h 0.34082 c 4.53551,-12.08598 13.05597,-17.7226 24.53896,-17.7226 11.66649,0 18.95477,5.63662 24.19814,17.7226 4.5093,-12.08598 14.76008,-17.7226 25.74495,-17.7226 7.81262,0 16.35931,3.22467 21.57646,10.46052 5.89879,8.04857 4.69281,19.74128 4.69281,29.99208 l -0.0262,60.37739 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061 h -18.61397 c -1.86138,-0.13107 -3.35574,-1.62543 -3.35574,-3.46061 V 51.29025 c 0,-4.03739 0.36702,-14.10466 -0.52434,-17.93233 -1.38949,-6.42311 -5.55797,-8.23209 -10.95865,-8.23209 -4.5093,0 -9.22833,3.01494 -11.14216,7.83885 -1.91383,4.8239 -1.73031,12.89867 -1.73031,18.32557 v 50.70338 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061 h -18.61395 c -1.88761,-0.13107 -3.35576,-1.62543 -3.35576,-3.46061 L 152.946,51.29025 c 0,-10.67025 1.75651,-26.37415 -11.48298,-26.37415 -13.39682,0 -12.87248,15.31063 -12.87248,26.37415 v 50.70338 c 0,1.91383 -1.59923,3.46061 -3.59171,3.46061"/>
-												<use href="#amz-a-card" transform="translate(244.36719)"/>
+												<use href="#amz-a-card-srv" transform="translate(244.36719)"/>
 												<path d="M 348.49744,20.06598 V 6.38079 c 0,-2.07113 1.57301,-3.46062 3.46062,-3.46062 h 61.26875 c 1.96628,0 3.53929,1.41571 3.53929,3.46062 v 11.71893 c -0.0262,1.96626 -1.67788,4.53551 -4.61418,8.59912 l -31.74859,45.32893 c 11.79759,-0.28837 24.25059,1.46814 34.94706,7.49802 2.41195,1.36327 3.06737,3.35575 3.25089,5.32203 V 99.4506 c 0,1.99248 -2.20222,4.32576 -4.5093,3.1198 -18.84992,-9.88376 -43.887,-10.95865 -64.72939,0.10487 -2.12356,1.15354 -4.35199,-1.15354 -4.35199,-3.14602 V 85.66054 c 0,-2.22843 0.0262,-6.02989 2.25463,-9.41186 l 36.78224,-52.74829 h -32.01076 c -1.96626,0 -3.53927,-1.38948 -3.53927,-3.43441"/>
 												<path d="m 469.51439,1.16364 c 27.65877,0 42.62858,23.75246 42.62858,53.95427 0,29.17934 -16.54284,52.32881 -42.62858,52.32881 -27.16066,0 -41.94697,-23.75246 -41.94697,-53.35127 0,-29.78234 14.96983,-52.93181 41.94697,-52.93181 m 0.15729,19.53156 c -13.73761,0 -14.60278,18.71881 -14.60278,30.38532 0,11.69271 -0.18352,36.65114 14.44549,36.65114 14.44548,0 15.12712,-20.13452 15.12712,-32.40403 0,-8.07477 -0.34082,-17.72257 -2.779,-25.3779 -2.09735,-6.65906 -6.26581,-9.25453 -12.19083,-9.25453"/>
 												<path d="M 548.00762,105.45424 H 529.4461 c -1.86141,-0.13107 -3.35577,-1.62543 -3.35577,-3.46061 l -0.0262,-95.69149 c 0.1573,-1.75653 1.7041,-3.1198 3.59171,-3.1198 h 17.27691 c 1.62543,0.0786 2.96249,1.17976 3.32954,2.67412 v 14.62899 h 0.3408 c 5.21717,-13.0822 12.53165,-19.32181 25.40412,-19.32181 8.36317,0 16.51662,3.01494 21.75999,11.27324 4.87633,7.65532 4.87633,20.5278 4.87633,29.78233 v 60.22011 c -0.20973,1.67786 -1.75653,3.01492 -3.59169,3.01492 h -18.69262 c -1.70411,-0.13107 -3.11982,-1.38948 -3.30332,-3.01492 V 50.47753 c 0,-10.46052 1.20597,-25.77117 -11.66651,-25.77117 -4.5355,0 -8.70399,3.04117 -10.77512,7.65532 -2.62167,5.84637 -2.96249,11.66651 -2.96249,18.11585 v 51.5161 c -0.0262,1.91383 -1.65166,3.46061 -3.64414,3.46061"/>
@@ -1910,6 +2452,147 @@
 									<div class="amzads-bar" style="height: 76%; background: #c2cbd1;"></div>
 									<div class="amzads-bar" style="height: 90%; background: #e3e8ec;"></div>
 									<div class="amzads-bar" style="height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.35);"></div>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<!-- 08 Social Media Management -->
+					<article class="service-card" tabindex="0" data-index="7" aria-label="Service 08 Social Media Management">
+						<span class="card-num">08</span>
+						<div class="card-arrow-circle" aria-hidden="true">
+							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+						</div>
+						<h3 class="card-title">Social Media<br>Management</h3>
+						<p class="card-desc">Strategic content, creative direction and daily management to grow your audience.</p>
+						<div class="card-visual-frame">
+							<div class="mockup-social-wrap">
+								<div class="social-header-row">
+									<div class="social-handle-box">
+										<div class="social-handle-avatar">O</div>
+										<span class="social-handle-text">@brand_channel</span>
+									</div>
+									<span class="social-growth-pill">+34.2% Reach</span>
+								</div>
+								<div class="social-feed-grid">
+									<div class="social-feed-card highlight">
+										<span class="social-post-tag">01 REEL</span>
+										<div class="social-feed-preview">
+											<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+										</div>
+										<span class="social-post-metric">48.2K</span>
+									</div>
+									<div class="social-feed-card">
+										<span class="social-post-tag">02 POST</span>
+										<div class="social-feed-preview">
+											<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+										</div>
+										<span class="social-post-metric">14.8K</span>
+									</div>
+									<div class="social-feed-card">
+										<span class="social-post-tag">03 STORY</span>
+										<div class="social-feed-preview">
+											<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+										</div>
+										<span class="social-post-metric">9.4K</span>
+									</div>
+								</div>
+								<div class="social-bottom-row">
+									<span><b>128K</b> Impressions</span>
+									<span><b>8.4%</b> Engagement</span>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<!-- 09 Graphic Design -->
+					<article class="service-card" tabindex="0" data-index="8" aria-label="Service 09 Graphic Design">
+						<span class="card-num">09</span>
+						<div class="card-arrow-circle" aria-hidden="true">
+							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+						</div>
+						<h3 class="card-title">Graphic Design</h3>
+						<p class="card-desc">High-impact brand identities, marketing collateral and conversion-focused visuals.</p>
+						<div class="card-visual-frame">
+							<div class="mockup-graphic-wrap">
+								<div class="graphic-top-row">
+									<div class="graphic-tools-bar">
+										<span class="graphic-tool-btn active">
+											<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+										</span>
+										<span class="graphic-tool-btn">
+											<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+										</span>
+										<span class="graphic-tool-btn">
+											<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+										</span>
+									</div>
+									<span class="graphic-dim-tag">1080 × 1350 · 300 DPI</span>
+								</div>
+								<div class="graphic-canvas-box">
+									<span class="graphic-node-point graphic-node-tl"></span>
+									<span class="graphic-node-point graphic-node-tr"></span>
+									<span class="graphic-node-point graphic-node-bl"></span>
+									<span class="graphic-node-point graphic-node-br"></span>
+									<svg class="graphic-vector-curve" viewBox="0 0 200 90" fill="none">
+										<path d="M20 70 C 60 10, 140 80, 180 20" stroke="rgba(217,250,98,0.4)" stroke-width="1.5" stroke-dasharray="3 3"/>
+										<circle cx="20" cy="70" r="3" fill="#d9fa62"/>
+										<circle cx="180" cy="20" r="3" fill="#d9fa62"/>
+										<line x1="20" y1="70" x2="60" y2="10" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+										<line x1="180" y1="20" x2="140" y2="80" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+									</svg>
+									<span class="graphic-hero-letter">Aa</span>
+								</div>
+								<div class="graphic-bottom-row">
+									<div class="graphic-swatches">
+										<span class="graphic-swatch" style="background:#d9fa62" title="Accent Lime"></span>
+										<span class="graphic-swatch" style="background:#ffffff" title="Paper White"></span>
+										<span class="graphic-swatch" style="background:#181e1b" title="Obsidian Dark"></span>
+										<span class="graphic-swatch" style="background:#4a5551" title="Slate Gray"></span>
+									</div>
+									<span class="graphic-dim-tag">Vector Artboard</span>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<!-- 10 Shiprocket Management -->
+					<article class="service-card" tabindex="0" data-index="9" aria-label="Service 10 Shiprocket Management">
+						<span class="card-num">10</span>
+						<div class="card-arrow-circle" aria-hidden="true">
+							<svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+						</div>
+						<h3 class="card-title">Shiprocket<br>Management</h3>
+						<p class="card-desc">Streamlined shipping logistics, order fulfillment and proactive RTO management.</p>
+						<div class="card-visual-frame">
+							<div class="mockup-shiprocket-wrap">
+								<div class="ship-top-row">
+									<div class="ship-awb-box">
+										<div class="ship-icon-box">
+											<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+										</div>
+										<span class="ship-awb-text">AWB #98241038</span>
+									</div>
+									<span class="ship-status-pill">● In Transit</span>
+								</div>
+								<div class="ship-pipeline-wrap">
+									<div class="ship-steps-bar">
+										<div class="ship-steps-progress"></div>
+										<div class="ship-step-node done"></div>
+										<div class="ship-step-node done"></div>
+										<div class="ship-step-node current"></div>
+										<div class="ship-step-node"></div>
+									</div>
+									<div class="ship-step-labels">
+										<span class="active">Manifest</span>
+										<span class="active">Picked</span>
+										<span class="active">In Transit</span>
+										<span>Delivered</span>
+									</div>
+								</div>
+								<div class="ship-metrics-row">
+									<span><b>99.4%</b> On-Time SLA</span>
+									<span><b>-38%</b> RTO Rate</span>
 								</div>
 							</div>
 						</div>
@@ -2034,9 +2717,9 @@
 			<div class="eyebrow" id="modalEyebrow"></div>
 			<h2 id="modalTitle"></h2>
 			<p id="modalDescription"></p>
-			<h4>WHAT WE DELIVER</h4>
-			<ul id="modalList"></ul>
-			<a href="/#contact" class="btn primary" id="modalCta">Start a conversation ↗</a>
+			<h4>SUB-SERVICES INCLUDED</h4>
+			<div id="modalSubservices" class="modal-subservices-list"></div>
+			<a href="/#contact" class="btn primary" id="modalCta">Discuss Your Project <span>↗</span></a>
 		</div>
 	</div>
 
@@ -2102,46 +2785,133 @@
 		});
 
 		// Service Data for Modals
-		const serviceDetails=[
+		const services=[
 			{
+				num:'01',
 				title:'Website Development',
-				desc:'Fast, responsive and scalable websites built to turn visitors into customers.',
-				deliver:['Responsive front-end builds','CMS and commerce integrations','Performance, speed and QA testing','Cross-browser and mobile optimization']
+				desc:'High-performance Shopify, WordPress and bespoke web platforms built for speed, responsiveness and high conversion.',
+				subservices:[
+					{num:'01',title:'Shopify Website',desc:'E-commerce stores, product page optimization, checkout conversion, app integrations'},
+					{num:'02',title:'WordPress Website',desc:'Business websites, Elementor/custom theme development, blogs, corporate portals'},
+					{num:'03',title:'Custom HTML / CSS / JavaScript',desc:'High-performance custom coded sites, animations, bespoke UI'}
+				]
 			},
 			{
+				num:'02',
+				title:'App Development',
+				desc:'High-performance iOS, Android and cross-platform mobile apps built for scale.',
+				subservices:[
+					{num:'01',title:'iOS App Development',desc:'Native Swift apps, App Store deployment, iPhone & iPad optimization'},
+					{num:'02',title:'Android App Development',desc:'Native Kotlin apps, Google Play publishing, performance tuning'},
+					{num:'03',title:'Cross-Platform App Development',desc:'Flutter / React Native applications with single codebase efficiency'}
+				]
+			},
+			{
+				num:'03',
 				title:'UI/UX Design',
-				desc:'Intuitive, modern interfaces designed around real users and real business goals.',
-				deliver:['User research and customer journeys','Wireframes, UX flow and visual design systems','Interactive clickable prototypes','Design-to-code handoff specifications']
+				desc:'User-centric designs that look premium and convert better.',
+				subservices:[
+					{num:'01',title:'Website UI/UX',desc:'Modern responsive layouts, landing pages, visual hierarchy'},
+					{num:'02',title:'Mobile App UI/UX',desc:'Intuitive mobile user flows, screen interactions, design systems'},
+					{num:'03',title:'Figma Design',desc:'High-fidelity design prototypes, component libraries, design systems'},
+					{num:'04',title:'UX Research & User Flows',desc:'Information architecture, wireframes, customer journey mapping'}
+				]
 			},
 			{
+				num:'04',
 				title:'Marketplace Management',
-				desc:'End-to-end management for your e-commerce marketplace presence.',
-				deliver:['Catalog and inventory synchronization','Seller account health monitoring','Buy Box and pricing strategy','Weekly performance analytics and reporting']
+				desc:'Complete marketplace operations to simplify and scale your online business.',
+				subservices:[
+					{num:'01',title:'Amazon Management',desc:'Complete store management, inventory planning, account health, promotions'},
+					{num:'02',title:'Flipkart Management',desc:'Account operations, listing updates, seller dashboard management, growth strategy'},
+					{num:'03',title:'Product & Catalog Management',desc:'Catalog structuring, category tagging, variation creation, inventory sync'},
+					{num:'04',title:'Order & Operations Management',desc:'Order tracking, SLA maintenance, fulfillment monitoring, returns oversight'}
+				]
 			},
 			{
+				num:'05',
 				title:'Amazon & Flipkart Listing',
-				desc:'Optimized product listings designed to improve visibility, clicks and conversions.',
-				deliver:['Keyword-rich search content strategy','A+ Content, EBC & brand store direction','Conversion-focused product image strategy','Organic search rank optimization']
+				desc:'Optimized product listings that improve visibility and drive sales.',
+				subservices:[
+					{num:'01',title:'Product Listing Creation',desc:'Single & parent-child listings, category guidelines compliance, attribute indexing'},
+					{num:'02',title:'SEO Product Titles & Descriptions',desc:'Keyword-rich product titles, compelling bullet points, backend search terms'},
+					{num:'03',title:'Product Image & Creative Optimization',desc:'High-converting gallery infographics, lifestyle renders, dimension tags'},
+					{num:'04',title:'A+ Content',desc:'Premium visual storytelling, branded comparison charts, high-impact brand modules'}
+				]
 			},
 			{
+				num:'06',
 				title:'Meta Ads',
-				desc:'Performance-driven campaigns designed to reach the right audience and generate measurable growth.',
-				deliver:['Custom audience segmentation and lookalikes','Creative copywriting and ad testing','Pixel, CAPI and attribution setup','Daily bid management and ROAS scaling']
+				desc:'Targeted ad campaigns to reach the right audience and generate real results.',
+				subservices:[
+					{num:'01',title:'Facebook Ads',desc:'Audience targeting, prospecting funnels, catalog dynamic ads, conversion scaling'},
+					{num:'02',title:'Instagram Ads',desc:'Reel ads, story placements, visual lifestyle promotions, high-intent targeting'},
+					{num:'03',title:'Campaign Strategy',desc:'Full-funnel TOFU/MOFU/BOFU setup, retargeting architecture, budget pacing'},
+					{num:'04',title:'Ad Creative & Optimization',desc:'Hook testing, high-CTR visual assets, performance analysis, ROAS scaling'}
+				]
 			},
 			{
+				num:'07',
 				title:'Amazon Ads',
-				desc:'Strategic advertising designed to increase product visibility and profitable sales.',
-				deliver:['Sponsored Products, Brands and Display strategy','Negative keyword harvesting and bid pruning','ACoS / TACoS focused campaign scaling','Competitor and category conquesting']
+				desc:'Data-driven Amazon advertising to boost visibility and maximize ROI.',
+				subservices:[
+					{num:'01',title:'Sponsored Products',desc:'High-converting search term bidding, product detail page placements, bid adjustments'},
+					{num:'02',title:'Sponsored Brands',desc:'Headline search ads, brand store traffic campaigns, video ad creative'},
+					{num:'03',title:'Keyword Targeting',desc:'Exact/phrase/broad keyword harvesting, competitor ASIN targeting, negative targeting'},
+					{num:'04',title:'Campaign Optimization',desc:'ACoS & ROAS reduction, dayparting, placement bid multipliers, scale management'}
+				]
+			},
+			{
+				num:'08',
+				title:'Social Media Management',
+				desc:'Strategic content, creative direction and daily management to grow your audience.',
+				subservices:[
+					{num:'01',title:'Social Media Strategy',desc:'Brand voice development, content pillars, competitor benchmarking, channel growth plans'},
+					{num:'02',title:'Content Planning',desc:'Monthly editorial calendars, trend alignment, caption copywriting, hashtag strategy'},
+					{num:'03',title:'Creative Direction',desc:'Consistent aesthetic themes, template design, audio & reel styling, visual moodboards'},
+					{num:'04',title:'Publishing & Management',desc:'Scheduled multi-platform posting, story engagement, community replies, growth monitoring'}
+				]
+			},
+			{
+				num:'09',
+				title:'Graphic Design',
+				desc:'High-impact brand identities, marketing collateral and conversion-focused visuals.',
+				subservices:[
+					{num:'01',title:'Social Media Creatives',desc:'High-converting promotional banners, carousel sets, story graphics, event teasers'},
+					{num:'02',title:'Brand Creatives',desc:'Logo marks, brand identity guidelines, typography palettes, brand stationery'},
+					{num:'03',title:'Product Creatives',desc:'Packaging design, label mockups, e-commerce badge overlays, unboxing inserts'},
+					{num:'04',title:'Marketing Materials',desc:'Digital brochures, pitch decks, sales sheets, print collateral, display signage'}
+				]
+			},
+			{
+				num:'10',
+				title:'Shiprocket Management',
+				desc:'Streamlined shipping logistics, order fulfillment and proactive RTO management.',
+				subservices:[
+					{num:'01',title:'Shipping Management',desc:'Courier partner allocation, rate optimization, bulk shipment automation'},
+					{num:'02',title:'Order Processing',desc:'Manifest generation, label printing, pickup coordination, warehouse dispatch'},
+					{num:'03',title:'Tracking & Delivery Management',desc:'Real-time tracking communication, NDR (Non-Delivery Report) workflows, delivery follow-ups'},
+					{num:'04',title:'RTO Management',desc:'Return-to-origin reduction strategy, address verification, damaged goods claim processing'}
+				]
 			}
 		];
 
 		const modal=document.getElementById('serviceModal');
 		function openServiceModal(index){
-			const s=serviceDetails[index];
-			document.getElementById('modalEyebrow').textContent=`0${index+1} // CAPABILITY`;
+			const s=services[index];
+			if(!s)return;
+			document.getElementById('modalEyebrow').textContent=`${s.num} / SERVICE`;
 			document.getElementById('modalTitle').textContent=s.title;
 			document.getElementById('modalDescription').textContent=s.desc;
-			document.getElementById('modalList').innerHTML=s.deliver.map(item=>`<li>${item}</li>`).join('');
+			document.getElementById('modalSubservices').innerHTML=s.subservices.map(sub=>`
+				<div class="subservice-item">
+					<div class="subservice-header">
+						<span class="subservice-num">${sub.num}.</span>
+						<span class="subservice-title">${sub.title}</span>
+					</div>
+					<p class="subservice-desc">${sub.desc}</p>
+				</div>
+			`).join('');
 			modal.classList.add('open');
 			document.querySelector('.modal-close').focus();
 		}
