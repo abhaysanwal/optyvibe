@@ -16,7 +16,389 @@
 		header{position:fixed;top:0;left:0;width:100%;z-index:20;transition:.3s;border-bottom:1px solid transparent}header.scrolled{background:rgba(16,19,18,.86);backdrop-filter:blur(16px);border-color:var(--line)}nav{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:17px;font-weight:800;letter-spacing:-.04em;display:flex;gap:12px;align-items:center}.logo-mark{display:flex;align-items:center;justify-content:center;width:66px;height:46px;flex-shrink:0}.logo-mark svg{display:block;width:100%;height:100%}.logo-wordmark{font-size:clamp(1.55rem,1.2vw + 1.1rem,2.05rem);line-height:1;letter-spacing:-.08em}.nav-links{display:flex;gap:31px;color:#a6aca5;font-size:12px}.nav-links a:hover{color:var(--paper)}.nav-cta,.btn{display:inline-flex;align-items:center;gap:13px;padding:12px 17px;border:1px solid var(--line);font-size:12px;transition:.25s}.nav-cta:hover,.btn.secondary:hover{border-color:var(--acid);color:var(--acid)}.btn.primary{background:var(--acid);color:var(--ink);border-color:var(--acid);font-weight:800}.btn.primary:hover{background:#efff99;transform:translateY(-2px)}.hamb{display:none;background:none;color:var(--paper);font-size:22px}
 		#hero{min-height:780px;padding-top:190px;overflow:hidden;background:radial-gradient(ellipse at 85% 30%,rgba(92,134,105,.2),transparent 38%),radial-gradient(ellipse at 10% 90%,rgba(217,250,98,.05),transparent 34%)}#hero:after{content:'';position:absolute;inset:0;z-index:-1;opacity:.25;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.hero-copy h1{font-size:clamp(70px,10vw,142px);line-height:.82;letter-spacing:-.1em;margin:22px 0 31px;font-weight:800}.hero-copy h1 span{display:block;color:var(--acid)}.hero-copy p{max-width:460px;color:#a9afa8;line-height:1.7;font-size:16px}.actions{display:flex;gap:12px;margin-top:34px}.trust{margin-top:67px;font:10px var(--mono);letter-spacing:.13em;color:#656b65}.hero-art{height:475px;position:relative}.art-browser{position:absolute;top:44px;right:0;width:82%;height:340px;background:#d9ded2;color:var(--ink);border-radius:7px;box-shadow:0 30px 100px rgba(0,0,0,.45);transform:rotate(2deg);padding:13px}.browser-top{display:flex;gap:5px;border-bottom:1px solid rgba(16,19,18,.15);padding-bottom:11px}.browser-top i{height:6px;width:6px;border-radius:50%;background:#8d9589}.browser-content{display:grid;grid-template-columns:1.3fr .7fr;gap:10px;padding:18px 11px}.browser-content h3{font-size:31px;line-height:.9;letter-spacing:-.08em;margin:8px 0 25px}.browser-content p{font:9px var(--mono);color:#677066}.browser-block{height:126px;background:#b7c3af;margin-top:25px}.mini-graph{height:80px;position:relative;background:#e8ebe3;border-radius:4px;padding:12px}.mini-graph svg{width:100%;height:100%;stroke:#718c6e;fill:none;stroke-width:2}.art-phone{position:absolute;bottom:3px;left:4%;width:136px;height:248px;border:6px solid #292d2a;border-radius:23px;background:#a8cebb;box-shadow:0 25px 40px rgba(0,0,0,.35);padding:20px 12px;transform:rotate(-8deg);z-index:2}.phone-notch{width:45px;height:5px;background:#292d2a;border-radius:5px;margin:-10px auto 22px}.phone-bar{height:7px;background:#294b43;width:64%;margin-bottom:11px}.phone-lines{height:7px;background:#629c8b;margin:7px 0;width:90%}.phone-card{height:64px;background:#d5e9d2;border-radius:5px;margin-top:17px}.float-stat{position:absolute;right:-18px;top:23px;background:#222925;color:var(--paper);padding:15px 18px;border:1px solid rgba(217,250,98,.4);font:10px var(--mono);box-shadow:0 15px 35px #0006;z-index:3}.float-stat strong{display:block;color:var(--acid);font:700 22px var(--sans);letter-spacing:-.06em;margin-top:4px}.float-stat.two{right:29%;top:auto;bottom:20px}.scroll-note{position:absolute;right:32px;bottom:50px;writing-mode:vertical-rl;font:10px var(--mono);color:#626961;letter-spacing:.15em}
 		.services-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:65px}
-		#capabilities{background:#e1e6da;color:var(--ink);overflow:hidden}#capabilities .eyebrow{color:#5e7f55}.flow-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:110px;align-items:center}.flow-layout .section-title{max-width:500px}.flow-copy{color:#5d665f;line-height:1.7;font-size:15px}.flow{border-left:1px solid #aeb8ad;padding-left:43px;position:relative}.flow-step{height:76px;display:flex;align-items:center;gap:23px;position:relative}.flow-step:before{content:'';position:absolute;left:-48px;width:9px;height:9px;background:var(--acid);border:2px solid var(--ink);border-radius:50%}.flow-step:not(:last-child):after{content:'';position:absolute;left:-44px;top:43px;height:32px;border-left:1px dashed #8ca18c}.flow-step b{font:11px var(--mono);color:#708170;width:32px}.flow-step strong{font-size:32px;letter-spacing:-.07em}.orbit-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}.orbit-tags span{font:10px var(--mono);border:1px solid #b6c2b4;padding:9px 12px;color:#667765}
+		/* ==================== THE OPTYVIBE METHOD SECTION ==================== */
+		.nav-anchor{position:relative;top:-90px;visibility:hidden;display:block;height:0}
+		#capabilities.method-section{
+			background:#dbe7d7;
+			color:#131915;
+			overflow:hidden;
+			padding:105px 0 115px;
+			position:relative;
+		}
+		.method-grid{
+			display:grid;
+			grid-template-columns:1.05fr 1fr 1.15fr;
+			gap:48px;
+			align-items:center;
+		}
+		.method-left{
+			min-width:0;
+		}
+		.method-eyebrow{
+			font:11px/1.2 var(--mono);
+			letter-spacing:.14em;
+			text-transform:uppercase;
+			color:#527054;
+			margin-bottom:20px;
+		}
+		.method-headline{
+			font-size:clamp(38px,4.2vw,56px);
+			font-weight:800;
+			line-height:1.06;
+			letter-spacing:-.045em;
+			color:#131915;
+			margin:0 0 24px;
+		}
+		.method-headline .method-accent{
+			color:#2e5831;
+			font-style:italic;
+			font-weight:800;
+		}
+		.method-copy{
+			color:#48544a;
+			line-height:1.65;
+			font-size:14.5px;
+			max-width:400px;
+			margin:0 0 32px;
+		}
+		.method-tags{
+			display:flex;
+			flex-wrap:wrap;
+			gap:8px 10px;
+			max-width:380px;
+		}
+		.method-tag{
+			font:11px/1 var(--mono);
+			color:#2d3a2f;
+			background:rgba(255,255,255,.32);
+			border:1px solid rgba(82,112,84,.28);
+			border-radius:8px;
+			padding:8px 13px;
+			letter-spacing:.02em;
+			transition:border-color .2s ease,background .2s ease;
+		}
+		.method-tag:hover{
+			background:rgba(255,255,255,.6);
+			border-color:rgba(46,88,49,.5);
+		}
+
+		/* Center Editorial Visual */
+		.method-center{
+			position:relative;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			min-height:430px;
+		}
+		.method-aura{
+			position:absolute;
+			width:380px;
+			height:380px;
+			border-radius:50%;
+			background:radial-gradient(circle,rgba(255,255,255,.85) 0%,rgba(215,242,212,.5) 45%,transparent 72%);
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			filter:blur(24px);
+			pointer-events:none;
+			z-index:1;
+		}
+		.method-card-back{
+			position:relative;
+			z-index:2;
+			width:min(320px,100%);
+			height:380px;
+			background:#121814;
+			border-radius:24px;
+			border:1px solid rgba(255,255,255,.08);
+			box-shadow:0 24px 50px rgba(18,32,22,.2),0 4px 12px rgba(0,0,0,.08);
+			overflow:hidden;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			padding:28px 24px 22px;
+			margin-left:auto;
+			margin-right:10px;
+		}
+		.method-card-back-bg{
+			position:absolute;
+			inset:0;
+			pointer-events:none;
+			z-index:1;
+		}
+		.method-back-svg{
+			width:100%;
+			height:100%;
+			display:block;
+			object-fit:cover;
+		}
+		.method-back-content{
+			position:relative;
+			z-index:2;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			height:100%;
+		}
+		.method-back-words{
+			font:12.5px/1.7 var(--mono);
+			font-weight:600;
+			letter-spacing:.12em;
+			color:#e2ede1;
+			display:flex;
+			flex-direction:column;
+		}
+		.method-card-dash{
+			color:var(--acid);
+			font-size:15px;
+			margin-top:2px;
+		}
+		.method-back-brand{
+			position:absolute;
+			right:0;
+			bottom:0;
+			text-align:right;
+			display:flex;
+			flex-direction:column;
+			align-items:flex-end;
+			z-index:4;
+		}
+		.method-brand-icon{
+			position:relative;
+			width:44px;
+			height:40px;
+			overflow:hidden;
+			margin-bottom:4px;
+		}
+		.method-brand-icon .method-brand-img{
+			position:absolute;
+			width:220px;
+			height:220px;
+			max-width:none;
+			left:-84px;
+			top:-77px;
+			display:block;
+			filter:drop-shadow(0 0 8px rgba(217,250,98,.3));
+		}
+		.method-brand-title{
+			font:800 13px/1.1 var(--sans);
+			letter-spacing:-.02em;
+			color:#ffffff;
+		}
+		.method-brand-sub{
+			font:8px/1.2 var(--mono);
+			letter-spacing:.08em;
+			color:#8ea391;
+			margin-top:3px;
+		}
+
+		/* Foreground Card */
+		.method-card-front{
+			position:absolute;
+			z-index:3;
+			left:0px;
+			bottom:15px;
+			width:170px;
+			height:200px;
+			background:#1a231d;
+			border-radius:18px;
+			border:1px solid rgba(255,255,255,.1);
+			box-shadow:0 18px 36px rgba(0,0,0,.32),0 2px 8px rgba(0,0,0,.15);
+			overflow:hidden;
+			padding:20px 18px;
+		}
+		.method-card-front-bg{
+			position:absolute;
+			inset:0;
+			pointer-events:none;
+			z-index:1;
+		}
+		.method-front-svg{
+			width:100%;
+			height:100%;
+			display:block;
+		}
+		.method-front-content{
+			position:relative;
+			z-index:2;
+		}
+		.method-front-words{
+			font:12px/1.7 var(--mono);
+			font-weight:600;
+			letter-spacing:.12em;
+			color:#e2ede1;
+			display:flex;
+			flex-direction:column;
+		}
+
+		/* Right Process Steps (5 Rows) */
+		.method-right{
+			min-width:0;
+		}
+		.method-steps{
+			display:flex;
+			flex-direction:column;
+			gap:18px;
+		}
+		.method-step{
+			display:flex;
+			align-items:flex-start;
+			gap:16px;
+			padding:4px 0;
+		}
+		.method-icon-tile{
+			width:44px;
+			height:44px;
+			flex-shrink:0;
+			border-radius:12px;
+			background:rgba(255,255,255,.55);
+			border:1px solid rgba(82,112,84,.18);
+			display:grid;
+			place-items:center;
+			box-shadow:0 2px 8px rgba(32,54,34,.05);
+			transition:transform .2s ease,background .2s ease;
+		}
+		.method-step:hover .method-icon-tile{
+			transform:scale(1.06);
+			background:#ffffff;
+			border-color:rgba(46,88,49,.35);
+		}
+		.method-step-svg{
+			width:20px;
+			height:20px;
+			stroke:#2e5831;
+			stroke-width:1.8;
+			fill:none;
+			stroke-linecap:round;
+			stroke-linejoin:round;
+		}
+		.method-step-body{
+			min-width:0;
+			padding-top:2px;
+		}
+		.method-step-header{
+			display:flex;
+			align-items:baseline;
+			gap:12px;
+			margin-bottom:4px;
+		}
+		.method-step-num{
+			font:11px/1 var(--mono);
+			font-weight:600;
+			color:#527054;
+			letter-spacing:.04em;
+		}
+		.method-step-title{
+			font:800 15px/1.2 var(--sans);
+			letter-spacing:-.02em;
+			color:#131915;
+			margin:0;
+		}
+		.method-step-desc{
+			font-size:13px;
+			line-height:1.45;
+			color:#48544a;
+			margin:0;
+			max-width:340px;
+		}
+
+		/* Responsive Adjustments */
+		@media(min-width:801px) and (max-width:1150px){
+			.method-grid{
+				grid-template-columns:1.05fr .95fr 1.05fr;
+				gap:24px;
+			}
+			.method-headline{
+				font-size:clamp(32px,3.6vw,42px);
+			}
+			.method-card-back{
+				width:270px;
+				height:330px;
+				padding:20px 18px;
+				margin-right:0;
+			}
+			.method-card-front{
+				left:-10px;
+				bottom:10px;
+				width:145px;
+				height:175px;
+				padding:16px 14px;
+			}
+			.method-aura{
+				width:280px;
+				height:280px;
+			}
+			.method-step{
+				gap:12px;
+			}
+			.method-icon-tile{
+				width:38px;
+				height:38px;
+			}
+			.method-step-svg{
+				width:18px;
+				height:18px;
+			}
+			.method-step-title{
+				font-size:14px;
+			}
+			.method-step-desc{
+				font-size:12px;
+			}
+		}
+		@media(max-width:800px){
+			#capabilities.method-section{
+				padding:72px 0 80px;
+			}
+			.method-grid{
+				grid-template-columns:1fr;
+				gap:44px;
+			}
+			.method-headline{
+				font-size:clamp(34px,8.5vw,44px);
+			}
+			.method-copy{
+				max-width:100%;
+				margin-bottom:24px;
+			}
+			.method-tags{
+				max-width:100%;
+				gap:7px 8px;
+			}
+			.method-tag{
+				font-size:10.5px;
+				padding:7px 11px;
+			}
+			.method-center{
+				min-height:360px;
+				margin:10px 0;
+			}
+			.method-aura{
+				width:300px;
+				height:300px;
+			}
+			.method-card-back{
+				width:280px;
+				height:340px;
+				margin:0 auto;
+				padding:22px 20px 18px;
+			}
+			.method-card-front{
+				left:calc(50% - 145px);
+				bottom:5px;
+				width:155px;
+				height:180px;
+				padding:16px 14px;
+			}
+			.method-steps{
+				gap:20px;
+			}
+			.method-step-desc{
+				max-width:100%;
+				font-size:12.5px;
+			}
+		}
+
 		/* ==================== WORK PORTFOLIO SECTION ==================== */
 		#work{
 			background:#0b0f0e;
@@ -258,12 +640,44 @@
 		}
 		#results{padding:86px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}.metric{border-left:1px solid var(--line);padding-left:20px}.metric strong{font-size:54px;letter-spacing:-.08em;color:var(--acid)}.metric p{color:#899089;font:11px var(--mono);margin-top:7px}
 		.process-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);margin-top:75px}.process-step{padding:25px 16px 0 0;border-right:1px solid var(--line);min-height:200px}.process-step:not(:first-child){padding-left:18px}.process-step:last-child{border:0}.process-step b{font:11px var(--mono);color:var(--acid)}.process-step h3{font-size:18px;margin:28px 0 13px;letter-spacing:-.04em}.process-step p{font-size:12px;color:#878f87;line-height:1.6;margin:0;padding-right:15px}
-		#about{background:#e1e6da;color:var(--ink)}#about .eyebrow{color:#5e7f55}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.about-grid .section-title{max-width:540px}.about-grid p{color:#5e665f;line-height:1.75;max-width:470px}.about-art{height:380px;position:relative;background:#acc7b3;overflow:hidden}.about-art:before{content:'N';position:absolute;font:800 470px/1 var(--sans);color:#c9dfc9;left:5%;top:-16%;letter-spacing:-.2em}.pillars{display:flex;gap:8px;position:absolute;bottom:25px;left:25px;right:25px;flex-wrap:wrap}.pillars span{border:1px solid #779178;padding:8px 10px;font:10px var(--mono);background:#d7e6d3cc}
-		#testimonials{background:#c7e9b8;color:var(--ink)}#testimonials .eyebrow{color:#507454}.quote-wrap{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:end}.quote{font:clamp(25px,3.2vw,43px)/1.15 var(--serif);letter-spacing:-.035em;margin:0;max-width:760px}.quote:before{content:'“';font-size:100px;line-height:0;vertical-align:-.3em;color:#699b68}.quote-meta{font:11px var(--mono);margin-top:32px}.quote-meta span{display:block;color:#527054;margin-top:7px}.slider-actions{display:flex;gap:8px;justify-content:end}.slider-actions button{width:42px;height:42px;border:1px solid #82a681;background:transparent;font-size:18px;color:var(--ink)}.slider-actions button:hover{background:var(--ink);color:var(--paper)}
+		#about{background:#101312;color:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;padding:88px 0 100px}
+		#about::before{content:'';position:absolute;top:20%;right:10%;width:420px;height:420px;background:radial-gradient(circle,rgba(217,250,98,.035) 0%,transparent 65%);border-radius:50%;filter:blur(60px);pointer-events:none}
+		.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2}
+		.about-eyebrow{font:11px var(--mono);color:var(--acid);letter-spacing:.18em;text-transform:uppercase;margin:0 0 16px}
+		.about-headline{font-size:clamp(38px,4.2vw,54px);line-height:1.08;letter-spacing:-.04em;margin:0 0 20px;color:var(--paper);font-weight:700}
+		.about-headline .accent{color:var(--acid)}
+		.about-body{color:#9ea8a0;font-size:15px;line-height:1.7;margin:0 0 32px;max-width:480px}
+		.about-values-list{display:flex;align-items:center;gap:22px;margin:0 0 32px;padding:0;list-style:none;flex-wrap:wrap}
+		.about-val-item{display:inline-flex;align-items:center;gap:8px;font:600 11.5px var(--mono);color:#c2cac4;letter-spacing:.06em;text-transform:uppercase}
+		.about-val-icon{width:14px;height:14px;color:var(--acid);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+		.about-val-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2}
+		.about-cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--acid);color:var(--ink);padding:13px 26px;font:700 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:4px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+		.about-cta-btn:hover{background:#e5ff80;transform:translateY(-2px);box-shadow:0 8px 24px rgba(217,250,98,.22)}
+		.about-visual-wrapper{display:flex;justify-content:center;position:relative}
+		.about-card{position:relative;width:100%;max-width:480px;background:linear-gradient(165deg,#151a17 0%,#101412 100%);border:1px solid rgba(243,240,233,.08);border-radius:18px;padding:46px 36px 30px;box-shadow:0 25px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+		.about-card-pattern{position:absolute;inset:0;opacity:.035;background-image:linear-gradient(to right,rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+		.about-card-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%}
+		.about-card-glow{position:absolute;top:32px;left:50%;transform:translate(-50%,-50%);width:130px;height:130px;background:radial-gradient(circle,rgba(217,250,98,.09) 0%,rgba(217,250,98,.02) 50%,transparent 75%);border-radius:50%;pointer-events:none;filter:blur(14px)}
+		.about-card-emblem{position:relative;width:60px;height:56px;overflow:hidden;margin:0 auto 16px;z-index:2}
+		.about-card-emblem .about-card-logo-img{position:absolute;width:310px;height:310px;max-width:none;left:-118px;top:-108px;display:block}
+		.about-card-name{font:800 21px/1 var(--sans);color:var(--paper);letter-spacing:-.03em;margin:0 0 7px;position:relative;z-index:2}
+		.about-card-tag{font:10.5px var(--mono);color:#8b958c;letter-spacing:.15em;text-transform:uppercase;margin:0;position:relative;z-index:2}
+		.about-card-divider{width:100%;height:1px;background:rgba(243,240,233,.08);margin:34px 0 20px;position:relative;z-index:2}
+		.about-card-footer{font:10.5px var(--mono);color:#7f8a80;letter-spacing:.16em;text-transform:uppercase;position:relative;z-index:2;display:flex;align-items:center;gap:12px;justify-content:center}
+		.about-card-footer span{color:var(--acid)}
+		@media(max-width:800px){
+			#about{padding:72px 0 80px}
+			.about-grid{grid-template-columns:1fr;gap:40px}
+			.about-headline{font-size:clamp(34px,8.5vw,42px)}
+			.about-values-list{flex-direction:column;align-items:flex-start;gap:13px;margin-bottom:28px}
+			.about-card{max-width:100%;padding:36px 22px 24px}
+			.about-card-divider{margin:26px 0 16px}
+			.about-card-footer{font-size:10px;gap:8px}
+		}
 		#contact{position:relative;overflow:hidden;background:radial-gradient(circle at 100% 100%,#345044,transparent 45%),#181d1a}.particle-wave-container{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}.particle-wave-container canvas{display:block;width:100%;height:100%}.wave-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,transparent 35%,rgba(24,29,26,.65) 80%,#181d1a 100%),linear-gradient(to bottom,#181d1a 0%,transparent 18%,transparent 80%,#181d1a 100%);pointer-events:none}#contact .wrap{position:relative;z-index:2}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.contact-details{color:#929a92;line-height:1.7;font-size:14px}.contact-details strong{display:block;color:var(--paper);font-size:18px;margin-top:32px}.contact-details a{color:var(--acid);border-bottom:1px solid #79934a}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.field{position:relative}.field.full{grid-column:1/-1}.field label{font:10px var(--mono);color:#89938a;display:block;margin-bottom:8px}.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:8px 0 13px;color:var(--paper);outline:0;border-radius:0}.field select{appearance:none}.field option{background:var(--ink)}.field textarea{resize:vertical;min-height:75px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--acid)}.form-error{display:none;color:#f2a18b;font:10px var(--mono);margin-top:15px}.form-success{display:none;color:var(--acid);font:11px var(--mono);margin-top:20px}.form-btn{margin-top:27px}
 		footer{padding:65px 0 30px;border-top:1px solid var(--line)}.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:35px}.footer-desc{color:#838b83;line-height:1.6;font-size:13px;max-width:230px;margin-top:20px}.footer-col h4{font:10px var(--mono);color:var(--acid);margin:2px 0 20px;text-transform:uppercase;letter-spacing:.1em}.footer-col a{display:block;font-size:12px;color:#969d96;margin:0 0 12px}.footer-col a:hover{color:var(--paper)}.footer-bottom{border-top:1px solid var(--line);margin-top:70px;padding-top:18px;display:flex;justify-content:space-between;color:#626a62;font:10px var(--mono)}.footer-bottom div{display:flex;gap:20px}
 		.modal{position:fixed;inset:0;background:#0e1110d9;backdrop-filter:blur(10px);z-index:40;display:none;place-items:center;padding:25px}.modal.open{display:grid}.modal-box{background:#161c19;border:1px solid var(--acid);max-width:600px;width:100%;padding:36px 32px 30px;position:relative;max-height:88vh;overflow-y:auto;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.7)}.modal-box::-webkit-scrollbar{width:5px}.modal-box::-webkit-scrollbar-thumb{background:rgba(217,250,98,.25);border-radius:4px}.modal-box h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.05em;margin:10px 0;line-height:1.15}.modal-box p{color:#a4ada5;line-height:1.6;font-size:13.5px;margin:0 0 6px}.modal-box h4{font:11px var(--mono);color:var(--acid);margin:20px 0 12px;letter-spacing:.08em}.modal-subservices-list{display:flex;flex-direction:column;gap:10px;margin:0 0 24px}.subservice-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:11px 13px;transition:border-color .2s ease,background .2s ease}.subservice-item:hover{background:rgba(255,255,255,.05);border-color:rgba(217,250,98,.25)}.subservice-header{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}.subservice-num{font:11.5px var(--mono);font-weight:600;color:var(--acid)}.subservice-title{font-size:14px;font-weight:700;color:#ffffff;letter-spacing:-.01em}.subservice-desc{font-size:12px;color:#9ea89f;line-height:1.45;margin:0}.modal-close{position:absolute;right:17px;top:14px;background:none;color:var(--paper);font-size:22px;border:none;cursor:pointer}
-		@media(max-width:800px){.wrap{width:min(100% - 38px,620px)}.section{padding:84px 0}nav{height:70px}.nav-links,.nav-cta{display:none}.hamb{display:block}.mobile-open .nav-links{display:flex;position:absolute;top:70px;left:0;width:100%;padding:26px 20px;flex-direction:column;background:#171b19;border-bottom:1px solid var(--line)}.mobile-open .nav-links a{font-size:18px}.hero-grid,.flow-layout,.about-grid,.contact-grid{grid-template-columns:1fr;gap:55px}.hero-copy h1{font-size:clamp(64px,18vw,100px)}#hero{padding-top:140px;min-height:0;padding-bottom:80px}.hero-art{height:390px}.art-browser{width:84%;height:280px}.browser-content h3{font-size:23px}.art-phone{height:205px;width:115px}.float-stat{right:0}.services-head,.work-head{display:block;margin-bottom:40px}.services-head .section-intro{margin-top:20px}.service-grid{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr);gap:30px}.metric strong{font-size:43px}.process-grid{grid-template-columns:1fr;margin-top:45px}.process-step,.process-step:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:22px 0;min-height:0}.process-step h3{margin:12px 0 8px}.quote-wrap{grid-template-columns:1fr;gap:35px}.slider-actions{justify-content:start}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}.footer-bottom div{margin-top:10px}.scroll-note{display:none}}
+		@media(max-width:800px){.wrap{width:min(100% - 38px,620px)}.section{padding:84px 0}nav{height:70px}.nav-links,.nav-cta{display:none}.hamb{display:block}.mobile-open .nav-links{display:flex;position:absolute;top:70px;left:0;width:100%;padding:26px 20px;flex-direction:column;background:#171b19;border-bottom:1px solid var(--line)}.mobile-open .nav-links a{font-size:18px}.hero-grid,.flow-layout,.about-grid,.contact-grid{grid-template-columns:1fr;gap:55px}.hero-copy h1{font-size:clamp(64px,18vw,100px)}#hero{padding-top:140px;min-height:0;padding-bottom:80px}.hero-art{height:390px}.art-browser{width:84%;height:280px}.browser-content h3{font-size:23px}.art-phone{height:205px;width:115px}.float-stat{right:0}.services-head,.work-head{display:block;margin-bottom:40px}.services-head .section-intro{margin-top:20px}.service-grid{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr);gap:30px}.metric strong{font-size:43px}.process-grid{grid-template-columns:1fr;margin-top:45px}.process-step,.process-step:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:22px 0;min-height:0}.process-step h3{margin:12px 0 8px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}.footer-bottom div{margin-top:10px}.scroll-note{display:none}}
 		@media(prefers-reduced-motion:no-preference){.hero-copy>*{animation:rise .7s both}.hero-copy h1{animation-delay:.1s}.hero-copy p{animation-delay:.2s}.actions{animation-delay:.3s}.hero-art{animation:float 6s ease-in-out infinite}.service-card,.project-card{will-change:transform}@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-10px)}}}
 		@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 	</style>
@@ -1317,12 +1731,12 @@
 		}
 	</style>
 	<style>
-		.wrap{width:min(1180px,calc(100% - 48px))}.hero-grid,.flow-layout,.about-grid,.contact-grid{min-width:0}.hero-copy,.hero-art,.services-head>div,.services-head>.section-intro,.work-head>div,.project,.metric,.process-step,.quote-wrap>div,.contact-grid>div,form{min-width:0}.project-title,.service-card h3,.process-step h3{overflow-wrap:anywhere}
+		.wrap{width:min(1180px,calc(100% - 48px))}.hero-grid,.flow-layout,.about-grid,.contact-grid{min-width:0}.hero-copy,.hero-art,.services-head>div,.services-head>.section-intro,.work-head>div,.project,.metric,.process-step,.contact-grid>div,form{min-width:0}.project-title,.service-card h3,.process-step h3{overflow-wrap:anywhere}
 				@media(min-width:801px) and (max-width:1100px){.wrap{width:min(100% - 48px,900px)}.hero-grid{gap:24px}.hero-copy h1{font-size:clamp(48px,6vw,68px)}.services-head{gap:40px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.flow-layout{gap:48px}.contact-grid{gap:50px}.footer-top{grid-template-columns:repeat(2,1fr)}}
 		@media(max-width:800px){
 			.wrap{width:min(100% - 32px,620px)}.section{padding:76px 0}nav{height:70px}.nav-links,.nav-cta{display:none}.hamb{display:block}.mobile-open .nav-links{display:flex;position:absolute;top:70px;left:0;width:100%;padding:24px 16px;flex-direction:column;background:#171b19;border-bottom:1px solid var(--line)}.mobile-open .nav-links a{font-size:18px}
 			#hero{width:100%;height:auto;min-height:0;padding:92px 0 38px}.hero-grid{display:grid;grid-template-columns:1fr;gap:22px;align-items:start;height:auto}.hero-copy{position:relative;z-index:2}.hero-slides{min-height:0}.hero-slide{display:none!important}.hero-slide.active{display:block!important}.hero-copy h1{font-size:clamp(48px,15vw,72px);line-height:.86;margin:18px 0 22px;overflow-wrap:normal}.hero-slide p{max-width:100%;min-height:0;font-size:14px;line-height:1.6}.actions{flex-wrap:wrap;gap:10px;margin-top:24px}.actions .btn{padding:11px 13px}.banner-controls{display:flex;flex-wrap:wrap;margin-top:24px}.banner-dots{order:3;width:100%;margin:4px 0 0}.trust{margin-top:26px;white-space:normal;line-height:1.8;font-size:9px}.hero-art{position:relative;right:auto;bottom:auto;width:100%;height:clamp(210px,58vw,260px);opacity:1;pointer-events:auto}.art-browser{top:10px;right:0;width:87%;height:clamp(160px,45vw,220px);padding:10px}.browser-content{padding:14px 9px;gap:8px}.browser-content h3{font-size:clamp(20px,6vw,30px);margin:6px 0 16px}.browser-block{height:clamp(60px,17vw,100px);margin-top:16px}.mini-graph{height:clamp(52px,15vw,70px);padding:9px}.art-phone{bottom:0;left:3%;width:clamp(88px,23vw,124px);height:clamp(160px,40vw,210px);border-width:5px;padding:16px 9px}.phone-notch{margin:-8px auto 16px}.float-stat{display:none}
-			.services-head,.work-head{display:block;margin-bottom:42px}.services-head .section-intro{margin-top:20px}.service-grid,.work-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.metric{padding-left:14px}.metric strong{font-size:clamp(34px,11vw,48px)}.metric p{font-size:10px;line-height:1.5}.process-grid{grid-template-columns:1fr;margin-top:46px}.process-step,.process-step:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:22px 0;min-height:0}.process-step:last-child{border-bottom:0}.process-step h3{margin:12px 0 8px}.process-step p{padding-right:0}.flow-layout,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}.flow-layout{gap:42px}.flow-step strong{font-size:clamp(25px,8vw,32px)}.quote-wrap{grid-template-columns:1fr;gap:34px}.quote{font-size:clamp(25px,7vw,38px)}.quote:before{font-size:76px}.slider-actions{justify-content:start}.form-grid{grid-template-columns:1fr;gap:22px}.field.full{grid-column:auto}.footer-top{grid-template-columns:1fr 1fr;gap:28px 20px}.footer-top>div:first-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}.footer-bottom div{margin-top:10px;flex-wrap:wrap}.modal{padding:16px}.modal-box{padding:34px 24px}.modal-box h2{font-size:clamp(34px,10vw,45px)}
+			.services-head,.work-head{display:block;margin-bottom:42px}.services-head .section-intro{margin-top:20px}.service-grid,.work-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.metric{padding-left:14px}.metric strong{font-size:clamp(34px,11vw,48px)}.metric p{font-size:10px;line-height:1.5}.process-grid{grid-template-columns:1fr;margin-top:46px}.process-step,.process-step:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:22px 0;min-height:0}.process-step:last-child{border-bottom:0}.process-step h3{margin:12px 0 8px}.process-step p{padding-right:0}.flow-layout,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}.flow-layout{gap:42px}.flow-step strong{font-size:clamp(25px,8vw,32px)}.form-grid{grid-template-columns:1fr;gap:22px}.field.full{grid-column:auto}.footer-top{grid-template-columns:1fr 1fr;gap:28px 20px}.footer-top>div:first-child{grid-column:1/-1}.footer-bottom{display:block;line-height:2}.footer-bottom div{margin-top:10px;flex-wrap:wrap}.modal{padding:16px}.modal-box{padding:34px 24px}.modal-box h2{font-size:clamp(34px,10vw,45px)}
 		}
 		@media(max-width:380px){.wrap{width:calc(100% - 24px)}.hero-copy h1{font-size:clamp(44px,14vw,56px)}.actions .btn{width:100%;justify-content:center}.art-browser{width:91%}.art-phone{left:0;width:88px;height:165px}.browser-content h3{font-size:19px}.footer-top{grid-template-columns:1fr}.footer-top>div:first-child{grid-column:auto}}
 	</style>
@@ -1857,7 +2271,210 @@
 					</article>
 				</div>
 			</div></div></section>
-		<section id="capabilities" class="section"><div class="wrap flow-layout"><div><div class="eyebrow">The OPTYVIBE method</div><h2 class="section-title">One partner.<br><em>Multiple</em><br>capabilities.</h2><p class="flow-copy">The best digital work happens when every part of the journey speaks the same language. We bring the right disciplines together, at the right time.</p><div class="orbit-tags"><span>UI/UX</span><span>Development</span><span>Marketplace</span><span>Listings</span><span>Meta Ads</span><span>Amazon Ads</span></div></div><div class="flow"><div class="flow-step"><b>01</b><strong>DESIGN</strong></div><div class="flow-step"><b>02</b><strong>BUILD</strong></div><div class="flow-step"><b>03</b><strong>LAUNCH</strong></div><div class="flow-step"><b>04</b><strong>OPTIMIZE</strong></div><div class="flow-step"><b>05</b><strong>GROW</strong></div></div></div></section>
+		<section id="capabilities" class="section method-section">
+			<span id="process" class="nav-anchor" aria-hidden="true"></span>
+			<div class="wrap method-grid">
+				<!-- LEFT COLUMN -->
+				<div class="method-left">
+					<div class="method-eyebrow">THE OPTYVIBE METHOD</div>
+					<h2 class="method-headline">One partner.<br><span class="method-accent"><em>Multiple</em></span><br>capabilities.</h2>
+					<p class="method-copy">The best digital work happens when every part of the journey speaks the same language. We bring the right disciplines together, at the right time.</p>
+					<div class="method-tags">
+						<span class="method-tag">UI/UX</span>
+						<span class="method-tag">Development</span>
+						<span class="method-tag">Marketplace</span>
+						<span class="method-tag">Listings</span>
+						<span class="method-tag">Meta Ads</span>
+						<span class="method-tag">Amazon Ads</span>
+					</div>
+				</div>
+
+				<!-- CENTER VISUAL -->
+				<div class="method-center" aria-label="OPTYVIBE Brand Composition">
+					<div class="method-aura" aria-hidden="true"></div>
+					
+					<!-- Back Card -->
+					<div class="method-card-back">
+						<div class="method-card-back-bg" aria-hidden="true">
+							<svg viewBox="0 0 340 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="method-back-svg" preserveAspectRatio="xMidYMid slice">
+								<defs>
+									<linearGradient id="mBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+										<stop offset="0%" stop-color="#151c17"/>
+										<stop offset="60%" stop-color="#101512"/>
+										<stop offset="100%" stop-color="#0b0e0c"/>
+									</linearGradient>
+									<linearGradient id="mGlassGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+										<stop offset="0%" stop-color="#3b523f" stop-opacity="0.35"/>
+										<stop offset="100%" stop-color="#141d16" stop-opacity="0.85"/>
+									</linearGradient>
+									<linearGradient id="mGlassGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+										<stop offset="0%" stop-color="#4d6c51" stop-opacity="0.3"/>
+										<stop offset="100%" stop-color="#0e1310" stop-opacity="0.95"/>
+									</linearGradient>
+								</defs>
+								<rect width="100%" height="100%" fill="url(#mBgGrad)"/>
+								<!-- Architectural Facet 1 -->
+								<polygon points="120,0 340,0 340,260 170,140" fill="url(#mGlassGrad1)"/>
+								<!-- Architectural Facet 2 -->
+								<polygon points="170,140 340,260 340,380 210,380" fill="url(#mGlassGrad2)"/>
+								<!-- Perspective Lines -->
+								<line x1="120" y1="0" x2="210" y2="380" stroke="#4d6f53" stroke-width="1.2" stroke-opacity="0.45"/>
+								<line x1="170" y1="140" x2="340" y2="380" stroke="#628968" stroke-width="1" stroke-opacity="0.4"/>
+								<line x1="170" y1="140" x2="340" y2="80" stroke="#4d6f53" stroke-width="1" stroke-opacity="0.35"/>
+								<line x1="240" y1="0" x2="340" y2="200" stroke="#7aa680" stroke-width="0.75" stroke-opacity="0.3"/>
+								<line x1="140" y1="60" x2="340" y2="310" stroke="#7aa680" stroke-width="0.75" stroke-opacity="0.25"/>
+								<!-- Accent Nodes -->
+								<circle cx="170" cy="140" r="2.5" fill="#d9fa62" fill-opacity="0.7"/>
+								<circle cx="210" cy="200" r="1.5" fill="#d9fa62" fill-opacity="0.5"/>
+							</svg>
+						</div>
+						<div class="method-back-content">
+							<div class="method-back-words">
+								<span>DESIGN</span>
+								<span>BUILD</span>
+								<span>GROW</span>
+								<div class="method-card-dash">—</div>
+							</div>
+							<div class="method-back-brand">
+								<div class="method-brand-icon">
+									<img src="logo.png" alt="OPTYVIBE Logo" class="method-brand-img">
+								</div>
+								<div class="method-brand-title">OPTYVIBE</div>
+								<div class="method-brand-sub">DIGITAL GROWTH AGENCY</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Front Overlapping Card -->
+					<div class="method-card-front">
+						<div class="method-card-front-bg" aria-hidden="true">
+							<svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="method-front-svg">
+								<defs>
+									<linearGradient id="mFrontGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+										<stop offset="0%" stop-color="#1d261f"/>
+										<stop offset="100%" stop-color="#101512"/>
+									</linearGradient>
+								</defs>
+								<rect width="100%" height="100%" fill="url(#mFrontGrad)"/>
+								<!-- Ambient organic / workspace curves -->
+								<path d="M-10,180 Q60,110 130,160 T210,190" stroke="#3d5641" stroke-width="1.5" fill="none" opacity="0.4"/>
+								<path d="M20,220 Q80,140 140,180 T220,200" stroke="#527656" stroke-width="1" fill="none" opacity="0.3"/>
+								<line x1="30" y1="220" x2="30" y2="150" stroke="#334a36" stroke-width="2" opacity="0.35"/>
+								<path d="M30,170 Q10,160 15,145 Q30,155 30,170 Z" fill="#446147" fill-opacity="0.4"/>
+								<path d="M30,160 Q50,150 45,135 Q30,145 30,160 Z" fill="#587e5c" fill-opacity="0.45"/>
+								<path d="M30,150 Q15,135 25,120 Q35,135 30,150 Z" fill="#446147" fill-opacity="0.4"/>
+							</svg>
+						</div>
+						<div class="method-front-content">
+							<div class="method-front-words">
+								<span>IDEAS</span>
+								<span>INTO</span>
+								<span>IMPACT</span>
+								<div class="method-card-dash">—</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- RIGHT COLUMN: 5 INDEPENDENT PROCESS ROWS -->
+				<div class="method-right">
+					<div class="method-steps">
+						<!-- Step 01 -->
+						<div class="method-step">
+							<div class="method-icon-tile" aria-hidden="true">
+								<svg viewBox="0 0 24 24" class="method-step-svg">
+									<path d="M12 19l7-7 3 3-7 7-3-3z"/>
+									<path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+									<path d="M2 2l7.586 7.586"/>
+									<circle cx="11" cy="11" r="2"/>
+								</svg>
+							</div>
+							<div class="method-step-body">
+								<div class="method-step-header">
+									<span class="method-step-num">01</span>
+									<h3 class="method-step-title">DESIGN</h3>
+								</div>
+								<p class="method-step-desc">Create user-centric designs that are beautiful, functional and built for growth.</p>
+							</div>
+						</div>
+
+						<!-- Step 02 -->
+						<div class="method-step">
+							<div class="method-icon-tile" aria-hidden="true">
+								<svg viewBox="0 0 24 24" class="method-step-svg">
+									<polyline points="16 18 22 12 16 6"/>
+									<polyline points="8 6 2 12 8 18"/>
+									<line x1="14" y1="4" x2="10" y2="20"/>
+								</svg>
+							</div>
+							<div class="method-step-body">
+								<div class="method-step-header">
+									<span class="method-step-num">02</span>
+									<h3 class="method-step-title">BUILD</h3>
+								</div>
+								<p class="method-step-desc">Develop scalable websites and digital products that perform seamlessly.</p>
+							</div>
+						</div>
+
+						<!-- Step 03 -->
+						<div class="method-step">
+							<div class="method-icon-tile" aria-hidden="true">
+								<svg viewBox="0 0 24 24" class="method-step-svg">
+									<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+									<path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6.05 11a22.35 22.35 0 0 1-3.95 2z"/>
+									<path d="M9 12H4s.55-3.03 2-4.5c1.47-1.48 4.5-2 4.5-2"/>
+									<path d="M15 12v5s3.03-.55 4.5-2c1.48-1.47 2-4.5 2-4.5"/>
+									<circle cx="15.5" cy="8.5" r="1.5" fill="currentColor"/>
+								</svg>
+							</div>
+							<div class="method-step-body">
+								<div class="method-step-header">
+									<span class="method-step-num">03</span>
+									<h3 class="method-step-title">LAUNCH</h3>
+								</div>
+								<p class="method-step-desc">Bring your brand to market with the right strategy, platforms and execution.</p>
+							</div>
+						</div>
+
+						<!-- Step 04 -->
+						<div class="method-step">
+							<div class="method-icon-tile" aria-hidden="true">
+								<svg viewBox="0 0 24 24" class="method-step-svg">
+									<line x1="18" y1="20" x2="18" y2="10"/>
+									<line x1="12" y1="20" x2="12" y2="4"/>
+									<line x1="6" y1="20" x2="6" y2="14"/>
+									<line x1="2" y1="20" x2="22" y2="20"/>
+								</svg>
+							</div>
+							<div class="method-step-body">
+								<div class="method-step-header">
+									<span class="method-step-num">04</span>
+									<h3 class="method-step-title">OPTIMIZE</h3>
+								</div>
+								<p class="method-step-desc">Continuously improve performance through data, creatives and smart strategy.</p>
+							</div>
+						</div>
+
+						<!-- Step 05 -->
+						<div class="method-step">
+							<div class="method-icon-tile" aria-hidden="true">
+								<svg viewBox="0 0 24 24" class="method-step-svg">
+									<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+									<polyline points="17 6 23 6 23 12"/>
+								</svg>
+							</div>
+							<div class="method-step-body">
+								<div class="method-step-header">
+									<span class="method-step-num">05</span>
+									<h3 class="method-step-title">GROW</h3>
+								</div>
+								<p class="method-step-desc">Scale your business with marketing, marketplaces and long-term support.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="why-us" class="section"><div class="wrap"><div class="eyebrow">WHY US</div><h2 class="section-title why-us-heading">Why Brands <span class="accent">Choose Us</span></h2><div class="why-us-grid"><article class="why-us-card"><div class="why-us-card-top"><span>01</span><span class="why-us-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 15v9l6 4M12 13l-3-3M36 13l3-3"/></svg></span></div><h3>Strategic Thinking</h3><p>We don't just execute tasks. We understand the business behind them.</p></article><article class="why-us-card"><div class="why-us-card-top"><span>02</span><span class="why-us-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m12 29 7 7 17-20"/><path d="M9 13h30M9 19h18"/></svg></span></div><h3>Premium Execution</h3><p>Every touchpoint is designed and delivered with attention to detail.</p></article><article class="why-us-card"><div class="why-us-card-top"><span>03</span><span class="why-us-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 36h30M13 31l7-8 5 4 10-13"/><path d="M29 14h6v6"/></svg></span></div><h3>Performance Focused</h3><p>We focus on outcomes, not just deliverables.</p></article><article class="why-us-card"><div class="why-us-card-top"><span>04</span><span class="why-us-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 38s-14-8-14-19a7 7 0 0 1 14-3 7 7 0 0 1 14 3c0 11-14 19-14 19Z"/><path d="M17 24h5l2-4 3 8 2-4h3"/></svg></span></div><h3>Long-Term Partnership</h3><p>From launch to growth, we're here when your business evolves.</p></article></div></div></section>
 		<section id="work" class="section"><div class="wrap"><div class="work-head"><div><div class="eyebrow">OUR WORK</div><h2 class="section-title">Digital experiences built for <span class="accent">real brands.</span></h2></div><p class="section-intro">From e-commerce stores to digital brand experiences, we design and build digital platforms that help ambitious brands move forward.</p></div><div class="work-single-wrap">
 					<!-- 01 Celebrity Luxe (Featured Project Teaser) -->
@@ -1883,8 +2500,56 @@
 				</div></div></section>
 		<section id="results" class="section"><div class="wrap"><div class="eyebrow">The numbers</div><h2 class="section-title">Built for real<br><span class="accent">business impact.</span></h2><div class="metrics"><div class="metric"><strong>6</strong><p>Core Services</p></div><div class="metric"><strong>1</strong><p>End-to-End Digital Partner</p></div><div class="metric"><strong>3</strong><p>Digital Growth Areas</p></div><div class="metric"><strong>1</strong><p>Long-Term Approach</p></div></div></div></section>
 		<section id="process" class="section"><div class="wrap"><div class="eyebrow">How we work</div><h2 class="section-title">From idea<br>to <span class="accent">growth.</span></h2><div class="process-grid"><div class="process-step"><b>01</b><h3>DISCOVER</h3><p>Understand the business, users and goals.</p></div><div class="process-step"><b>02</b><h3>STRATEGIZE</h3><p>Create the right digital strategy.</p></div><div class="process-step"><b>03</b><h3>DESIGN</h3><p>Design intuitive, conversion-focused experiences.</p></div><div class="process-step"><b>04</b><h3>BUILD</h3><p>Develop, launch and test the solution.</p></div><div class="process-step"><b>05</b><h3>GROW</h3><p>Optimize performance and scale results.</p></div></div></div></section>
-		<section id="about" class="section"><div class="wrap about-grid"><div><div class="eyebrow">About OPTYVIBE</div><h2 class="section-title">Your digital<br><span>growth partner.</span></h2><p>We bring design, development, e-commerce and performance marketing together under one roof, helping businesses create stronger digital experiences and sustainable online growth.</p><a class="btn" style="margin-top:28px;border-color:#9cb099" href="/#contact">More about us <span>↗</span></a></div><div class="about-art"><div class="pillars"><span>STRATEGY</span><span>DESIGN</span><span>TECHNOLOGY</span><span>GROWTH</span></div></div></div></section>
-		<section id="testimonials" class="section"><div class="wrap"><div class="eyebrow">Client perspective</div><div class="quote-wrap"><div><h2 class="section-title">Good work<br>travels <em>far.</em></h2><div class="slider-actions"><button id="prev" aria-label="Previous testimonial">←</button><button id="next" aria-label="Next testimonial">→</button></div></div><div><blockquote class="quote" id="quote"></blockquote><div class="quote-meta" id="quoteMeta"></div></div></div></div></section>
+		<section id="about" class="section">
+			<div class="wrap about-grid">
+				<div class="about-content">
+					<div class="about-eyebrow">ABOUT OPTYVIBE</div>
+					<h2 class="about-headline">Your digital<br><span class="accent">growth partner.</span></h2>
+					<p class="about-body">We bring design, development, e-commerce and performance marketing together under one roof, helping businesses create stronger digital experiences and sustainable online growth.</p>
+					
+					<ul class="about-values-list">
+						<li class="about-val-item">
+							<span class="about-val-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></svg>
+							</span>
+							<span>Client Focused</span>
+						</li>
+						<li class="about-val-item">
+							<span class="about-val-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24"><polyline points="4 16 10 10 14 14 20 6"/><polyline points="15 6 20 6 20 11"/></svg>
+							</span>
+							<span>Result Driven</span>
+						</li>
+						<li class="about-val-item">
+							<span class="about-val-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5v8M19 5H11"/></svg>
+							</span>
+							<span>Long-Term Growth</span>
+						</li>
+					</ul>
+
+					<a class="about-cta-btn" href="/about-us">More about us <span>→</span></a>
+				</div>
+
+				<div class="about-visual-wrapper">
+					<div class="about-card" aria-label="OPTYVIBE Digital Growth Agency">
+						<div class="about-card-pattern" aria-hidden="true"></div>
+						<div class="about-card-center">
+							<div class="about-card-glow" aria-hidden="true"></div>
+							<div class="about-card-emblem" aria-hidden="true">
+								<img src="logo.png" alt="OPTYVIBE" class="about-card-logo-img">
+							</div>
+							<div class="about-card-name">OPTYVIBE</div>
+							<div class="about-card-tag">Digital Growth Agency</div>
+						</div>
+						<div class="about-card-divider" aria-hidden="true"></div>
+						<div class="about-card-footer">
+							<span>DESIGN</span> · <span>BUILD</span> · <span>GROW</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="contact" class="section"><div class="particle-wave-container" aria-hidden="true"><canvas id="homeWaveCanvas"></canvas><div class="wave-vignette"></div></div><div class="wrap contact-grid"><div><div class="eyebrow">Start a conversation</div><h2 class="section-title">Let's build <span class="accent">what's next.</span></h2><p class="section-intro">We create digital experiences that feel premium, work clearly and support the next stage of your business.</p><div class="contact-details"><strong>EMAIL</strong><a href="mailto:optyvibe@gmail.com">optyvibe@gmail.com</a><strong>PHONE</strong><a href="tel:+919319963315">+91 93199 63315</a><strong>LOCATION</strong><span>Noida · Working worldwide</span></div></div><form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate><input type="hidden" name="access_key" value="d3c260cc-0a7d-4f77-a1bc-cb3222ecbcc5"><input type="hidden" name="from_name" value="OPTYVIBE Website"><input type="hidden" id="formSubject" name="subject" value="New OPTYVIBE Project Inquiry"><input type="hidden" id="formReplyTo" name="replyto" value=""><div class="form-grid"><div class="field"><label for="name">NAME *</label><input id="name" name="name" required placeholder="Your name"></div><div class="field"><label for="email">EMAIL *</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div><div class="field"><label for="phone">PHONE</label><input id="phone" name="phone" placeholder="+91 00000 00000"></div><div class="field"><label for="company">COMPANY</label><input id="company" name="company" placeholder="Your company"></div><div class="field"><label for="service">SERVICE *</label><select id="service" name="service" required><option value="">Select a service</option><option value="Website Development">Website Development</option><option value="App Development">App Development</option><option value="UI/UX Design">UI/UX Design</option><option value="Marketplace Management">Marketplace Management</option><option value="Amazon &amp; Flipkart Listing">Amazon &amp; Flipkart Listing</option><option value="Meta Ads">Meta Ads</option><option value="Amazon Ads">Amazon Ads</option><option value="Social Media Management">Social Media Management</option><option value="Graphic Design">Graphic Design</option><option value="Shiprocket Management">Shiprocket Management</option></select></div><div class="field"><label for="requirement">WHAT DO YOU NEED?</label><select id="requirement" name="requirement"><option value="">Select a service first</option><option value="Not Sure / Need Consultation">Not Sure / Need Consultation</option></select></div><div class="field full"><label for="details">PROJECT DETAILS *</label><textarea id="details" name="message" required placeholder="Tell us a little about what you are building..."></textarea></div></div><div class="form-error" id="formError">Please fill in the required fields with valid details.</div><button class="btn primary form-btn" type="submit">Send project inquiry <span>↗</span></button><div class="form-success" id="formSuccess">Thank you! Your inquiry has been sent successfully. We'll get back to you soon.</div></form></div></section>
 	</main>
 	<footer><div class="wrap"><div class="footer-top"><div><a class="logo" href="/"><img src="logo.png" alt="OPTYVIBE" class="brand-logo"></a><p class="footer-desc">Designing digital experiences and building growth for ambitious brands.</p></div><div class="footer-col"><h4>Explore</h4><a href="/service/">Services</a><a href="/work/">Work</a><a href="about-us">About</a><a href="#process">Process</a><a href="/#contact">Contact</a></div><div class="footer-col"><h4>Services</h4><a href="/service/">UI/UX Design</a><a href="/service/">Website Development</a><a href="/service/">Marketplace Management</a><a href="/service/">Performance Marketing</a></div><div class="footer-col"><h4>Social</h4><a href="https://www.linkedin.com/company/optyvibe" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="/#contact">Instagram ↗</a><a href="/#contact">Facebook ↗</a></div></div><div class="footer-bottom"><span>© 2026 OPTYVIBE. All rights reserved.</span><div><a href="/#hero">Privacy Policy</a><a href="/#hero">Terms</a></div></div></div></footer>
@@ -2038,7 +2703,6 @@
 			card.onclick=()=>openService(idx);
 			card.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openService(idx)};
 		});
-		const testimonials=[['A strong digital presence should feel clear, premium and easy to navigate from the first interaction.','Client perspective','Brand team'],['The right digital experience gives a brand room to communicate value with confidence.','Client perspective','Brand team'],['Thoughtful design and smart execution make growth feel structured, not chaotic.','Client perspective','Brand team']];let current=0;function renderQuote(){const t=testimonials[current];document.getElementById('quote').textContent=t[0];document.getElementById('quoteMeta').innerHTML=`${t[1]}<span>${t[2]}</span>`}document.getElementById('prev').onclick=()=>{current=(current+testimonials.length-1)%testimonials.length;renderQuote()};document.getElementById('next').onclick=()=>{current=(current+1)%testimonials.length;renderQuote()};renderQuote();
 		const heroSlides=[...document.querySelectorAll('.hero-slide')];const bannerDots=[...document.querySelectorAll('.banner-dots button')];const brandLogos=[...document.querySelectorAll('.brand-logo')];const brandName=document.querySelector('header .brand-name');const logoSources=['logo-green.png','logo-orange.png','logo-blue.png'];const brandColors=['#d9fa62','#ffb477','#a8dfff'];const hero=document.getElementById('hero');let bannerIndex=0;let bannerTimer;let logoRequest=0;function syncLogos(index){const request=++logoRequest;const image=new Image();image.onload=()=>{if(request!==logoRequest)return;brandLogos.forEach(logo=>{logo.style.opacity='0'});if(brandName)brandName.style.opacity='0';setTimeout(()=>{if(request!==logoRequest)return;brandLogos.forEach(logo=>{logo.src=image.src;logo.style.opacity='1'});if(brandName)brandName.style.opacity='1'},150)};image.src=logoSources[index]}function showBanner(index){bannerIndex=(index+heroSlides.length)%heroSlides.length;heroSlides.forEach((slide,i)=>slide.classList.toggle('active',i===bannerIndex));bannerDots.forEach((dot,i)=>dot.classList.toggle('active',i===bannerIndex));hero.classList.remove('theme-0','theme-1','theme-2');hero.classList.add(`theme-${bannerIndex}`);if(brandName)brandName.style.setProperty('color',brandColors[bannerIndex],'important');syncLogos(bannerIndex);clearInterval(bannerTimer);bannerTimer=setInterval(()=>showBanner(bannerIndex+1),6500)}document.getElementById('bannerPrev').onclick=()=>showBanner(bannerIndex-1);document.getElementById('bannerNext').onclick=()=>showBanner(bannerIndex+1);bannerDots.forEach(dot=>dot.onclick=()=>showBanner(+dot.dataset.banner));showBanner(0);
 		const header=document.getElementById('header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));const hamburger=document.querySelector('.hamb');hamburger.onclick=()=>{const isOpen=document.body.classList.toggle('mobile-open');hamburger.textContent=isOpen?'×':'☰';hamburger.setAttribute('aria-label',isOpen?'Close menu':'Open menu')};document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>{document.body.classList.remove('mobile-open');hamburger.textContent='☰';hamburger.setAttribute('aria-label','Open menu')});
 		const subserviceMap={
